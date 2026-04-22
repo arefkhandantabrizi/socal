@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+.bottom-border:not(:last-child) {
+  border-bottom: 1px solid rgba($color-gray-dark-3, 0.6);
+}
+
+.margin-center {
+  margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+.normal-text {
+  font-size: 1.6rem !important;
+}
+
+.light-text {
+  color: $light-gray;
+}
+
+.file-name {
+  margin-left: 1rem;
+  font-style: italic;
+  color: $light-gray;
+}

@@ -1,0 +1,68 @@
+// COLOR VARIABLES
+$color-primary: #d80101;
+
+$color-secondary: #9ba5c9;
+
+$color-tertiary: #383838;
+$color-blue: #1531c6;
+
+// $color-quaternary: #9ebe3f;
+$color-quaternary: #ffba07;
+
+$color-gray-light: #fffafa;
+$color-gray-light-1: #f9f7f6;
+$color-gray-light-2: #aaa;
+
+$color-gray-dark-1: #505050;
+$color-gray-dark-2: #2e2e2e;
+$color-gray-dark-3: #212121;
+$color-gray-dark-4: #282828;
+$color-dark: rgb(33, 37, 41);
+
+$color-approved: #19a992;
+$color-approved-background: #e6faf8;
+
+$color-pending-background: #ffebef;
+
+$color-white: #ffffff;
+$color-black: #17181c;
+
+// Primary Colors
+$primary-blue: #2f58cd; // Royal Blue - Sidebar background
+$dark-navy: #1b1f3b; // Deep Navy - Active item background or dark accents
+$royal-blue: #454ade;
+$medium-purple: #b14aed;
+$orchid: #c874d9;
+$pink-flare: #e1bbc9;
+$white: #ffffff; // Main content background
+
+// Accent Colors
+$accent-blue: #72a1e5; // Sky Blue - Highlights & icons
+$light-gray: #f5f7fa; // Light Gray - Card and container background
+$charcoal: #2c2c2c; // Charcoal - Text
+
+// Semantic Colors
+$success: #4caf50; // Green - Success messages, badges
+$warning: #ffc107; // Yellow - Warnings
+$error: #f44336; // Red - Errors, destructive actions
+
+// Optional UI Enhancements
+$border-color: #e0e6ed; // Optional subtle border
+$hover-bg: #edf2fa; // Hover background for sidebar items
+$disabled-text: #a0aec0; // Muted text
+
+// FONT VARIABLES
+$font-primary: iransansdn, tahoma;
+$font-display: iransansdn, tahoma;
+
+$border-radius: 4rem;
+
+//Responsive breakpoints
+$bp-largest: 100rem; //1600px
+$bp-larger: 75rem; // 1200px
+$bp-large: 62.5rem; // 1000px
+$bp-medium: 50rem; // 800px
+$bp-bootstrap-medium: 47.9375rem; //767px
+$bp-small: 37.5rem; // 600px
+$bp-xsmall: 22rem; // 352px
+$bp-xxsmall: 16.375rem; //262px
