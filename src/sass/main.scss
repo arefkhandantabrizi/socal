@@ -1,2 +1,8 @@
 @use "abstracts/variables";
 @use "abstracts/animations";
+
+@use "base/base";
+@use "base/typography";
+@use "base/utility";
+
+@use "components/topNav";

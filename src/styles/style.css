@@ -28,5 +28,163 @@
     transform: translateY(0);
   }
 }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.6%;
+}
+@media only screen and (max-width: 75rem) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 62.5rem) {
+  html {
+    font-size: 51%;
+  }
+}
+@media only screen and (max-width: 50rem) {
+  html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  html {
+    font-size: 37%;
+  }
+}
+@media only screen and (max-width: 22rem) {
+  html {
+    font-size: 30%;
+  }
+}
+@media only screen and (max-width: 16.375rem) {
+  html {
+    font-size: 25%;
+  }
+}
+
+body {
+  font-family: var(--font-primary), sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #0a0f13;
+  color: #a7abb1;
+}
+
+.normal-text {
+  font-size: 1.6rem !important;
+}
+
+.light-text {
+  color: #a7abb1;
+}
+
+.file-name {
+  margin-left: 1rem;
+  font-style: italic;
+  color: #a7abb1;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+.topnav {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.topnav__icons {
+  padding: 1rem 2rem;
+}
+.topnav__icons--icon-1, .topnav__icons--icon-2 {
+  width: 2rem;
+  height: 2rem;
+  fill: #a7abb1;
+  cursor: pointer;
+}
+.topnav__search {
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+}
+.topnav__search--input {
+  padding: 0.8rem;
+  background-color: #1c2024;
+  color: #a7abb1;
+  width: 15rem;
+  outline: none;
+  border: 1px solid #1c2024;
+  text-align: center;
+}
+.topnav__contact {
+  padding: 1rem 2rem;
+}
+.topnav__contact--btn {
+  padding: 0.5rem 4rem;
+  background-color: #00f2ff;
+  color: #1c2024;
+  cursor: pointer;
+}
+.topnav__items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.topnav__item {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #a7abb1;
+}
+.topnav__item--first {
+  position: relative;
+  cursor: pointer;
+  font-size: 2.6rem;
+  color: #00f2ff;
+  margin-right: 10rem;
+}
+.topnav__item--active {
+  color: #00f2ff;
+}
+.topnav__item--active .topnav__line {
+  transform: scaleX(1);
+}
+.topnav__line {
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #00f2ff;
+  transform: scaleX(0);
+  transform-origin: left;
+}
 
 /*# sourceMappingURL=style.css.map */

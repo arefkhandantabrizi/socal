@@ -1,0 +1,87 @@
+@use "../abstracts/variables" as *;
+
+.topnav {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+
+  &__icons {
+    padding: 1rem 2rem;
+
+    &--icon-1,
+    &--icon-2 {
+      width: 2rem;
+      height: 2rem;
+      fill: $technicalUI-color;
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+
+    &--input {
+      padding: 0.8rem;
+      background-color: $secondary-color;
+      color: $technicalUI-color;
+      width: 15rem;
+      outline: none;
+      border: 1px solid $secondary-color;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    padding: 1rem 2rem;
+
+    &--btn {
+      padding: 0.5rem 4rem;
+      background-color: $accent-color;
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: $technicalUI-color;
+
+    &--first {
+      position: relative;
+      cursor: pointer;
+      font-size: 2.6rem;
+      color: $accent-color;
+      margin-right: 10rem;
+    }
+  }
+
+  &__item--active {
+    color: $accent-color;
+
+    .topnav__line {
+      transform: scaleX(1);
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 100%;
+    height: 0.2rem;
+    background-color: $accent-color;
+
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
