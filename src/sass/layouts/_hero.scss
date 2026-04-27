@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+
+.hero {
+  padding: 10rem 0;
+  width: 100dvw;
+  background-image:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(0, 242, 255, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(0, 242, 255, 0.05) 0%,
+      transparent 50%
+    );
+
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  align-items: center;
+
+  &__img {
+    height: 50rem;
+    width: auto;
+    &--container {
+      grid-column: 2 / span 1;
+      grid-row: 1/ 2;
+      justify-self: start;
+      position: relative;
+    }
+
+    &--badge {
+      position: absolute;
+      background-color: rgba($color: $technicalUI-color, $alpha: 0.1);
+      padding: 0.2rem 1rem 0.5rem 0.4rem;
+      font-family: $font-primary;
+      top: 2rem;
+      left: 2rem;
+      border-left: 0.3rem solid $accent-color;
+      cursor: default;
+
+      &--header {
+        color: $accent-color;
+        font-weight: 600;
+        cursor: default;
+      }
+
+      &--sub {
+        color: $technicalUI-color;
+        font-size: 1.5rem;
+        font-weight: 400;
+        cursor: default;
+      }
+    }
+  }
+  &__text {
+    grid-column: 1 / span 1;
+    padding: 2rem;
+    grid-row: 1/ 2;
+    justify-self: end;
+
+    &--header-1 {
+      font-size: 7.5rem;
+      font-weight: 900;
+      color: $white-color;
+      line-height: 0.5;
+      cursor: default;
+    }
+    &--header-2 {
+      font-size: 7.5rem;
+      font-weight: 900;
+      color: $accent-color;
+      cursor: default;
+    }
+
+    &--body {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: $technicalUI-color;
+      padding-bottom: 2rem;
+      cursor: default;
+    }
+
+    &--btn {
+      padding: 1.5rem 3rem;
+      background-color: $accent-color;
+      color: $secondary-color;
+      text-align: center;
+      border: 1px solid $accent-color;
+      cursor: pointer;
+    }
+  }
+}

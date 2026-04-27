@@ -1,3 +1,11 @@
+import Divisions from "@/components/home/divisions";
+import Hero from "@/components/home/hero";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+      <Divisions />
+    </>
+  );
 }

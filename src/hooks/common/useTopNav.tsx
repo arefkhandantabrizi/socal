@@ -25,8 +25,8 @@ const useTopNav = () => {
 
     gsap.to(line, {
       scaleX: show ? 1 : 0,
-      duration: 0.3,
-      ease: "power4.inout",
+      duration: 0.6,
+      ease: "power2.inOut",
     });
   };
 
