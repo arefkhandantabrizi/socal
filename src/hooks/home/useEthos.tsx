@@ -29,7 +29,8 @@ const useEthos = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 100%",
-          end: "bottom 40%",
+          end: "bottom 30%",
+          scrub: 1,
         },
       });
 
