@@ -30,7 +30,6 @@ const useEthos = () => {
           trigger: containerRef.current,
           start: "top 100%",
           end: "bottom 40%",
-          scrub: 1,
         },
       });
 
