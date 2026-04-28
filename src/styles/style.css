@@ -8,6 +8,11 @@
     transform: scale(1.05);
   }
 }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -116,7 +121,7 @@ body {
 }
 
 .topnav {
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -190,7 +195,7 @@ body {
 }
 
 .hero {
-  padding: 10rem 0;
+  padding: 10rem 5rem;
   width: 100dvw;
   background-image: radial-gradient(circle at 0% 0%, rgba(0, 242, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 100% 100%, rgba(0, 242, 255, 0.05) 0%, transparent 50%);
   display: grid;
@@ -205,7 +210,7 @@ body {
 .hero__img--container {
   grid-column: 2/span 1;
   grid-row: 1/2;
-  justify-self: start;
+  justify-self: center;
   position: relative;
 }
 .hero__img--badge {
@@ -231,7 +236,7 @@ body {
 }
 .hero__text {
   grid-column: 1/span 1;
-  padding: 2rem;
+  padding: 2rem 0;
   grid-row: 1/2;
   justify-self: end;
 }
@@ -265,9 +270,9 @@ body {
 }
 
 .divisions {
-  padding: 10rem 2rem;
+  padding: 10rem 5rem;
   background-color: #0a0f13;
-  height: 60rem;
+  border-bottom: 0.2rem solid rgba(0, 242, 255, 0.3);
 }
 .divisions__title {
   font-size: 1.4rem;
@@ -289,6 +294,8 @@ body {
   background: rgba(28, 32, 36, 0.4);
   padding: 4rem 2rem;
   position: relative;
+  border-bottom: 0.4rem solid #1c2024;
+  border-radius: 0.4rem;
 }
 .divisions__card--1 {
   grid-column: 1/3;
@@ -335,6 +342,159 @@ body {
   font-weight: 500;
   margin-bottom: 1rem;
   cursor: pointer;
+}
+
+.ethos {
+  background-color: #011220;
+  padding: 15rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+.ethos__texts {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.ethos__terminal {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: center;
+  align-content: center;
+}
+.ethos__terminal--progress-bar {
+  margin-left: 5rem;
+  width: 80%;
+  height: 0.15rem;
+  background-color: #99f7ff;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.ethos__terminal--icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #99f7ff;
+}
+.ethos__terminal--command {
+  padding: 0 5rem 2rem 5rem;
+  color: #eeeeee;
+  font-size: 1.4rem;
+  width: 70%;
+}
+.ethos__terminal--command-container {
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+}
+.ethos__terminal--command-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #a7abb1;
+}
+.ethos__terminal--container {
+  background-color: #0a0f13;
+  padding-bottom: 5rem;
+  width: 60rem;
+}
+.ethos__terminal--controler {
+  padding: 5rem 5rem;
+  display: flex;
+}
+.ethos__terminal--red {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  clip-path: circle(50%);
+  background-color: #ff716c;
+  border-radius: 50rem;
+}
+.ethos__terminal--blue {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  clip-path: circle(50%);
+  background-color: #99f7ff;
+  border-radius: 50rem;
+}
+.ethos__terminal--gray {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  clip-path: circle(50%);
+  background-color: #a7abb1;
+  border-radius: 50rem;
+}
+.ethos__label {
+  padding: 1rem 4rem;
+  background-color: #0e2937;
+  color: #99f7ff;
+  border: 0.1px solid #99f7ff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.ethos__header {
+  padding-top: 5rem;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #eeeeee;
+  line-height: 1;
+}
+.ethos__subheader {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #00f2ff;
+}
+.ethos__body {
+  padding: 5rem 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #a7abb1;
+}
+.ethos__icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #99f7ff;
+  margin-right: 2rem;
+}
+.ethos__icon--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+.ethos__icon--header {
+  color: #99f7ff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.ethos__icon--header-wrapper {
+  display: flex;
+  align-items: center;
+}
+.ethos__icon--body {
+  padding: 2rem 0;
+  color: #a7abb1;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.ethos__icon--1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.ethos__icon--2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.has-cursor::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

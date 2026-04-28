@@ -1,9 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .divisions {
-  padding: 10rem 2rem;
+  padding: 10rem 5rem;
   background-color: $primary-color;
-  height: 60rem;
+  border-bottom: 0.2rem solid rgba($accent-color, 0.3);
 
   &__title {
     font-size: 1.4rem;
@@ -28,6 +28,8 @@
     background: rgba(28, 32, 36, 0.4);
     padding: 4rem 2rem;
     position: relative;
+    border-bottom: 0.4rem solid $secondary-color;
+    border-radius: 0.4rem;
 
     &--1 {
       grid-column: 1 / 3;

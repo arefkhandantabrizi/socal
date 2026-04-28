@@ -1,4 +1,5 @@
 import Divisions from "@/components/home/divisions";
+import Ethos from "@/components/home/ethos";
 import Hero from "@/components/home/hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Divisions />
+      <Ethos />
     </>
   );
 }

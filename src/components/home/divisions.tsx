@@ -33,6 +33,9 @@ const Divisions = () => {
             Grid-scale power distribution and embedded logic systems for extreme
             environments.
           </div>
+          <div className="divisions__card--links">
+            <div className="divisions__card--link-1">COMMING SOON...</div>
+          </div>
         </div>
       </div>
     </section>
