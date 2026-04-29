@@ -28,8 +28,8 @@ const useEthos = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 100%",
-          end: "bottom 30%",
+          start: "top 80%",
+          end: "bottom 20%",
           scrub: 1,
         },
       });

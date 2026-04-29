@@ -1,0 +1,128 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  background-image:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(0, 242, 255, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(0, 242, 255, 0.05) 0%,
+      transparent 50%
+    );
+
+  &__items {
+    padding: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    border-top: 1px solid $secondary-color;
+    font-size: 1.6rem;
+    color: $technicalUI-color;
+
+    &--live {
+      color: $accent-color;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+
+  &__section {
+    font-size: 1.4rem;
+    color: $technicalUI-color;
+    &--1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    &--2 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+    &--3 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+    &--4 {
+      grid-column: 4 / 5;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__name {
+    padding-bottom: 2.5rem;
+    color: $accent-color;
+    font-size: 2.5rem;
+    font-weight: 900;
+    cursor: default;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+    cursor: default;
+    width: 75%;
+  }
+
+  &__title {
+    font-weight: 300;
+    color: $ethosText-color;
+    padding-bottom: 2.5rem;
+    font-size: 1.3rem;
+    cursor: default;
+  }
+
+  &__department {
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+
+  &__department:not(:last-child) {
+    padding: 0.5rem 0;
+  }
+  &__department:last-child {
+    padding-top: 0.5rem;
+  }
+
+  &__protocol {
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  &__protocol:not(:last-child) {
+    padding: 0.5rem 0;
+  }
+
+  &__protocol:last-child {
+    padding-top: 0.5rem;
+  }
+
+  &__address {
+    cursor: default;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  &__connection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 0;
+    width: 50%;
+
+    &--icon {
+      width: 3rem;
+      height: 3rem;
+      fill: $ethosText-color;
+      cursor: pointer;
+    }
+  }
+}
