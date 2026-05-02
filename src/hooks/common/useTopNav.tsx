@@ -10,7 +10,12 @@ const useTopNav = () => {
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const menuItems = ["COMPUTER DEPARTMENT", "POWER DEPARTMENT", "ABOUT US"];
+  const menuItems = [
+    "COMPUTER DEPARTMENT",
+    "POWER DEPARTMENT",
+    "CALIBRATION DEPARTMENT",
+    "ABOUT US",
+  ];
 
   useGSAP(
     () => {

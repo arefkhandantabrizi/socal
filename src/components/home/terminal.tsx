@@ -10,6 +10,7 @@ const Terminal = () => {
     commandRef2,
     activeCursor,
   } = useEthos();
+
   return (
     <div className="ethos__terminal" ref={containerRef}>
       <div className="ethos__terminal--container">
@@ -18,50 +19,54 @@ const Terminal = () => {
           <span className="ethos__terminal--blue mr-1" />
           <span className="ethos__terminal--gray" />
         </div>
+
         <div className="ethos__terminal--command-container">
-          <ChevronRight className="ethos__terminal--icon mr-2" />
+          <ChevronRight className="ethos__terminal--icon chevron-1 mr-2" />
           <div
+            ref={commandRef}
             className={`ethos__terminal--command-text ${
               activeCursor === "cmd1" ? "has-cursor" : ""
             }`}
-            ref={commandRef}
           />
         </div>
+
         <div
+          ref={(el) => {
+            if (el) {
+              linesRef.current[0] = el;
+            }
+          }}
           className={`ethos__terminal--command ${
             activeCursor === 0 ? "has-cursor" : ""
           }`}
-          ref={(el) => {
-            if (el) linesRef.current[0] = el;
-          }}
         />
 
         <div
-          className={`ethos__terminal--command ${
-            activeCursor === 0 ? "has-cursor" : ""
-          }`}
           ref={(el) => {
             if (el) linesRef.current[1] = el;
           }}
+          className={`ethos__terminal--command ${
+            activeCursor === 1 ? "has-cursor" : ""
+          }`}
         />
 
         <div className="ethos__terminal--command-container">
-          <ChevronRight className="ethos__terminal--icon mr-2" />
+          <ChevronRight className="ethos__terminal--icon chevron-2 mr-2" />
           <div
+            ref={commandRef2}
             className={`ethos__terminal--command-text ${
               activeCursor === "cmd2" ? "has-cursor" : ""
             }`}
-            ref={commandRef2}
           />
         </div>
 
         <div
-          className={`ethos__terminal--command ${
-            activeCursor === 0 ? "has-cursor" : ""
-          }`}
           ref={(el) => {
             if (el) linesRef.current[2] = el;
           }}
+          className={`ethos__terminal--command ${
+            activeCursor === 2 ? "has-cursor" : ""
+          }`}
         />
 
         <div className="ethos__terminal--progress-bar" ref={progressRef} />

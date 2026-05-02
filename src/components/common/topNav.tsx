@@ -36,21 +36,30 @@ const TopNav = () => {
             />
           </li>
         ))}
+        <li className="topnav__item">
+          <input
+            type="text"
+            placeholder="search here"
+            className="topnav__search--input"
+          />
+        </li>
+        <li className="topnav__item">
+          <div className="topnav__icons">
+            <Terminal className="topnav__icons--icon-1 mr-2" />
+            <Setting className="topnav__icons--icon-2 " />
+          </div>
+        </li>
+        <li className="topnav__item">
+          <button className="topnav__contact--btn">CONTACT US</button>
+        </li>
       </ul>
-      <div className="topnav__search">
-        <input
-          type="text"
-          placeholder="search here"
-          className="topnav__search--input"
-        />
-      </div>
-      <div className="topnav__icons">
-        <Terminal className="topnav__icons--icon-1 mr-2" />
-        <Setting className="topnav__icons--icon-2 " />
-      </div>
-      <div className="topnav__contact">
-        <button className="topnav__contact--btn">CONTACT US</button>
-      </div>
+      {/* <div className="topnav__search"> */}
+
+      {/* </div> */}
+      {/* <div className="topnav__icons"> */}
+      {/* </div> */}
+      {/* <div className="topnav__contact"> */}
+      {/* </div> */}
     </nav>
   );
 };

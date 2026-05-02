@@ -1,4 +1,10 @@
-import { Compass, Lightning, Mechanical, Terminal } from "../common/icons";
+import {
+  Calibration,
+  // Compass,
+  Lightning,
+  // Mechanical,
+  Terminal,
+} from "../common/icons";
 import DivisionCard from "./divisionCard";
 
 const Divisions = () => {
@@ -34,6 +40,18 @@ const Divisions = () => {
         />
         <DivisionCard
           {...{
+            icon: <Calibration className="divisions__card--icon" />,
+            title: "Calibration & Testing",
+            extraClassName: "divisions__card--3",
+            bodyText:
+              "High-fidelity verification protocols and stress-testing for sub-micron component integrity across all hardware strata",
+            hasLinks: true,
+            isActive: false,
+            links: ["COMMING SOON..."],
+          }}
+        />
+        {/* <DivisionCard
+          {...{
             icon: <Compass className="divisions__card--icon" />,
             title: "Civil",
             extraClassName: "divisions__card--3",
@@ -43,8 +61,8 @@ const Divisions = () => {
             isActive: false,
             links: ["COMMING SOON..."],
           }}
-        />
-        <DivisionCard
+        /> */}
+        {/* <DivisionCard
           {...{
             icon: <Mechanical className="divisions__card--icon" />,
             title: "Mechanical",
@@ -55,7 +73,7 @@ const Divisions = () => {
             isActive: false,
             links: ["COMMING SOON..."],
           }}
-        />
+        /> */}
       </div>
     </section>
   );

@@ -65,7 +65,8 @@ body {
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.6;
+  max-width: 200rem;
+  margin: 0 auto;
   background-color: $primary-color;
   color: $technicalUI-color;
-  // direction: rtl;
 }

@@ -23,6 +23,7 @@
       width: 80%;
       height: 0.15rem;
       background-color: $ethosText-color;
+
       transform: scaleX(0);
       transform-origin: left;
     }
@@ -31,6 +32,7 @@
       width: 2rem;
       height: 2rem;
       fill: $ethosText-color;
+      flex-shrink: 0;
     }
 
     &--command {
@@ -39,15 +41,24 @@
       font-size: 1.4rem;
       width: 70%;
 
+      white-space: pre-wrap;
+      word-break: break-word;
+      position: relative;
+
       &-container {
         padding: 0 5rem;
         display: flex;
         align-items: center;
       }
+
       &-text {
         font-size: 1.6rem;
         font-weight: 400;
         color: $technicalUI-color;
+
+        white-space: pre-wrap;
+        word-break: break-word;
+        position: relative;
       }
     }
 
@@ -55,6 +66,7 @@
       background-color: $primary-color;
       padding-bottom: 5rem;
       width: 60rem;
+      overflow: hidden;
     }
 
     &--controler {
@@ -62,29 +74,26 @@
       display: flex;
     }
 
-    &--red {
-      display: block;
-      width: 1.2rem;
-      height: 1.2rem;
-      clip-path: circle(50%);
-      background-color: $ethosTerminalRed-color;
-      border-radius: 50rem;
-    }
-    &--blue {
-      display: block;
-      width: 1.2rem;
-      height: 1.2rem;
-      clip-path: circle(50%);
-      background-color: $ethosText-color;
-      border-radius: 50rem;
-    }
+    &--red,
+    &--blue,
     &--gray {
       display: block;
       width: 1.2rem;
       height: 1.2rem;
       clip-path: circle(50%);
-      background-color: $technicalUI-color;
       border-radius: 50rem;
+    }
+
+    &--red {
+      background-color: $ethosTerminalRed-color;
+    }
+
+    &--blue {
+      background-color: $ethosText-color;
+    }
+
+    &--gray {
+      background-color: $technicalUI-color;
     }
   }
 
@@ -105,11 +114,13 @@
     color: $white-color;
     line-height: 1;
   }
+
   &__subheader {
     font-size: 5rem;
     font-weight: 600;
     color: $accent-color;
   }
+
   &__body {
     padding: 5rem 0;
     font-size: 2rem;
@@ -151,20 +162,34 @@
       grid-column: 1/2;
       grid-row: 1/2;
     }
+
     &--2 {
       grid-column: 2/3;
       grid-row: 1/2;
     }
   }
 }
-
 .has-cursor::after {
   content: "|";
+  display: inline-block;
   margin-left: 4px;
-  animation: blink 1s infinite;
+
+  animation: blink 1s steps(2, start) infinite;
 }
+
 @keyframes blink {
-  50% {
-    opacity: 0;
+  to {
+    visibility: hidden;
   }
+}
+
+.ethos__terminal--icon {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ethos__terminal--command-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
