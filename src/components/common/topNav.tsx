@@ -2,6 +2,7 @@
 
 import useTopNav from "@/hooks/common/useTopNav";
 import { Setting, Terminal } from "./icons";
+import Link from "next/link";
 
 const TopNav = () => {
   const {
@@ -9,6 +10,7 @@ const TopNav = () => {
     menuItems,
     container,
     linesRef,
+    pathName,
     handleEnter,
     handleLeave,
   } = useTopNav();
@@ -16,17 +18,34 @@ const TopNav = () => {
   return (
     <nav className="topnav">
       <ul className="topnav__items" ref={container}>
-        <li className="topnav__item--first">SOCAL POWER GRID</li>
-        {menuItems.map((text, i) => (
+        <li className="topnav__item--first">
+          <Link href={"/"} className="topnav__item--first">
+            SOCAL POWER GRID
+          </Link>
+        </li>
+        {menuItems.map((menu, i) => (
           <li
             key={i}
             className={`topnav__item ${
-              i === activeIndex ? "topnav__item--active" : ""
+              i === activeIndex || pathName === menu.slug
+                ? "topnav__item--active"
+                : ""
             }`}
             onMouseEnter={() => handleEnter(i)}
             onMouseLeave={() => handleLeave(i)}
           >
-            {text}
+            <Link
+              href={`${menu.slug}`}
+              className={`topnav__item ${
+                i === activeIndex || pathName === menu.slug
+                  ? "topnav__item--active"
+                  : ""
+              }`}
+              onMouseEnter={() => handleEnter(i)}
+              onMouseLeave={() => handleLeave(i)}
+            >
+              {menu.text}
+            </Link>
 
             <span
               ref={(el) => {
@@ -53,13 +72,6 @@ const TopNav = () => {
           <button className="topnav__contact--btn">CONTACT US</button>
         </li>
       </ul>
-      {/* <div className="topnav__search"> */}
-
-      {/* </div> */}
-      {/* <div className="topnav__icons"> */}
-      {/* </div> */}
-      {/* <div className="topnav__contact"> */}
-      {/* </div> */}
     </nav>
   );
 };

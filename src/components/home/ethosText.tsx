@@ -26,7 +26,7 @@ const EthosText = () => {
             <span className="ethos__icon--header">MULTI-DISCIPLINARY</span>
           </div>
           <div className="ethos__icon--body">
-            Cross-sector eynthesis between electrical and computational logic to
+            Cross-sector synthesis between electrical and computational logic to
             create unified infrastructure.
           </div>
         </div>

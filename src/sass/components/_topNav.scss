@@ -2,6 +2,7 @@
 
 .topnav {
   padding: 3rem 5rem;
+  background-color: $black-color;
 
   &__icons {
     // padding: 1rem 2rem;
@@ -56,6 +57,11 @@
     cursor: pointer;
     font-size: 1.6rem;
     color: $technicalUI-color;
+    text-decoration: none;
+
+    & > Link {
+      text-decoration: none;
+    }
 
     &--first {
       position: relative;
@@ -63,6 +69,10 @@
       font-size: 2.4rem;
       color: $accent-color;
       margin-right: 3rem;
+      text-decoration: none;
+      & > Link {
+        text-decoration: none;
+      }
     }
   }
 

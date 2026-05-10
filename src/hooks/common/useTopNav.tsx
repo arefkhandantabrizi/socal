@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(useGSAP);
 
@@ -8,13 +9,15 @@ const useTopNav = () => {
   const container = useRef<HTMLUListElement | null>(null);
   const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
 
+  const pathName = usePathname();
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const menuItems = [
-    "COMPUTER DEPARTMENT",
-    "POWER DEPARTMENT",
-    "CALIBRATION DEPARTMENT",
-    "ABOUT US",
+    { text: "COMPUTER", slug: "/computer" },
+    { text: "POWER", slug: "/power" },
+    { text: "CALIBRATION", slug: "/calibration" },
+    { text: "ABOUT US", slug: "/about-us" },
   ];
 
   useGSAP(
@@ -50,6 +53,7 @@ const useTopNav = () => {
     menuItems,
     container,
     linesRef,
+    pathName,
     handleEnter,
     handleLeave,
   };

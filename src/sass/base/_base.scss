@@ -65,6 +65,32 @@ body {
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.6;
+  min-height: 100vh;
+
+  background-color: #020202;
+
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(43, 78, 255, 0.18) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 183, 255, 0.1) 0%,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom center,
+      rgba(140, 82, 255, 0.08) 0%,
+      transparent 40%
+    ),
+    linear-gradient(180deg, #020202 0%, #050507 50%, #010101 100%);
+
+  background-attachment: fixed;
+}
+
+.site-wrapper {
   max-width: 200rem;
   margin: 0 auto;
   background-color: $primary-color;
