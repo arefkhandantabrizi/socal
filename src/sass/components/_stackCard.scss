@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+
+.stack__card {
+  background-color: $secondary-color;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+  cursor: default;
+
+  &--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $accent-color;
+  }
+  &--header {
+    padding: 5rem 0;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: $white-color;
+  }
+  &--body {
+    font-size: 1.6rem;
+    color: $technicalUI-color;
+    margin-bottom: 3rem;
+  }
+  &--labelwrapper {
+    display: flex;
+    gap: 1.2rem;
+  }
+  &--label {
+    padding: 1rem 2rem;
+    background-color: $black-color;
+    color: $accent-color;
+    border-radius: 0.6rem;
+  }
+}

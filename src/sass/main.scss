@@ -7,11 +7,13 @@
 
 @use "components/topNav";
 @use "components/footer";
+@use "components/stackCard";
 
 @use "layouts/hero";
 @use "layouts/divisions";
 @use "layouts/ethos";
 @use "layouts/inquiry";
 @use "layouts/intro";
+@use "layouts/stack";
 
-@use "pages/computer";
+// @use "pages/computer";

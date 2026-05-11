@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+
+.stack {
+  padding: 10rem 5rem;
+  background-color: $primary-color;
+
+  &__header {
+    font-weight: 200;
+    letter-spacing: 0.4rem;
+    color: $technicalUI-color;
+    font-size: 1.8rem;
+    cursor: default;
+  }
+  &__subheader {
+    font-weight: 800;
+    color: $white-color;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.8;
+    margin-bottom: 5rem;
+    cursor: default;
+  }
+
+  &__cardwrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    cursor: default;
+  }
+
+  &__imagewrapper {
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    object-fit: fill;
+  }
+}

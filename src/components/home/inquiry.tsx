@@ -1,9 +1,7 @@
 const Inquiry = () => {
   return (
     <div className="inquiry">
-      <div className="inquiry__label">
-        {`I N N O V A T I O N`} &nbsp; &nbsp; {`L A B S`}
-      </div>
+      <div className="inquiry__label">INNOVATION &nbsp; LABS</div>
       <h4 className="inquiry__header">FUTURE-PROOFING</h4>
       <h4 className="inquiry__subheader">INDUSTRIAL INFRASTRUCTURE</h4>
       <div className="inquiry__btnwrapper">

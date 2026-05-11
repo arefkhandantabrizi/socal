@@ -14,20 +14,23 @@ const useIntro = () => {
       refImageContainer.current,
       {
         opacity: 0,
-        y: 80,
+        y: 120,
         scale: 0.9,
-        boxShadow: "0 0 0 rgba(0,242,255,0)",
+        filter: "blur(20px)",
+        boxShadow: "0 0 0 transparent",
       },
       {
         opacity: 1,
         y: 0,
         scale: 1,
+        filter: "blur(0px)",
         boxShadow: "-1.5rem 0.9rem 2.6rem -0.6rem rgba(0,242,255,0.4)",
-        duration: 2,
-        ease: "power4.out",
+        duration: 1.5,
+        ease: "expo.out",
       },
     );
   });
+
   return { refImageContainer };
 };
 

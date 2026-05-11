@@ -313,6 +313,39 @@ body {
   cursor: pointer;
 }
 
+.stack__card {
+  background-color: #1c2024;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+  cursor: default;
+}
+.stack__card--icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #00f2ff;
+}
+.stack__card--header {
+  padding: 5rem 0;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #eeeeee;
+}
+.stack__card--body {
+  font-size: 1.6rem;
+  color: #a7abb1;
+  margin-bottom: 3rem;
+}
+.stack__card--labelwrapper {
+  display: flex;
+  gap: 1.2rem;
+}
+.stack__card--label {
+  padding: 1rem 2rem;
+  background-color: #040404;
+  color: #00f2ff;
+  border-radius: 0.6rem;
+}
+
 .hero {
   padding: 10rem 5rem;
   width: 100%;
@@ -652,6 +685,7 @@ body {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 400;
+  letter-spacing: 0.5rem;
   border-radius: 0.2rem;
   width: fit-content;
   cursor: default;
@@ -750,9 +784,44 @@ body {
 .intro__img--container {
   padding: 5rem;
   background-color: rgba(28, 32, 36, 0.4);
-  box-shadow: -1.5rem 0.9rem 2.6rem -0.6rem rgba(0, 242, 255, 0.4);
+  overflow: visible;
+  will-change: transform, filter;
+  transform: translateZ(0);
   border-radius: 0.9rem;
   cursor: default;
+}
+
+.stack {
+  padding: 10rem 5rem;
+  background-color: #0a0f13;
+}
+.stack__header {
+  font-weight: 200;
+  letter-spacing: 0.4rem;
+  color: #a7abb1;
+  font-size: 1.8rem;
+  cursor: default;
+}
+.stack__subheader {
+  font-weight: 800;
+  color: #eeeeee;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.8;
+  margin-bottom: 5rem;
+  cursor: default;
+}
+.stack__cardwrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  cursor: default;
+}
+.stack__imagewrapper {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  object-fit: fill;
 }
 
 /*# sourceMappingURL=style.css.map */
