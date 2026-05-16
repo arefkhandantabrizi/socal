@@ -22,7 +22,7 @@ const useIndustrialApp = () => {
     tl.fromTo(
       ".industrial__architectures--text",
       {
-        y: -100,
+        y: 20,
         opacity: 0,
       },
       { y: 0, opacity: 1, duration: 0.5, ease: "power4.inOut" },
@@ -31,7 +31,7 @@ const useIndustrialApp = () => {
     tl.fromTo(
       ".industrial__dashboard--text",
       {
-        y: -100,
+        y: -20,
         opacity: 0,
       },
       { y: 0, opacity: 1, duration: 0.5, delay: 0.2, ease: "power4.inOut" },
