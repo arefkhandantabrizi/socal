@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+
+.industrial {
+  background-color: $black-color;
+  padding: 10rem 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+
+  &__images {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    &--header {
+      font-size: 3rem;
+      color: $white-color;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1;
+      padding-bottom: 3rem;
+    }
+    &--body {
+      font-size: 1.3rem;
+      color: $technicalUI-color;
+      padding-bottom: 3rem;
+      width: 70%;
+    }
+    &--link {
+      text-transform: uppercase;
+      color: $white-color;
+      font-weight: 700;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      --line-scale: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 4rem;
+        height: 0.1rem;
+        background-color: $accent-color;
+
+        transform: scaleX(var(--line-scale));
+        transform-origin: left center;
+      }
+    }
+  }
+
+  &__architectures {
+    &--wrapper {
+      position: relative;
+    }
+    &--image {
+      position: relative;
+    }
+    &--text {
+      position: absolute;
+      bottom: 3rem;
+      width: 40rem;
+      text-align: center;
+      z-index: 10;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $white-color;
+      font-weight: 700;
+    }
+  }
+  &__dashboard {
+    &--wrapper {
+      position: relative;
+    }
+    &--image {
+      position: relative;
+    }
+    &--text {
+      position: absolute;
+      bottom: 2rem;
+      text-align: center;
+      z-index: 10;
+      width: 33rem;
+      font-size: 1.5rem;
+      color: $white-color;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

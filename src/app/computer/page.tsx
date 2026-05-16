@@ -1,3 +1,4 @@
+import IndustrialApp from "@/components/computer/industrialApp";
 import Intro from "@/components/computer/intro";
 import Stack from "@/components/computer/stack";
 
@@ -6,6 +7,7 @@ const Computer = () => {
     <>
       <Intro />
       <Stack />
+      <IndustrialApp />
     </>
   );
 };

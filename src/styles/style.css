@@ -824,4 +824,84 @@ body {
   object-fit: fill;
 }
 
+.industrial {
+  background-color: #040404;
+  padding: 10rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.industrial__images {
+  display: flex;
+  align-items: center;
+}
+.industrial__text--header {
+  font-size: 3rem;
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 3rem;
+}
+.industrial__text--body {
+  font-size: 1.3rem;
+  color: #a7abb1;
+  padding-bottom: 3rem;
+  width: 70%;
+}
+.industrial__text--link {
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  --line-scale: 0;
+}
+.industrial__text--link::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.1rem;
+  background-color: #00f2ff;
+  transform: scaleX(var(--line-scale));
+  transform-origin: left center;
+}
+.industrial__architectures--wrapper {
+  position: relative;
+}
+.industrial__architectures--image {
+  position: relative;
+}
+.industrial__architectures--text {
+  position: absolute;
+  bottom: 3rem;
+  width: 40rem;
+  text-align: center;
+  z-index: 10;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-weight: 700;
+}
+.industrial__dashboard--wrapper {
+  position: relative;
+}
+.industrial__dashboard--image {
+  position: relative;
+}
+.industrial__dashboard--text {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  z-index: 10;
+  width: 33rem;
+  font-size: 1.5rem;
+  color: #eeeeee;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=style.css.map */
