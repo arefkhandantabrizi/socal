@@ -9,19 +9,23 @@ const Terminal = () => {
     commandRef,
     commandRef2,
     activeCursor,
+    chevron1Ref,
+    chevron2Ref,
   } = useEthos();
 
   return (
     <div className="ethos__terminal" ref={containerRef}>
       <div className="ethos__terminal--container">
-        <div className="ethos__terminal--controler">
+        <div className="ethos__terminal--controller">
           <span className="ethos__terminal--red mr-1" />
           <span className="ethos__terminal--blue mr-1" />
           <span className="ethos__terminal--gray" />
         </div>
 
         <div className="ethos__terminal--command-container">
-          <ChevronRight className="ethos__terminal--icon chevron-1 mr-2" />
+          <span ref={chevron1Ref} className="ethos__terminal--icon-wrap">
+            <ChevronRight className="ethos__terminal--icon chevron-1 mr-2" />
+          </span>
           <div
             ref={commandRef}
             className={`ethos__terminal--command-text ${
@@ -51,7 +55,9 @@ const Terminal = () => {
         />
 
         <div className="ethos__terminal--command-container">
-          <ChevronRight className="ethos__terminal--icon chevron-2 mr-2" />
+          <span ref={chevron2Ref} className="ethos__terminal--icon-wrap">
+            <ChevronRight className="ethos__terminal--icon chevron-2 mr-2" />
+          </span>
           <div
             ref={commandRef2}
             className={`ethos__terminal--command-text ${

@@ -1,59 +1,79 @@
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import gsap from "@/utils/gsap";
 import { usePathname } from "next/navigation";
 
-gsap.registerPlugin(useGSAP);
+type MenuItem = {
+  text: string;
+  slug: string;
+};
+
+const menuItems: MenuItem[] = [
+  { text: "COMPUTER", slug: "/computer" },
+  { text: "POWER", slug: "/power" },
+  { text: "CALIBRATION", slug: "/calibration" },
+  { text: "ABOUT US", slug: "/about-us" },
+];
 
 const useTopNav = () => {
-  const container = useRef<HTMLUListElement | null>(null);
+  const containerRef = useRef<HTMLUListElement | null>(null);
   const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
 
-  const pathName = usePathname();
+  const pathname = usePathname();
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const menuItems = [
-    { text: "COMPUTER", slug: "/computer" },
-    { text: "POWER", slug: "/power" },
-    { text: "CALIBRATION", slug: "/calibration" },
-    { text: "ABOUT US", slug: "/about-us" },
-  ];
-
   useGSAP(
     () => {
-      gsap.set(".topnav__line", { scaleX: 0 });
+      linesRef.current.forEach((line, index) => {
+        if (!line) return;
+
+        const isActiveRoute = pathname === menuItems[index].slug;
+
+        gsap.set(line, {
+          scaleX: isActiveRoute ? 1 : 0,
+          transformOrigin: "left",
+        });
+      });
     },
-    { scope: container },
+    {
+      scope: containerRef,
+      dependencies: [pathname],
+      revertOnUpdate: true,
+    },
   );
 
-  const animateLine = (i: number, show: boolean) => {
-    const line = linesRef.current[i];
+  const animateLine = (index: number, show: boolean) => {
+    const line = linesRef.current[index];
+
     if (!line) return;
 
+    const isActiveRoute = pathname === menuItems[index].slug;
+
     gsap.to(line, {
-      scaleX: show ? 1 : 0,
-      duration: 0.6,
-      ease: "power2.inOut",
+      scaleX: show || isActiveRoute ? 1 : 0,
+      duration: 0.45,
+      ease: "power3.out",
+      overwrite: "auto",
     });
   };
 
-  const handleEnter = (i: number) => {
-    setActiveIndex(i);
-    animateLine(i, true);
+  const handleEnter = (index: number) => {
+    setActiveIndex(index);
+    animateLine(index, true);
   };
 
-  const handleLeave = (i: number) => {
-    animateLine(i, false);
+  const handleLeave = (index: number) => {
     setActiveIndex(null);
+    animateLine(index, false);
   };
 
   return {
     activeIndex,
     menuItems,
-    container,
+    containerRef,
     linesRef,
-    pathName,
+    pathname,
     handleEnter,
     handleLeave,
   };

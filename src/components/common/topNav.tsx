@@ -1,74 +1,71 @@
 "use client";
 
+import Link from "next/link";
 import useTopNav from "@/hooks/common/useTopNav";
 import { Setting, Terminal } from "./icons";
-import Link from "next/link";
 
 const TopNav = () => {
   const {
     activeIndex,
     menuItems,
-    container,
+    containerRef,
     linesRef,
-    pathName,
+    pathname,
     handleEnter,
     handleLeave,
   } = useTopNav();
 
   return (
     <nav className="topnav">
-      <ul className="topnav__items" ref={container}>
-        <li className="topnav__item--first">
-          <Link href={"/"} className="topnav__item--first">
+      <ul className="topnav__items" ref={containerRef}>
+        <li className="topnav__brand">
+          <Link href="/" className="topnav__brand-link">
             SOCAL POWER GRID
           </Link>
         </li>
-        {menuItems.map((menu, i) => (
-          <li
-            key={i}
-            className={`topnav__item ${
-              i === activeIndex || pathName === menu.slug
-                ? "topnav__item--active"
-                : ""
-            }`}
-            onMouseEnter={() => handleEnter(i)}
-            onMouseLeave={() => handleLeave(i)}
-          >
-            <Link
-              href={`${menu.slug}`}
-              className={`topnav__item ${
-                i === activeIndex || pathName === menu.slug
-                  ? "topnav__item--active"
-                  : ""
-              }`}
-              onMouseEnter={() => handleEnter(i)}
-              onMouseLeave={() => handleLeave(i)}
-            >
-              {menu.text}
-            </Link>
 
-            <span
-              ref={(el) => {
-                linesRef.current[i] = el;
-              }}
-              className="topnav__line"
-            />
-          </li>
-        ))}
-        <li className="topnav__item">
+        {menuItems.map((menu, index) => {
+          const isActive = activeIndex === index || pathname === menu.slug;
+
+          return (
+            <li
+              key={menu.slug}
+              className={`topnav__item ${
+                isActive ? "topnav__item--active" : ""
+              }`}
+              onMouseEnter={() => handleEnter(index)}
+              onMouseLeave={() => handleLeave(index)}
+            >
+              <Link href={menu.slug} className="topnav__item-link">
+                {menu.text}
+              </Link>
+
+              <span
+                ref={(el) => {
+                  linesRef.current[index] = el;
+                }}
+                className="topnav__line"
+              />
+            </li>
+          );
+        })}
+
+        <li className="topnav__item topnav__search">
           <input
             type="text"
             placeholder="search here"
             className="topnav__search--input"
           />
         </li>
+
         <li className="topnav__item">
           <div className="topnav__icons">
-            <Terminal className="topnav__icons--icon-1 mr-2" />
-            <Setting className="topnav__icons--icon-2 " />
+            <Terminal className="topnav__icons--icon" />
+            <Setting className="topnav__icons--icon" />
           </div>
         </li>
-        <li className="topnav__item">
+
+        <li className="topnav__item topnav__contact">
           <button className="topnav__contact--btn">CONTACT US</button>
         </li>
       </ul>

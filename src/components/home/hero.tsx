@@ -3,10 +3,10 @@ import useHero from "@/hooks/home/useHero";
 import Image from "next/image";
 
 const Hero = () => {
-  const { containerRef, containerRefBadge, containerRefText } = useHero();
+  const { rootRef, badgeRef, imageRef, textRef } = useHero();
   return (
-    <section className="hero">
-      <div className="hero__img--container" ref={containerRef}>
+    <section className="hero" ref={rootRef}>
+      <div className="hero__img--container" ref={imageRef}>
         <Image
           className="hero__img"
           src="/hero.webp"
@@ -15,19 +15,19 @@ const Hero = () => {
           height={500}
           preload
         />
-        <div className="hero__img--badge" ref={containerRefBadge}>
+        <div className="hero__img--badge" ref={badgeRef}>
           <p className="hero__img--badge--header ">NODE_STATUS</p>
           <p className="hero__img--badge--sub ">SYNCHRONIZED</p>
         </div>
       </div>
 
-      <div className="hero__text" ref={containerRefText}>
+      <div className="hero__text" ref={textRef}>
         <h1 className="hero__text--header-1">Engineered</h1>
         <h1 className="hero__text--header-2">Precision.</h1>
         <h2 className="hero__text--body">
-          Architecting Intelligence through heigh-fidelity hardware synthesis
-          and next-generation industrial computing. We build the infrastructure
-          of tomorrow.
+          Architecting Intelligence through high-fidelity hardware synthesis and
+          next-generation industrial computing. We build the infrastructure of
+          tomorrow.
         </h2>
         <button className="hero__text--btn">Schedule a Meeting</button>
       </div>

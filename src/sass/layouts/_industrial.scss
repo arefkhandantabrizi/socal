@@ -9,12 +9,9 @@
   justify-content: space-between;
   gap: 5rem;
 
-  &__images {
-    display: flex;
-    align-items: center;
-  }
-
   &__text {
+    flex: 1;
+
     &--header {
       font-size: 3rem;
       color: $white-color;
@@ -23,12 +20,14 @@
       line-height: 1;
       padding-bottom: 3rem;
     }
+
     &--body {
       font-size: 1.3rem;
       color: $technicalUI-color;
       padding-bottom: 3rem;
       width: 70%;
     }
+
     &--link {
       text-transform: uppercase;
       color: $white-color;
@@ -37,8 +36,11 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+      opacity: 0;
 
-      --line-scale: 0;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
 
       &::before {
         content: "";
@@ -46,49 +48,53 @@
         width: 4rem;
         height: 0.1rem;
         background-color: $accent-color;
-
-        transform: scaleX(var(--line-scale));
         transform-origin: left center;
+        flex-shrink: 0;
       }
     }
   }
 
-  &__architectures {
-    &--wrapper {
-      position: relative;
-    }
-    &--image {
-      position: relative;
-    }
-    &--text {
-      position: absolute;
-      bottom: 3rem;
-      width: 40rem;
-      text-align: center;
-      z-index: 10;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      color: $white-color;
-      font-weight: 700;
-    }
+  &__images {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4rem;
   }
-  &__dashboard {
-    &--wrapper {
-      position: relative;
-    }
-    &--image {
-      position: relative;
-    }
-    &--text {
-      position: absolute;
-      bottom: 2rem;
-      text-align: center;
-      z-index: 10;
-      width: 33rem;
-      font-size: 1.5rem;
-      color: $white-color;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+
+  &__image-wrapper {
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: $black-color;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__image--computer {
+    transform: scale(1.08);
+  }
+
+  &__image--dashboard {
+    transform: scale(1);
+  }
+
+  &__image-label {
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: $white-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    pointer-events: none;
   }
 }
