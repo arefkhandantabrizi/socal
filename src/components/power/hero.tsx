@@ -1,6 +1,10 @@
+"use client";
+
+import useEfficiencyCounter from "@/hooks/power/useEfficiencyCounter";
 import Image from "next/image";
 
 const Hero = () => {
+  const { containerRef, efficiencyRef } = useEfficiencyCounter();
   return (
     <section className="power__hero">
       <Image
@@ -17,19 +21,24 @@ const Hero = () => {
           electrical_ <br /> engineering_
         </h1>
         <h1 className="power__hero--text--header-3">core</h1>
-        <h2 className="power__hero--text--body">
-          Architecting resillient power infrastructures through high-fidelity
-          modeling and precision execution. From grid scale distribution to
-          sustainable energy integration.
-        </h2>
-      </div>
-      <div className="power__hero--badge">
-        <div className="power__hero--badge--header">status</div>
-        <div className="power__hero--badge--body">synced</div>
-      </div>
-      <div className="power__hero--badge">
-        <div className="power__hero--badge--header">efficiency</div>
-        <div className="power__hero--badge--body">99.8%</div>
+        <div className="power__hero--text--body--wrapper">
+          <h2 className="power__hero--text--body">
+            Architecting resillient power infrastructures through high-fidelity
+            modeling and precision execution. From grid scale distribution to
+            sustainable energy integration.
+          </h2>
+          <div className="power__hero--badge">
+            <div className="power__hero--badge--header">status</div>
+            <div className="power__hero--badge--body">synced</div>
+          </div>
+          <div className="power__hero--badge" ref={containerRef}>
+            <div className="power__hero--badge--header">efficiency</div>
+            <div
+              className="power__hero--badge--body power__hero--badge--body-1"
+              ref={efficiencyRef}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

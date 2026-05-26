@@ -1,9 +1,9 @@
-import Hero from "@/components/power/hero";
+import PowerClient from "@/components/power/powerClient";
 
 const Power = () => {
   return (
     <>
-      <Hero />
+      <PowerClient />
     </>
   );
 };

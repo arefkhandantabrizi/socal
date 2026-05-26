@@ -1,8 +1,91 @@
 @use "../abstracts/variables" as *;
 
-.power {
-  &__hero {
-    &--image {
+.power__hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100dvw;
+  &--image {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    max-height: 100vh;
+    width: 100dvw;
+    object-position: center;
+    overflow: hidden;
+  }
+
+  &--text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 10;
+    padding: 0 5rem;
+    align-self: center;
+    &--header-1 {
+      color: $ethosText-color;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      cursor: default;
+    }
+    &--header-2 {
+      color: $white-color;
+      font-size: 7.5rem;
+      font-weight: 800;
+      line-height: 1;
+      cursor: default;
+      text-transform: uppercase;
+    }
+    &--header-3 {
+      color: $accent-color;
+      font-size: 7.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 2rem;
+      cursor: default;
+      text-transform: uppercase;
+    }
+    &--body {
+      color: $technicalUI-color;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      cursor: default;
+      padding: 0 2rem;
+      border-left: 1px solid rgba($accent-color, 0.4);
+      width: 30%;
+      margin-right: 7rem;
+
+      &--wrapper {
+        display: flex;
+        width: 100dvw;
+        gap: 2rem;
+        align-items: center;
+      }
+    }
+  }
+
+  &--badge {
+    display: flex;
+    padding: 1rem;
+    background-color: $secondary-color;
+    flex-direction: column;
+    align-items: center;
+    &--header {
+      color: $ethosText-color;
+      font-weight: 600;
+      cursor: default;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    &--body {
+      font-weight: 500;
+      cursor: default;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      color: $accent-color;
+
+      &-1 {
+        color: $white-color;
+      }
     }
   }
 }
