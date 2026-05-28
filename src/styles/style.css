@@ -1052,6 +1052,7 @@ body {
   letter-spacing: 0.2rem;
   font-weight: 600;
   color: #eeeeee;
+  cursor: default;
 }
 .design__text--tag {
   display: flex;
@@ -1113,6 +1114,7 @@ body {
   font-size: 1.7rem;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: default;
 }
 .design__shapes--compass--wrapper {
   border-bottom: 1px solid #1c2024;
@@ -1148,6 +1150,7 @@ body {
   font-size: 1.7rem;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: default;
 }
 .design__shapes--synthesis {
   width: 10rem;
@@ -1167,17 +1170,20 @@ body {
   font-size: 1.7rem;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: default;
 }
 .design__shapes--deployment--texts {
   background-color: #10252b;
   border: 0.5px solid #00f2ff;
   padding: 0.7rem 1rem;
   color: #00f2ff;
+  cursor: default;
 }
 .design__shapes--deployment--text {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 500;
+  cursor: default;
 }
 .design__shapes--deployment--wrapper {
   padding-left: 5rem;
@@ -1192,6 +1198,190 @@ body {
   font-size: 1.7rem;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: default;
+}
+
+.solar {
+  background-color: #040404;
+  padding: 10rem 5rem;
+}
+.solar__cards {
+  display: flex;
+  position: relative;
+  perspective: 100rem;
+}
+.solar__card, .solar__analysis {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.solar__card {
+  flex: 0 0 50%;
+  background-color: #171d22;
+  padding: 5rem;
+  position: relative;
+  border-left: 3px solid #00f2ff;
+}
+.solar__card--btn {
+  padding: 0.5rem 1rem;
+  background-color: #00f2ff;
+  color: #173138;
+  text-transform: uppercase;
+  border: 1px solid #00f2ff;
+  outline: none;
+  cursor: pointer;
+  font: var(--font-primary), sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.solar__card--btn--wrapper {
+  padding-top: 5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.solar__card--btn--outline {
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  color: #00f2ff;
+  text-transform: uppercase;
+  border: 1px solid #a7abb1;
+  outline: none;
+  cursor: pointer;
+  font: var(--font-primary), sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.solar__card--label {
+  text-transform: uppercase;
+  color: #00f2ff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+.solar__card--icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  fill: #a7abb1;
+  cursor: default;
+}
+.solar__card--icon * {
+  fill: currentColor;
+}
+.solar__card--icon--wrapper {
+  position: absolute;
+  display: block;
+  top: 1rem;
+  right: 2rem;
+  color: #a7abb1;
+}
+.solar__card--header {
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: #eeeeee;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 3rem;
+  cursor: default;
+}
+.solar__card--body {
+  font-size: 1.4rem;
+  color: #a7abb1;
+  font-weight: 400;
+  width: 80%;
+  cursor: default;
+}
+.solar__analysis {
+  flex: 0 0 50%;
+  background-color: #1f272e;
+  position: absolute;
+  z-index: 2;
+  top: 2rem;
+  left: 48%;
+  padding: 5rem;
+}
+.solar__analysis--label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #ff4b4b;
+  font-weight: 700;
+}
+.solar__analysis--label--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.solar__analysis--label--indicator {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #ff4b4b;
+  display: block;
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+.solar__analysis--header {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #eeeeee;
+  font-weight: 900;
+  line-height: 1;
+  cursor: default;
+}
+.solar__analysis--bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+.solar__analysis--bar {
+  position: relative;
+  width: 100%;
+  height: 0.4rem;
+  overflow: hidden;
+  background-color: rgba(28, 32, 36, 0.35);
+}
+.solar__analysis--bar--fill {
+  width: 100%;
+  height: 100%;
+  background-color: #00f2ff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+.solar__analysis--bar--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(28, 32, 36, 0.35);
+}
+.solar__analysis--bar--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.solar__analysis--bar--title {
+  color: rgba(238, 238, 238, 0.65);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.solar__analysis--bar--label {
+  color: #00f2ff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.solar__analysis--quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  width: 90%;
+  color: #a7abb1;
 }
 
 .power {

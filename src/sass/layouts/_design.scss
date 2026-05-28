@@ -51,6 +51,7 @@
       letter-spacing: 0.2rem;
       font-weight: 600;
       color: $white-color;
+      cursor: default;
     }
     &--tag {
       display: flex;
@@ -113,6 +114,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         text-transform: uppercase;
+        cursor: default;
       }
       &--wrapper {
         border-bottom: 1px solid $secondary-color;
@@ -151,6 +153,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         text-transform: uppercase;
+        cursor: default;
       }
     }
     &--synthesis {
@@ -170,6 +173,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         text-transform: uppercase;
+        cursor: default;
       }
     }
     &--deployment {
@@ -178,11 +182,13 @@
         border: 0.5px solid $accent-color;
         padding: 0.7rem 1rem;
         color: $accent-color;
+        cursor: default;
       }
       &--text {
         font-size: 1.6rem;
         text-transform: uppercase;
         font-weight: 500;
+        cursor: default;
       }
       &--wrapper {
         padding-left: 5rem;
@@ -197,6 +203,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         text-transform: uppercase;
+        cursor: default;
       }
     }
   }
