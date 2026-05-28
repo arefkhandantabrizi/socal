@@ -928,6 +928,7 @@ body {
   grid-row: 1/2;
   max-height: 100vh;
   width: 100dvw;
+  max-width: 200rem;
   object-position: center;
   overflow: hidden;
 }
@@ -976,6 +977,7 @@ body {
 .power__hero--text--body--wrapper {
   display: flex;
   width: 100dvw;
+  max-width: 200rem;
   gap: 2rem;
   align-items: center;
 }
@@ -1002,6 +1004,194 @@ body {
 }
 .power__hero--badge--body-1 {
   color: #eeeeee;
+}
+
+.design {
+  padding: 10rem 5rem;
+  background-color: rgba(28, 32, 36, 0.4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.design__text {
+  grid-column: 1/2;
+}
+.design__text--label {
+  color: #99f7ff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  cursor: default;
+  text-transform: uppercase;
+}
+.design__text--header {
+  color: #eeeeee;
+  font-size: 7.5rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 3rem;
+  cursor: default;
+  text-transform: uppercase;
+}
+.design__text--body {
+  color: #a7abb1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  cursor: default;
+  width: 80%;
+}
+.design__text--spacer {
+  width: 80%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, transparent 0%, rgba(91, 144, 151, 0.9) 4%, rgba(91, 144, 151, 0.75) 45%, rgba(91, 144, 151, 0.35) 75%, transparent 100%);
+  margin: 3rem 0;
+}
+.design__text--tags {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color: #eeeeee;
+}
+.design__text--tag {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+.design__text--tag--dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #173138;
+  flex-shrink: 0;
+  will-change: background-color;
+}
+.design__shapes {
+  margin-left: 5rem;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  background-color: #040404;
+  padding: 5rem 5rem;
+}
+.design__shapes--compass {
+  width: 10rem;
+  height: 10rem;
+  fill: #1c2024;
+}
+.design__shapes--compass--frame {
+  width: 30rem;
+  height: 17rem;
+  position: relative;
+  padding: 3rem 2rem;
+}
+.design__shapes--compass--frame::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #173138;
+  border-bottom: 2px solid #173138;
+}
+.design__shapes--compass--frame::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-top: 2px solid #173138;
+  border-right: 2px solid #173138;
+}
+.design__shapes--compass--title {
+  margin-top: 10rem;
+  margin-bottom: 2.5rem;
+  color: #eeeeee;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.design__shapes--compass--wrapper {
+  border-bottom: 1px solid #1c2024;
+  border-right: 1px solid #1c2024;
+  padding-right: 5rem;
+  padding-top: 5rem;
+  min-width: 35rem;
+  min-height: 32rem;
+}
+.design__shapes--square {
+  width: 13rem;
+  height: 13rem;
+  border: 2px dashed #173138;
+  align-self: center;
+  padding: 3rem 2rem;
+  transform-origin: center center;
+  will-change: transform;
+}
+.design__shapes--square--wrapper {
+  border-bottom: 1px solid #1c2024;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+  padding-top: 7.5rem;
+  min-width: 35rem;
+  min-height: 32rem;
+  justify-content: space-between;
+}
+.design__shapes--square--title {
+  margin-top: 10rem;
+  margin-bottom: 2.5rem;
+  color: #eeeeee;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.design__shapes--synthesis {
+  width: 10rem;
+  height: 10rem;
+}
+.design__shapes--synthesis--wrapper {
+  border-right: 1px solid #1c2024;
+  padding-right: 5rem;
+  padding-top: 5rem;
+  min-width: 35rem;
+  min-height: 32rem;
+}
+.design__shapes--synthesis--title {
+  margin-top: 10rem;
+  margin-bottom: 2.5rem;
+  color: #eeeeee;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.design__shapes--deployment--texts {
+  background-color: #10252b;
+  border: 0.5px solid #00f2ff;
+  padding: 0.7rem 1rem;
+  color: #00f2ff;
+}
+.design__shapes--deployment--text {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.design__shapes--deployment--wrapper {
+  padding-left: 5rem;
+  padding-top: 5rem;
+  min-width: 35rem;
+  min-height: 32rem;
+}
+.design__shapes--deployment--title {
+  margin-top: 11rem;
+  margin-bottom: 2.5rem;
+  color: #eeeeee;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .power {

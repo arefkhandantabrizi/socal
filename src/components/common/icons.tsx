@@ -1,4 +1,5 @@
 import IIcons from "@/interfaces/common/icons";
+import { useId } from "react";
 
 export const Setting = ({ className }: IIcons) => {
   return (
@@ -85,6 +86,40 @@ export const Linkedin = ({ className }: IIcons) => {
       viewBox="0 0 24 28"
     >
       <path d="M3.703 22.094h3.609v-10.844h-3.609v10.844zM7.547 7.906c-0.016-1.062-0.781-1.875-2.016-1.875s-2.047 0.812-2.047 1.875c0 1.031 0.781 1.875 2 1.875h0.016c1.266 0 2.047-0.844 2.047-1.875zM16.688 22.094h3.609v-6.219c0-3.328-1.781-4.875-4.156-4.875-1.937 0-2.797 1.078-3.266 1.828h0.031v-1.578h-3.609s0.047 1.016 0 10.844v0h3.609v-6.062c0-0.313 0.016-0.641 0.109-0.875 0.266-0.641 0.859-1.313 1.859-1.313 1.297 0 1.813 0.984 1.813 2.453v5.797zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z"></path>
+    </svg>
+  );
+};
+export const MiniBarsIcon = ({ className }: IIcons) => {
+  const gradientId = useId();
+
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 52 98"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient
+          id={gradientId}
+          x1="0"
+          y1="0"
+          x2="52"
+          y2="0"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#8DFFFF" />
+          <stop offset="35%" stopColor="#5D9A9F" />
+          <stop offset="70%" stopColor="#3E666D" />
+          <stop offset="100%" stopColor="#263F46" />
+        </linearGradient>
+      </defs>
+
+      <g fill={`url(#${gradientId})`}>
+        <rect x="0" y="0" width="7" height="74" />
+        <rect x="21" y="0" width="7" height="49" />
+        <rect x="42" y="0" width="7" height="98" />
+      </g>
     </svg>
   );
 };
@@ -755,6 +790,23 @@ export const Calibration = ({ className }: IIcons) => {
           </g>
         </g>
       </g>
+    </svg>
+  );
+};
+
+export const CompassIcon = ({ className }: IIcons) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 500 500"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M309 177L293 193L278 201L270 203L270 205L288 262L295 291L326 391L328 401L333 415L335 427L339 437L339 440L346 462L353 469L363 472L371 498L372 499L378 499L379 495L375 485L374 477L371 469L378 461L379 450L374 433L374 428L368 403L366 399L359 368L357 364L350 333L348 329L333 269L332 260L320 212L318 208L311 177ZM190 177L188 178L181 209L179 213L167 261L167 266L161 290L159 294L150 333L148 337L143 360L135 387L125 427L125 432L120 449L121 461L129 469L126 476L125 485L122 494L122 497L124 499L129 499L130 498L136 473L138 471L146 469L151 465L154 460L163 431L163 428L166 421L166 416L182 367L188 344L194 328L197 315L207 285L210 270L231 204L221 201L211 196L200 188ZM249 108L238 112L232 118L230 122L229 132L232 140L238 146L244 149L250 150L258 148L265 143L270 134L270 124L268 119L264 114L258 110ZM241 59L223 64L215 68L205 75L194 86L188 95L182 110L180 120L180 138L182 148L188 163L197 175L209 186L223 194L232 197L242 199L257 199L258 198L268 197L284 190L294 183L304 173L310 165L315 155L319 141L320 125L319 124L319 117L317 108L309 91L303 83L293 74L286 69L267 61L258 59ZM246 101L253 101L264 105L273 114L277 123L277 135L273 144L262 154L253 157L243 156L233 151L226 143L222 133L222 124L228 112L234 106L239 103ZM235 4L231 9L228 16L228 55L239 52L260 52L272 55L272 20L268 8L258 0L242 0Z"
+      />
     </svg>
   );
 };

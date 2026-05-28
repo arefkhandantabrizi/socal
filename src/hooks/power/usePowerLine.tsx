@@ -23,7 +23,7 @@ const usePowerLine = () => {
           y: () => section.offsetHeight - line.offsetHeight,
           opacity: 0.4,
           ease: "none",
-          duration: 2.5,
+          duration: 5,
           repeat: -1,
           repeatRefresh: true,
         },

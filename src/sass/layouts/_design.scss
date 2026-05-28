@@ -1,0 +1,203 @@
+@use "../abstracts/variables" as *;
+
+.design {
+  padding: 10rem 5rem;
+  background-color: $ethos-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  &__text {
+    grid-column: 1 / 2;
+    &--label {
+      color: $ethosText-color;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      cursor: default;
+      text-transform: uppercase;
+    }
+    &--header {
+      color: $white-color;
+      font-size: 7.5rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 3rem;
+      cursor: default;
+      text-transform: uppercase;
+    }
+    &--body {
+      color: $technicalUI-color;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      cursor: default;
+      width: 80%;
+    }
+    &--spacer {
+      width: 80%;
+      height: 0.2rem;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(91, 144, 151, 0.9) 4%,
+        rgba(91, 144, 151, 0.75) 45%,
+        rgba(91, 144, 151, 0.35) 75%,
+        transparent 100%
+      );
+      margin: 3rem 0;
+    }
+    &--tags {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+      color: $white-color;
+    }
+    &--tag {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 1rem 0;
+
+      &--dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: $border-color;
+        flex-shrink: 0;
+        will-change: background-color;
+      }
+    }
+  }
+  &__shapes {
+    margin-left: 5rem;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    background-color: $black-color;
+    padding: 5rem 5rem;
+    &--compass {
+      width: 10rem;
+      height: 10rem;
+      fill: $secondary-color;
+      &--frame {
+        width: 30rem;
+        height: 17rem;
+        position: relative;
+        padding: 3rem 2rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          border-left: 2px solid $border-color;
+          border-bottom: 2px solid $border-color;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 7.5rem;
+          height: 7.5rem;
+          border-top: 2px solid $border-color;
+          border-right: 2px solid $border-color;
+        }
+      }
+      &--title {
+        margin-top: 10rem;
+        margin-bottom: 2.5rem;
+        color: $white-color;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      &--wrapper {
+        border-bottom: 1px solid $secondary-color;
+        border-right: 1px solid $secondary-color;
+        padding-right: 5rem;
+        padding-top: 5rem;
+        min-width: 35rem;
+        min-height: 32rem;
+      }
+    }
+
+    &--square {
+      width: 13rem;
+      height: 13rem;
+      border: 2px dashed $border-color;
+      align-self: center;
+      padding: 3rem 2rem;
+
+      transform-origin: center center;
+      will-change: transform;
+
+      &--wrapper {
+        border-bottom: 1px solid $secondary-color;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-top: 7.5rem;
+        min-width: 35rem;
+        min-height: 32rem;
+        justify-content: space-between;
+      }
+      &--title {
+        margin-top: 10rem;
+        margin-bottom: 2.5rem;
+        color: $white-color;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    &--synthesis {
+      width: 10rem;
+      height: 10rem;
+      &--wrapper {
+        border-right: 1px solid $secondary-color;
+        padding-right: 5rem;
+        padding-top: 5rem;
+        min-width: 35rem;
+        min-height: 32rem;
+      }
+      &--title {
+        margin-top: 10rem;
+        margin-bottom: 2.5rem;
+        color: $white-color;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    &--deployment {
+      &--texts {
+        background-color: $shape-color;
+        border: 0.5px solid $accent-color;
+        padding: 0.7rem 1rem;
+        color: $accent-color;
+      }
+      &--text {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      &--wrapper {
+        padding-left: 5rem;
+        padding-top: 5rem;
+        min-width: 35rem;
+        min-height: 32rem;
+      }
+      &--title {
+        margin-top: 11rem;
+        margin-bottom: 2.5rem;
+        color: $white-color;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
