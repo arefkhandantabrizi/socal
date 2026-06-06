@@ -11,8 +11,14 @@ const Solar = () => {
     analysisCardEvents,
   } = useSolarTilt();
 
-  const { analysisRef, indicatorRef, harmonicFillRef, flowFillRef } =
-    useSolarAnalysisAnimation();
+  const {
+    analysisRef,
+    indicatorRef,
+    harmonicFillRef,
+    flowFillRef,
+    flowTextRef,
+    harmonicTextRef,
+  } = useSolarAnalysisAnimation();
 
   const setAnalysisRefs = (node: HTMLDivElement | null) => {
     analysisRef.current = node;
@@ -67,7 +73,12 @@ const Solar = () => {
                 <span className="solar__analysis--bar--title">
                   harmonic distortion
                 </span>
-                <span className="solar__analysis--bar--label">0.03%</span>
+                <span
+                  className="solar__analysis--bar--label"
+                  ref={harmonicTextRef}
+                >
+                  0.03%
+                </span>
               </div>
 
               <div className="solar__analysis--bar">
@@ -83,7 +94,9 @@ const Solar = () => {
                 <span className="solar__analysis--bar--title">
                   short circuit flow
                 </span>
-                <span className="solar__analysis--bar--label">stable</span>
+                <span className="solar__analysis--bar--label" ref={flowTextRef}>
+                  stable
+                </span>
               </div>
 
               <div className="solar__analysis--bar">

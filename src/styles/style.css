@@ -850,12 +850,14 @@ body {
   font-weight: 600;
   line-height: 1;
   padding-bottom: 3rem;
+  cursor: default;
 }
 .industrial__text--body {
   font-size: 1.3rem;
   color: #a7abb1;
   padding-bottom: 3rem;
   width: 70%;
+  cursor: default;
 }
 .industrial__text--link {
   text-transform: uppercase;
@@ -866,6 +868,7 @@ body {
   align-items: center;
   gap: 2rem;
   opacity: 0;
+  cursor: default;
 }
 .industrial__text--link:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -916,6 +919,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   pointer-events: none;
+  cursor: default;
 }
 
 .power__hero {
@@ -1382,6 +1386,112 @@ body {
   font-style: italic;
   width: 90%;
   color: #a7abb1;
+}
+
+.ecosystem {
+  background-color: #0e1419;
+  padding: 10rem 5rem;
+}
+.ecosystem__label {
+  text-transform: uppercase;
+  color: #99f7ff;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: default;
+}
+.ecosystem__header {
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-size: 5rem;
+  font-weight: 900;
+  cursor: default;
+}
+.ecosystem__header--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ecosystem__header--icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #a7abb1;
+}
+.ecosystem__header--icon--wrappers {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  margin-right: 5rem;
+}
+.ecosystem__header--icon--wrapper {
+  padding: 1rem;
+  background-color: #141a20;
+  border: 1px solid #a7abb1;
+  cursor: pointer;
+}
+.ecosystem__carousel {
+  overflow: hidden;
+  position: relative;
+  overflow-x: scroll;
+  padding: 5rem 0;
+}
+.ecosystem__carousel::-webkit-scrollbar {
+  display: none;
+}
+.ecosystem__carousel--items {
+  display: flex;
+  column-gap: 5rem;
+  min-width: 82vw;
+  width: max-content;
+}
+.ecosystem__carousel--item {
+  background-color: #1a2027;
+  padding: 7.5rem 5rem;
+  max-width: 28.5714285714vw;
+  position: relative;
+}
+.ecosystem__carousel--item--icon--wrapper {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+}
+.ecosystem__carousel--item--header {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #eeeeee;
+  margin-top: 8rem;
+  cursor: default;
+  line-height: 1;
+}
+.ecosystem__carousel--item--body {
+  font-size: 1.5rem;
+  color: #a7abb1;
+  padding: 2rem 0;
+  cursor: default;
+}
+.ecosystem__carousel--item--label {
+  text-transform: uppercase;
+  padding: 1rem;
+  background-color: #0e2937;
+  color: #99f7ff;
+  border: 0.1px solid #99f7ff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: default;
+}
+.ecosystem__carousel--item--label--wrapper {
+  display: flex;
+  column-gap: 2rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 5rem;
+}
+.ecosystem__carousel--icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #00f2ff;
 }
 
 .power {

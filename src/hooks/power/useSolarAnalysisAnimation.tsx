@@ -1,13 +1,12 @@
 import gsap from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const useSolarAnalysisAnimation = () => {
   const analysisRef = useRef<HTMLDivElement | null>(null);
   const indicatorRef = useRef<HTMLSpanElement | null>(null);
+  const harmonicTextRef = useRef<HTMLSpanElement | null>(null);
+  const flowTextRef = useRef<HTMLSpanElement | null>(null);
   const harmonicFillRef = useRef<HTMLDivElement | null>(null);
   const flowFillRef = useRef<HTMLDivElement | null>(null);
 
@@ -17,12 +16,26 @@ const useSolarAnalysisAnimation = () => {
       const indicator = indicatorRef.current;
       const harmonicFill = harmonicFillRef.current;
       const flowFill = flowFillRef.current;
+      const harmonicText = harmonicTextRef.current;
+      const flowText = flowTextRef.current;
 
-      if (!analysis || !indicator || !harmonicFill || !flowFill) return;
+      if (
+        !analysis ||
+        !indicator ||
+        !harmonicFill ||
+        !flowFill ||
+        !harmonicText ||
+        !flowText
+      )
+        return;
 
       gsap.set([harmonicFill, flowFill], {
         scaleX: 0,
         transformOrigin: "left center",
+      });
+
+      gsap.set([harmonicText, flowText], {
+        opacity: 0,
       });
 
       gsap.to(indicator, {
@@ -46,15 +59,26 @@ const useSolarAnalysisAnimation = () => {
         scaleX: 0.75,
         duration: 1.1,
         ease: "power3.out",
-      }).to(
-        flowFill,
-        {
-          scaleX: 0.5,
-          duration: 1.1,
-          ease: "power3.out",
-        },
-        "-=0.75",
-      );
+      })
+        .to(
+          harmonicText,
+          { opacity: 1, duration: 0.6, ease: "power4.inOut" },
+          "-=0.75",
+        )
+        .to(
+          flowFill,
+          {
+            scaleX: 1,
+            duration: 1.1,
+            ease: "power3.out",
+          },
+          "-=0.75",
+        )
+        .to(
+          flowText,
+          { opacity: 1, duration: 0.6, ease: "power4.inOut" },
+          "-=0.75",
+        );
     },
     {
       scope: analysisRef,
@@ -66,6 +90,8 @@ const useSolarAnalysisAnimation = () => {
     indicatorRef,
     harmonicFillRef,
     flowFillRef,
+    flowTextRef,
+    harmonicTextRef,
   };
 };
 

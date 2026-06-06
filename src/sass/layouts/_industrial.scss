@@ -19,6 +19,7 @@
       font-weight: 600;
       line-height: 1;
       padding-bottom: 3rem;
+      cursor: default;
     }
 
     &--body {
@@ -26,6 +27,7 @@
       color: $technicalUI-color;
       padding-bottom: 3rem;
       width: 70%;
+      cursor: default;
     }
 
     &--link {
@@ -37,6 +39,7 @@
       align-items: center;
       gap: 2rem;
       opacity: 0;
+      cursor: default;
 
       &:not(:last-child) {
         margin-bottom: 1.5rem;
@@ -96,5 +99,6 @@
     font-weight: 700;
     text-transform: uppercase;
     pointer-events: none;
+    cursor: default;
   }
 }

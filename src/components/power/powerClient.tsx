@@ -3,6 +3,7 @@ import usePowerLine from "@/hooks/power/usePowerLine";
 import Hero from "./hero";
 import DesignAndPlanning from "./designAndPlanning";
 import Solar from "./solar";
+import Ecosystem from "./ecosystem";
 
 const PowerClient = () => {
   const { lineRef, sectionRef } = usePowerLine();
@@ -12,6 +13,7 @@ const PowerClient = () => {
       <Hero />
       <DesignAndPlanning />
       <Solar />
+      <Ecosystem />
     </section>
   );
 };
