@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export default interface IDivisionCard {
-  extraClassName: string;
+  extraClassName?: string;
   icon: ReactNode;
   title: string;
   bodyExtraClassName?: string;
@@ -9,4 +9,6 @@ export default interface IDivisionCard {
   hasLinks: boolean;
   links?: string[];
   isActive: boolean;
+  index?: number;
+  panelRef?: (el: HTMLDivElement | null) => void;
 }

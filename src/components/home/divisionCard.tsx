@@ -2,36 +2,33 @@ import IDivisionCard from "@/interfaces/home/divisionCard";
 
 const DivisionCard = ({
   title,
-  extraClassName,
-  bodyExtraClassName,
   bodyText,
-  hasLinks,
   links,
   icon,
-  isActive,
+  index,
+  panelRef,
 }: IDivisionCard) => {
   return (
-    <div className={`divisions__card ${extraClassName}`}>
-      <div className="divisions__card--header">{icon}</div>
-      <div className="divisions__card--title">{title}</div>
-      <div className={`divisions__card--body ${bodyExtraClassName}`}>
-        {bodyText}
+    <div className="divisions__panel" ref={panelRef}>
+      <div className="divisions__visual">
+        <div className="divisions__visual--box">{icon}</div>
       </div>
-      {hasLinks && (
-        <div className="divisions__card--links">
-          {links?.map((l, i) => {
-            return isActive ? (
-              <div key={i} className={`divisions__card--link-${i + 1}`}>
-                {l} &nbsp; &nbsp; &rarr;
-              </div>
-            ) : (
-              <div key={i} className={`divisions__card--link-${i + 1}`}>
-                {l}
-              </div>
-            );
-          })}
+
+      <div className="divisions__content">
+        <div className="divisions__label">
+          SECTOR_0{index === undefined ? 1 : index + 1}
         </div>
-      )}
+
+        <h2 className="divisions__title">{title}</h2>
+
+        <p className="divisions__body">{bodyText}</p>
+
+        <div className="divisions__links">
+          {links?.map((link, i) => (
+            <div key={i}>{link}</div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

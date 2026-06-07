@@ -1,8 +1,10 @@
+import useEthosText from "@/hooks/home/useEthosText";
 import { MultipleConnector, RoboticArm } from "../common/icons";
 
 const EthosText = () => {
+  const { containerRef } = useEthosText();
   return (
-    <div className="ethos__texts">
+    <div className="ethos__texts" ref={containerRef}>
       <span className="ethos__label">ETHOS_101</span>
       <h3 className="ethos__header">Architecting the</h3>
       <h3 className="ethos__subheader">future.</h3>

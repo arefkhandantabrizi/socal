@@ -66,7 +66,7 @@ const useEthos = () => {
         opacity: 0,
         y: 40,
         duration: 0.5,
-        ease: "power3.out",
+        ease: "power4.inOut",
       })
         .to(chevron1, {
           opacity: 1,
@@ -111,7 +111,7 @@ const useEthos = () => {
           {
             scaleX: 0.4,
             duration: 2,
-            ease: "power2.out",
+            ease: "power4.inOut",
             transformOrigin: "left",
           },
           "<",
