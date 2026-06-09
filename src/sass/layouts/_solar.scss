@@ -8,6 +8,10 @@
     display: flex;
     position: relative;
     perspective: 100rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
   }
   &__card,
   &__analysis {
@@ -21,6 +25,10 @@
     padding: 5rem;
     position: relative;
     border-left: 3px solid $accent-color;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 0 0 100%;
+    }
 
     &--btn {
       padding: 0.5rem 1rem;
@@ -106,6 +114,15 @@
     top: 2rem;
     left: 48%;
     padding: 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 0 0 100%;
+      width: 90%;
+      top: unset;
+      left: unset;
+      bottom: -80%;
+      align-self: center;
+    }
 
     &--label {
       text-transform: uppercase;

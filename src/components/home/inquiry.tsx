@@ -5,6 +5,7 @@ import useInquiry from "@/hooks/home/useInquiry";
 const Inquiry = () => {
   const { btn1Ref, btn2Ref, containerRef, headerRef, labelRef, subheaderRef } =
     useInquiry();
+
   return (
     <div className="inquiry" ref={containerRef}>
       <div className="inquiry__label" ref={labelRef}>

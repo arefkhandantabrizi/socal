@@ -20,10 +20,18 @@
       transparent 50%
     );
 
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr;
+  }
+
   &__text {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     cursor: default;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 2 / 3;
+    }
 
     &--header-1 {
       color: $ethosText-color;
@@ -61,6 +69,11 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     cursor: default;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1 / 1;
+      width: 75dvw;
+    }
     &--container {
       padding: 5rem;
       background-color: $ethos-color;
@@ -70,6 +83,10 @@
       border-radius: 0.9rem;
       cursor: default;
       box-shadow: -1.5rem 0.9rem 2.6rem -0.6rem rgba($accent-color, 0.4);
+
+      @media only screen and (max-width: $bp-large) {
+        width: 85dvw;
+      }
     }
   }
 }

@@ -16,7 +16,7 @@ const useDivisions = () => {
     },
     {
       icon: <Lightning className="divisions__floating-icon--svg" />,
-      title: "Electrical",
+      title: "Power",
       bodyText:
         "Grid-scale power distribution and embedded logic systems for extreme environments.",
       hasLinks: true,
@@ -25,7 +25,7 @@ const useDivisions = () => {
     },
     {
       icon: <Calibration className="divisions__floating-icon--svg" />,
-      title: "Calibration & Testing",
+      title: "System Engineering & Calibraton",
       bodyText:
         "High-fidelity verification protocols and stress-testing for sub-micron component integrity across all hardware strata.",
       hasLinks: true,

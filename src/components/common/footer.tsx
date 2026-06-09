@@ -1,6 +1,10 @@
+"use client";
+import useFooter from "@/hooks/common/useFooter";
 import { Email, Github, Linkedin } from "./icons";
+import Link from "next/link";
 
 const Footer = () => {
+  const { containerRef, indicatorRef } = useFooter();
   return (
     <section className="footer">
       <div className="footer__items">
@@ -13,9 +17,21 @@ const Footer = () => {
         </div>
         <div className="footer__section footer__section--2">
           <div className="footer__title">DEPARTMENTAL_NODES</div>
-          <div className="footer__department">COMPUTER</div>
-          <div className="footer__department">ELECTRICAL</div>
-          <div className="footer__department">CALIBRATION & TESTING</div>
+          <div className="footer__department">
+            <Link href={"/computer"} className="footer__department">
+              COMPUTER
+            </Link>
+          </div>
+          <div className="footer__department">
+            <Link href={"/power"} className="footer__department">
+              POWER
+            </Link>
+          </div>
+          <div className="footer__department">
+            <Link href={"/calibration"} className="footer__department">
+              SYSTEM ENGINEERING & CALIBRATION
+            </Link>
+          </div>
         </div>
         <div className="footer__section footer__section--3">
           <div className="footer__title">PROTOCOL_LINKS</div>
@@ -39,7 +55,10 @@ const Footer = () => {
 
       <div className="footer__copyright">
         <div>&copy; 2026 SOCAL POWER GRID. ALL RIGHT RESERVED.</div>
-        <div className="footer__copyright--live">SYSTEM IS LIVE</div>
+        <div className="footer__copyright--live" ref={containerRef}>
+          <span ref={indicatorRef} className="footer__copyright--indicator" />
+          SYSTEM IS LIVE
+        </div>
       </div>
     </section>
   );

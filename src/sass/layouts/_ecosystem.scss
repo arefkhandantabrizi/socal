@@ -3,6 +3,10 @@
 .ecosystem {
   background-color: $ecosystem-color;
   padding: 10rem 5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 30rem;
+  }
   &__label {
     text-transform: uppercase;
     color: $ethosText-color;
@@ -17,6 +21,10 @@
     font-size: 5rem;
     font-weight: 900;
     cursor: default;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.5rem;
+    }
 
     &--wrapper {
       display: flex;
@@ -62,6 +70,10 @@
       padding: 7.5rem 5rem;
       max-width: calc(100vw / 3.5);
       position: relative;
+
+      @media only screen and (max-width: $bp-medium) {
+        max-width: calc(100vw / 2);
+      }
 
       &--icon--wrapper {
         position: absolute;

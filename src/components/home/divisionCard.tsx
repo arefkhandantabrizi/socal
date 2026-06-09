@@ -16,7 +16,7 @@ const DivisionCard = ({
 
       <div className="divisions__content">
         <div className="divisions__label">
-          SECTOR_0{index === undefined ? 1 : index + 1}
+          DEPARTMENT_0{index === undefined ? 1 : index + 1}
         </div>
 
         <h2 className="divisions__title">{title}</h2>

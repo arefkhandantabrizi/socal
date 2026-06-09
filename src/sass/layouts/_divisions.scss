@@ -2,39 +2,31 @@
 
 .divisions {
   height: 100vh;
-
   overflow: hidden;
-
   background: #02070b;
-
   position: relative;
 
   &__track {
     display: flex;
-
     width: max-content;
-
     height: 100vh;
-
+    width: 80dvh;
     will-change: transform;
   }
 
   &__panel {
     width: 100vw;
-
     height: 100vh;
-
     flex-shrink: 0;
-
     display: grid;
-
     grid-template-columns: 45% 55%;
-
     align-items: center;
-
     padding: 0 8rem;
-
     position: relative;
+    @media only screen and (max-width: $bp-large) {
+      padding: 0 2rem;
+      grid-template-columns: 35% 65%;
+    }
   }
 
   &__visual {
@@ -46,6 +38,11 @@
       width: 42rem;
       height: 42rem;
 
+      @media only screen and (max-width: $bp-large) {
+        width: 21rem;
+        height: 21rem;
+      }
+
       background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.06),
@@ -53,19 +50,20 @@
       );
 
       border: 1px solid rgba(0, 242, 255, 0.08);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       position: relative;
-
       overflow: hidden;
-
       svg {
         width: 10rem;
         height: 10rem;
-        fill: #00f2ff;
+        fill: $accent-color;
+
+        @media only screen and (max-width: $bp-large) {
+          width: 5rem;
+          height: 5rem;
+        }
       }
     }
   }
@@ -75,51 +73,39 @@
   }
 
   &__label {
-    color: #00f2ff;
-
+    color: $accent-color;
     letter-spacing: 0.4rem;
-
     font-size: 1.4rem;
-
     font-weight: 700;
-
     margin-bottom: 3rem;
   }
 
   &__title {
-    font-size: clamp(7rem, 9vw, 12rem);
-
+    font-size: clamp(5rem, 7vw, 12rem);
     font-weight: 900;
-
-    color: white;
-
+    color: $white-color;
     line-height: 0.9;
-
     margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-large) {
+      line-height: 1;
+    }
   }
 
   &__body {
     font-size: 2.4rem;
-
     line-height: 1.7;
-
-    color: rgba(255, 255, 255, 0.65);
-
+    color: rgba($technicalUI-color, 0.65);
     max-width: 70rem;
   }
 
   &__links {
     margin-top: 6rem;
-
     display: flex;
     flex-direction: column;
-
     row-gap: 2rem;
-
-    color: rgba(255, 255, 255, 0.3);
-
+    color: rgba(rgba($technicalUI-color, 0.65), 0.3);
     font-size: 1.6rem;
-
     letter-spacing: 0.2rem;
   }
 }

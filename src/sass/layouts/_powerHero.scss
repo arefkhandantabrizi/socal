@@ -12,6 +12,10 @@
     max-width: 200rem;
     object-position: center;
     overflow: hidden;
+    @media only screen and (max-width: $bp-medium) {
+      object-fit: cover;
+      aspect-ratio: 14/9;
+    }
   }
 
   &--text {
@@ -54,6 +58,10 @@
       border-left: 1px solid rgba($accent-color, 0.4);
       width: 30%;
       margin-right: 7rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+      }
 
       &--wrapper {
         display: flex;

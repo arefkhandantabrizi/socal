@@ -61,7 +61,6 @@ const Solar = () => {
               ref={indicatorRef}
               className="solar__analysis--label--indicator"
             />
-
             <div className="solar__analysis--label">active_analysis</div>
           </div>
           <h3 className="solar__analysis--header">
@@ -88,7 +87,6 @@ const Solar = () => {
                 />
               </div>
             </div>
-
             <div className="solar__analysis--bar--wrapper">
               <div className="solar__analysis--bar--header">
                 <span className="solar__analysis--bar--title">

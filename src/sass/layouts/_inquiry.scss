@@ -25,6 +25,9 @@
     font-weight: 900;
     color: $white-color;
     cursor: default;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
   }
 
   &__subheader {
@@ -33,6 +36,13 @@
     font-weight: 900;
     color: $accent-color;
     cursor: default;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+      text-align: center;
+      text-wrap-style: balance;
+      text-wrap-mode: nowrap;
+    }
   }
 
   &__btnwrapper {

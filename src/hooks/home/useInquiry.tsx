@@ -36,15 +36,10 @@ const useInquiry = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
-
           start: "top top",
-
           end: "+=120%",
-
           scrub: 1,
-
           pin: true,
-
           anticipatePin: 1,
         },
       });

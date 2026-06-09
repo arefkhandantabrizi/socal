@@ -10,7 +10,7 @@ const TEXT = {
   command1: "RUN SOCAL_Power_Grid.exe",
   line1: "Initializing hardware handshake... [SUCCESS]",
   line2:
-    "Scanning department nodes... Computer(OK), Electrical(COMING SOON), Calibration(COMING SOON)",
+    "Scanning department nodes... Computer(OK), Power(COMING SOON), System Engineering & Calibration(COMING SOON)",
   command2: "DEPLOY infrastructure",
   line3: "waiting for architectural sign-off",
 } as const;

@@ -1,13 +1,14 @@
 import gsap from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import useIsMobile from "../common/useIsMobile";
 
 const useDivisionAnimation = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
-
   const trackRef = useRef<HTMLDivElement | null>(null);
-
   const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const isMobile = useIsMobile();
 
   useGSAP(
     () => {
@@ -16,7 +17,9 @@ const useDivisionAnimation = () => {
 
       if (!section || !track) return;
 
-      const totalScroll = track.scrollWidth - window.innerWidth;
+      const totalScroll = !isMobile
+        ? track.scrollWidth - window.innerWidth
+        : track.scrollWidth + 90 - window.innerWidth;
 
       gsap.to(track, {
         x: -totalScroll,

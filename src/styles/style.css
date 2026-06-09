@@ -83,6 +83,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
   background-color: #020202;
   background-image: radial-gradient(circle at top left, rgba(43, 78, 255, 0.18) 0%, transparent 30%), radial-gradient(circle at top right, rgba(0, 183, 255, 0.1) 0%, transparent 28%), radial-gradient(circle at bottom center, rgba(140, 82, 255, 0.08) 0%, transparent 40%), linear-gradient(180deg, #020202 0%, #050507 50%, #010101 100%);
   background-attachment: fixed;
@@ -133,13 +134,19 @@ body {
   padding: 3rem 5rem;
   background-color: #040404;
 }
+@media only screen and (max-width: 62.5rem) {
+  .topnav {
+    width: 100vw;
+    overflow: hidden;
+  }
+}
 .topnav__items {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   list-style: none;
-  width: 100%;
+  width: 100dvw;
 }
 .topnav__brand {
   position: relative;
@@ -222,6 +229,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
 }
+@media only screen and (max-width: 50rem) {
+  .footer__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .footer__copyright {
   display: flex;
   justify-content: space-between;
@@ -234,6 +246,17 @@ body {
   color: #00f2ff;
   font-size: 1.3rem;
   font-weight: 400;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.footer__copyright--indicator {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #00f2ff;
+  display: block;
+  transform-origin: center;
+  will-change: opacity, transform;
 }
 .footer__section {
   font-size: 1.4rem;
@@ -253,10 +276,22 @@ body {
   grid-column: 3/4;
   grid-row: 1/2;
 }
+@media only screen and (max-width: 50rem) {
+  .footer__section--3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 .footer__section--4 {
   padding-top: 1rem;
   grid-column: 4/5;
   grid-row: 1/2;
+}
+@media only screen and (max-width: 50rem) {
+  .footer__section--4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
 .footer__name {
   padding-bottom: 2.5rem;
@@ -282,6 +317,11 @@ body {
 .footer__department {
   cursor: pointer;
   font-size: 1.3rem;
+}
+.footer__department:active, .footer__department:link, .footer__department:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #a7abb1;
 }
 .footer__department:not(:last-child) {
   padding: 0.5rem 0;
@@ -353,10 +393,18 @@ body {
 
 .hero {
   padding: 10rem 5rem;
-  width: 100%;
+  width: 100dvw;
   background-image: radial-gradient(circle at 0% 0%, rgba(0, 242, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 100% 100%, rgba(0, 242, 255, 0.05) 0%, transparent 50%);
   display: grid;
   grid-template-columns: 2fr 3fr;
+}
+@media only screen and (max-width: 62.5rem) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+}
+.hero {
   gap: 3rem;
   align-items: center;
 }
@@ -364,11 +412,26 @@ body {
   height: 50rem;
   width: auto;
 }
+@media only screen and (max-width: 62.5rem) {
+  .hero__img {
+    width: 90dvw;
+    height: auto;
+  }
+}
 .hero__img--container {
   grid-column: 2/span 1;
   grid-row: 1/2;
   justify-self: center;
   position: relative;
+}
+@media only screen and (max-width: 62.5rem) {
+  .hero__img--container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
+    width: 90dvw;
+    height: auto;
+  }
 }
 .hero__img--badge {
   position: absolute;
@@ -396,6 +459,12 @@ body {
   padding: 2rem 0;
   grid-row: 1/2;
   justify-self: end;
+}
+@media only screen and (max-width: 62.5rem) {
+  .hero__text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 .hero__text--header-1 {
   font-size: 7.5rem;
@@ -436,6 +505,7 @@ body {
   display: flex;
   width: max-content;
   height: 100vh;
+  width: 80dvh;
   will-change: transform;
 }
 .divisions__panel {
@@ -448,6 +518,12 @@ body {
   padding: 0 8rem;
   position: relative;
 }
+@media only screen and (max-width: 62.5rem) {
+  .divisions__panel {
+    padding: 0 2rem;
+    grid-template-columns: 35% 65%;
+  }
+}
 .divisions__visual {
   display: flex;
   align-items: center;
@@ -456,6 +532,14 @@ body {
 .divisions__visual--box {
   width: 42rem;
   height: 42rem;
+}
+@media only screen and (max-width: 62.5rem) {
+  .divisions__visual--box {
+    width: 21rem;
+    height: 21rem;
+  }
+}
+.divisions__visual--box {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(0, 242, 255, 0.08);
   display: flex;
@@ -469,6 +553,12 @@ body {
   height: 10rem;
   fill: #00f2ff;
 }
+@media only screen and (max-width: 62.5rem) {
+  .divisions__visual--box svg {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .divisions__content {
   padding-left: 8rem;
 }
@@ -480,16 +570,21 @@ body {
   margin-bottom: 3rem;
 }
 .divisions__title {
-  font-size: clamp(7rem, 9vw, 12rem);
+  font-size: clamp(5rem, 7vw, 12rem);
   font-weight: 900;
-  color: white;
+  color: #eeeeee;
   line-height: 0.9;
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 62.5rem) {
+  .divisions__title {
+    line-height: 1;
+  }
 }
 .divisions__body {
   font-size: 2.4rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(167, 171, 177, 0.65);
   max-width: 70rem;
 }
 .divisions__links {
@@ -497,7 +592,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(167, 171, 177, 0.3);
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
 }
@@ -509,9 +604,20 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
 }
+@media only screen and (max-width: 62.5rem) {
+  .ethos {
+    grid-template-columns: 1fr;
+  }
+}
 .ethos__texts {
   grid-column: 1/2;
   grid-row: 1/2;
+}
+@media only screen and (max-width: 62.5rem) {
+  .ethos__texts {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 .ethos__terminal {
   grid-column: 2/3;
@@ -519,6 +625,12 @@ body {
   justify-self: center;
   align-content: center;
   width: 100%;
+}
+@media only screen and (max-width: 62.5rem) {
+  .ethos__terminal {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 .ethos__terminal--progress-bar {
   margin-left: 5rem;
@@ -694,12 +806,25 @@ body {
   color: #eeeeee;
   cursor: default;
 }
+@media only screen and (max-width: 50rem) {
+  .inquiry__header {
+    font-size: 4rem;
+  }
+}
 .inquiry__subheader {
   padding-bottom: 3rem;
   font-size: 5rem;
   font-weight: 900;
   color: #00f2ff;
   cursor: default;
+}
+@media only screen and (max-width: 50rem) {
+  .inquiry__subheader {
+    font-size: 4rem;
+    text-align: center;
+    text-wrap-style: balance;
+    text-wrap-mode: nowrap;
+  }
 }
 .inquiry__btnwrapper {
   display: flex;
@@ -738,10 +863,20 @@ body {
   align-items: center;
   background-image: radial-gradient(circle at 0% 0%, rgba(0, 242, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 100% 100%, rgba(0, 242, 255, 0.05) 0%, transparent 50%);
 }
+@media only screen and (max-width: 62.5rem) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
 .intro__text {
   grid-column: 1/2;
   grid-row: 1/2;
   cursor: default;
+}
+@media only screen and (max-width: 62.5rem) {
+  .intro__text {
+    grid-row: 2/3;
+  }
 }
 .intro__text--header-1 {
   color: #99f7ff;
@@ -778,6 +913,12 @@ body {
   grid-row: 1/2;
   cursor: default;
 }
+@media only screen and (max-width: 62.5rem) {
+  .intro__img {
+    grid-column: 1/1;
+    width: 75dvw;
+  }
+}
 .intro__img--container {
   padding: 5rem;
   background-color: rgba(28, 32, 36, 0.4);
@@ -787,6 +928,11 @@ body {
   border-radius: 0.9rem;
   cursor: default;
   box-shadow: -1.5rem 0.9rem 2.6rem -0.6rem rgba(0, 242, 255, 0.4);
+}
+@media only screen and (max-width: 62.5rem) {
+  .intro__img--container {
+    width: 85dvw;
+  }
 }
 
 .stack {
@@ -829,6 +975,12 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
+  width: 100dvw;
+}
+@media only screen and (max-width: 62.5rem) {
+  .industrial {
+    flex-direction: column;
+  }
 }
 .industrial__text {
   flex: 1;
@@ -879,6 +1031,11 @@ body {
   justify-content: flex-end;
   gap: 4rem;
 }
+@media only screen and (max-width: 62.5rem) {
+  .industrial__images {
+    flex-direction: column;
+  }
+}
 .industrial__image-wrapper {
   position: relative;
   width: 40rem;
@@ -926,6 +1083,12 @@ body {
   object-position: center;
   overflow: hidden;
 }
+@media only screen and (max-width: 50rem) {
+  .power__hero--image {
+    object-fit: cover;
+    aspect-ratio: 14/9;
+  }
+}
 .power__hero--text {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -968,6 +1131,11 @@ body {
   width: 30%;
   margin-right: 7rem;
 }
+@media only screen and (max-width: 50rem) {
+  .power__hero--text--body {
+    width: 50%;
+  }
+}
 .power__hero--text--body--wrapper {
   display: flex;
   width: 100dvw;
@@ -1006,8 +1174,19 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+@media only screen and (max-width: 62.5rem) {
+  .design {
+    grid-template-columns: 1fr;
+  }
+}
 .design__text {
   grid-column: 1/2;
+}
+@media only screen and (max-width: 62.5rem) {
+  .design__text {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 .design__text--label {
   color: #99f7ff;
@@ -1066,7 +1245,28 @@ body {
   margin-left: 5rem;
   grid-column: 2/4;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+@media only screen and (max-width: 100rem) {
+  .design__shapes {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+@media only screen and (max-width: 75rem) {
+  .design__shapes {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+@media only screen and (max-width: 62.5rem) {
+  .design__shapes {
+    margin-left: 0rem;
+    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+.design__shapes {
   background-color: #040404;
   padding: 5rem 5rem;
 }
@@ -1118,6 +1318,12 @@ body {
   min-width: 35rem;
   min-height: 32rem;
 }
+@media only screen and (max-width: 50rem) {
+  .design__shapes--compass--wrapper {
+    border-right: unset;
+    border-bottom: 1px solid #1c2024;
+  }
+}
 .design__shapes--square {
   width: 13rem;
   height: 13rem;
@@ -1126,6 +1332,11 @@ body {
   padding: 3rem 2rem;
   transform-origin: center center;
   will-change: transform;
+}
+@media only screen and (max-width: 50rem) {
+  .design__shapes--square {
+    align-self: self-start;
+  }
 }
 .design__shapes--square--wrapper {
   border-bottom: 1px solid #1c2024;
@@ -1157,6 +1368,12 @@ body {
   min-width: 35rem;
   min-height: 32rem;
 }
+@media only screen and (max-width: 50rem) {
+  .design__shapes--synthesis--wrapper {
+    border-right: unset;
+    border-bottom: 1px solid #1c2024;
+  }
+}
 .design__shapes--synthesis--title {
   margin-top: 10rem;
   margin-bottom: 2.5rem;
@@ -1185,6 +1402,11 @@ body {
   min-width: 35rem;
   min-height: 32rem;
 }
+@media only screen and (max-width: 50rem) {
+  .design__shapes--deployment--wrapper {
+    padding-left: unset;
+  }
+}
 .design__shapes--deployment--title {
   margin-top: 11rem;
   margin-bottom: 2.5rem;
@@ -1204,6 +1426,11 @@ body {
   position: relative;
   perspective: 100rem;
 }
+@media only screen and (max-width: 50rem) {
+  .solar__cards {
+    flex-direction: column;
+  }
+}
 .solar__card, .solar__analysis {
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -1215,6 +1442,11 @@ body {
   padding: 5rem;
   position: relative;
   border-left: 3px solid #00f2ff;
+}
+@media only screen and (max-width: 50rem) {
+  .solar__card {
+    flex: 0 0 100%;
+  }
 }
 .solar__card--btn {
   padding: 0.5rem 1rem;
@@ -1293,6 +1525,16 @@ body {
   top: 2rem;
   left: 48%;
   padding: 5rem;
+}
+@media only screen and (max-width: 50rem) {
+  .solar__analysis {
+    flex: 0 0 100%;
+    width: 90%;
+    top: unset;
+    left: unset;
+    bottom: -80%;
+    align-self: center;
+  }
 }
 .solar__analysis--label {
   text-transform: uppercase;
@@ -1382,6 +1624,11 @@ body {
   background-color: #0e1419;
   padding: 10rem 5rem;
 }
+@media only screen and (max-width: 50rem) {
+  .ecosystem {
+    margin-top: 30rem;
+  }
+}
 .ecosystem__label {
   text-transform: uppercase;
   color: #99f7ff;
@@ -1396,6 +1643,11 @@ body {
   font-size: 5rem;
   font-weight: 900;
   cursor: default;
+}
+@media only screen and (max-width: 50rem) {
+  .ecosystem__header {
+    font-size: 2.5rem;
+  }
 }
 .ecosystem__header--wrapper {
   display: flex;
@@ -1439,6 +1691,11 @@ body {
   padding: 7.5rem 5rem;
   max-width: 28.5714285714vw;
   position: relative;
+}
+@media only screen and (max-width: 50rem) {
+  .ecosystem__carousel--item {
+    max-width: 50vw;
+  }
 }
 .ecosystem__carousel--item--icon--wrapper {
   position: absolute;

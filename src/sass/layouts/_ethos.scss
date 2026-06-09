@@ -7,9 +7,17 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr;
+  }
+
   &__texts {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
   }
 
   &__terminal {
@@ -18,6 +26,11 @@
     justify-self: center;
     align-content: center;
     width: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
 
     &--progress-bar {
       margin-left: 5rem;
