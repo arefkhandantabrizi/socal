@@ -181,7 +181,7 @@ const useStack = () => {
             opacity: 0.55,
             ease: "none",
           },
-          "-=0.1",
+          "-=0.9",
         );
     },
     { scope: containerRef },
