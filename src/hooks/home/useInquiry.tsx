@@ -4,29 +4,19 @@ import { useRef } from "react";
 
 const useInquiry = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-
   const labelRef = useRef<HTMLDivElement | null>(null);
-
   const headerRef = useRef<HTMLHeadingElement | null>(null);
-
   const subheaderRef = useRef<HTMLHeadingElement | null>(null);
-
   const btn1Ref = useRef<HTMLButtonElement | null>(null);
-
   const btn2Ref = useRef<HTMLButtonElement | null>(null);
 
   useGSAP(
     () => {
       const container = containerRef.current;
-
       const label = labelRef.current;
-
       const header = headerRef.current;
-
       const subheader = subheaderRef.current;
-
       const btn1 = btn1Ref.current;
-
       const btn2 = btn2Ref.current;
 
       if (!container || !label || !header || !subheader || !btn1 || !btn2) {
@@ -48,7 +38,7 @@ const useInquiry = () => {
         opacity: 0,
         y: 30,
         duration: 0.4,
-        ease: "power2.out",
+        ease: "power4.inOut",
       })
 
         .from(
@@ -58,7 +48,7 @@ const useInquiry = () => {
             y: 120,
             skewY: 4,
             duration: 1.2,
-            ease: "power4.out",
+            ease: "power4.inOut",
           },
           "-=0.1",
         )
@@ -70,7 +60,7 @@ const useInquiry = () => {
             y: 120,
             skewY: 4,
             duration: 1.2,
-            ease: "power4.out",
+            ease: "power4.inOut",
           },
           "-=0.95",
         )
@@ -82,7 +72,7 @@ const useInquiry = () => {
             y: 50,
             stagger: 0.12,
             duration: 0.7,
-            ease: "power3.out",
+            ease: "power4.inOut",
           },
           "-=0.75",
         )
