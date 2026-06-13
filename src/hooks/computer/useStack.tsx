@@ -5,200 +5,251 @@ import { useGSAP } from "@gsap/react";
 const useStack = () => {
   const containerRef = useRef<HTMLElement | null>(null);
   const webRef = useRef<HTMLDivElement | null>(null);
+  const webIconWrapperRef = useRef<HTMLDivElement | null>(null);
   const webIconRef = useRef<HTMLDivElement | null>(null);
   const webIconRef1 = useRef<HTMLDivElement | null>(null);
   const backendRef = useRef<HTMLDivElement | null>(null);
+  const backendIconWrapperRef = useRef<HTMLDivElement | null>(null);
   const backendIconRef = useRef<HTMLDivElement | null>(null);
   const backendIconRef2 = useRef<HTMLDivElement | null>(null);
   const backendIconRef3 = useRef<HTMLDivElement | null>(null);
-  const backendIconWrapperRef = useRef<HTMLDivElement | null>(null);
-  const webIconWrapperRef = useRef<HTMLDivElement | null>(null);
   const aiRef = useRef<HTMLDivElement | null>(null);
   const aiIconRef = useRef<HTMLDivElement | null>(null);
-  // const industrialRef = useRef<HTMLDivElement | null>(null);
-  // const industrialImageRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
       const container = containerRef.current;
       const web = webRef.current;
-      const ai = aiRef.current;
+      const webIconWrapper = webIconWrapperRef.current;
       const webIcon = webIconRef.current;
       const webIcon1 = webIconRef1.current;
-      const webIconWrapper = webIconWrapperRef.current;
-      const aiIcon = aiIconRef.current;
-      // const industrial = industrialRef.current;
-      // const industrialImage = industrialImageRef.current;
       const backend = backendRef.current;
+      const backendIconWrapper = backendIconWrapperRef.current;
       const backendIcon = backendIconRef.current;
       const backendIcon2 = backendIconRef2.current;
       const backendIcon3 = backendIconRef3.current;
-      const backendIconWrapper = backendIconWrapperRef.current;
+      const ai = aiRef.current;
+      const aiIcon = aiIconRef.current;
 
       if (
         !container ||
         !web ||
-        !ai ||
+        !webIconWrapper ||
         !webIcon ||
         !webIcon1 ||
-        !aiIcon ||
-        !webIconWrapper ||
-        // !industrial ||
-        // !industrialImage ||
         !backend ||
+        !backendIconWrapper ||
         !backendIcon ||
         !backendIcon2 ||
         !backendIcon3 ||
-        !backendIconWrapper
-      )
+        !ai ||
+        !aiIcon
+      ) {
         return;
+      }
+
+      /*
+       * INITIAL STATES
+       */
+      gsap.set([web, webIconWrapper, backend, backendIconWrapper, ai, aiIcon], {
+        opacity: 0,
+      });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
           start: "top top",
-          end: "+=140%",
-          scrub: 1,
+          end: "+=400%",
+          scrub: 1.2,
           pin: true,
           anticipatePin: 1,
         },
       });
 
-      tl.from(web, {
-        opacity: 0,
-        x: -40,
-        duration: 0.4,
-        ease: "power4.inOut",
+      /*
+       * FRONTEND
+       */
+      tl.to(web, {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: "power3.out",
       })
-        .from(
+        .fromTo(
           webIconWrapper,
           {
             opacity: 0,
-            x: 40,
-            duration: 0.4,
-            ease: "power4.inOut",
+            x: 120,
           },
-          "-=0.1",
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out",
+          },
+          "<",
         )
-        .from(
+        .fromTo(
           [webIcon, webIcon1],
           {
             opacity: 0,
-            x: 20,
-            duration: 0.4,
-            ease: "power4.inOut",
-            stagger: 0.1,
+            scale: 0.7,
+            y: 40,
           },
-          "-=0.1",
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.9",
         )
-        .to([web, webIconWrapper, webIcon, webIcon1], { opacity: 0 })
-        .from(
-          backendIconWrapper,
+
+        /*
+         * FRONTEND EXIT
+         */
+        .to(
+          [web, webIconWrapper],
           {
             opacity: 0,
-            x: 40,
-            duration: 0.4,
-            ease: "power4.inOut",
+            y: -80,
+            scale: 0.9,
+            duration: 1.2,
+            ease: "power2.inOut",
           },
-          "-=0.1",
+          "+=1",
         )
-        .from(
-          [backendIcon, backendIcon2, backendIcon3],
-          {
-            opacity: 0,
-            x: 20,
-            duration: 0.4,
-            ease: "power4.inOut",
-            stagger: 0.1,
-          },
-          "-=0.1",
-        )
-        .from(
+
+        /*
+         * BACKEND
+         */
+        .fromTo(
           backend,
           {
             opacity: 0,
-            x: -40,
-            duration: 0.4,
-            ease: "power4.inOut",
+            x: -120,
           },
-          "-=0.1",
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out",
+          },
         )
+        .fromTo(
+          backendIconWrapper,
+          {
+            opacity: 0,
+            x: 120,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out",
+          },
+          "<",
+        )
+        .fromTo(
+          [backendIcon, backendIcon2, backendIcon3],
+          {
+            opacity: 0,
+            scale: 0.6,
+            y: 50,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            stagger: 0.18,
+            duration: 1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.9",
+        )
+
+        /*
+         * BACKEND EXIT
+         */
         .to(
-          [
-            backendIconWrapper,
-            backendIcon,
-            backendIcon2,
-            backendIcon3,
-            backend,
-          ],
-          { opacity: 0 },
+          [backend, backendIconWrapper],
+          {
+            opacity: 0,
+            y: -80,
+            scale: 0.9,
+            duration: 1.2,
+            ease: "power2.inOut",
+          },
+          "+=1",
         )
-        .from(
+
+        /*
+         * AI
+         */
+        .fromTo(
           ai,
           {
             opacity: 0,
-            x: -40,
-            duration: 0.4,
-            ease: "power4.inOut",
+            x: -120,
           },
-          "-=0.1",
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out",
+          },
         )
-        .from(
+        .fromTo(
           aiIcon,
           {
             opacity: 0,
-            x: 40,
-            duration: 0.4,
-            ease: "power4.inOut",
+            x: 120,
+            scale: 0.85,
           },
-          "-=0.1",
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 1.5,
+            ease: "power3.out",
+          },
+          "<",
         )
-        .to([ai, aiIcon], { opacity: 0 })
-        // .from(
-        //   industrial,
-        //   {
-        //     opacity: 0,
-        //     x: -40,
-        //     duration: 0.4,
-        //     ease: "power4.inOut",
-        //   },
-        //   "-=0.95",
-        // )
-        // .from(
-        //   industrialImage,
-        //   {
-        //     opacity: 0,
-        //     x: 40,
-        //     duration: 0.4,
-        //     ease: "power4.inOut",
-        //   },
-        //   "-=0.45",
-        // )
+
+        /*
+         * FINAL EXIT
+         */
         .to(
           container,
           {
-            scale: 0.94,
-            opacity: 0.55,
-            ease: "none",
+            scale: 0.92,
+            opacity: 0.45,
+            duration: 2,
+            ease: "power2.out",
           },
-          "-=0.9",
+          "+=1",
         );
     },
-    { scope: containerRef },
+    {
+      scope: containerRef,
+    },
   );
+
   return {
-    aiIconRef,
-    aiRef,
     containerRef,
+    webRef,
+    webIconWrapperRef,
     webIconRef,
     webIconRef1,
-    webIconWrapperRef,
-    webRef,
     backendRef,
+    backendIconWrapperRef,
     backendIconRef,
     backendIconRef2,
     backendIconRef3,
-    backendIconWrapperRef,
+    aiRef,
+    aiIconRef,
   };
 };
 
