@@ -2,9 +2,10 @@
 import useFooter from "@/hooks/common/useFooter";
 import { Email, Github, Linkedin } from "./icons";
 import Link from "next/link";
+import menuItems from "@/utils/menuItems";
 
 const Footer = () => {
-  const { containerRef, indicatorRef } = useFooter();
+  const { containerRef, indicatorRef, pathname } = useFooter();
   return (
     <section className="footer">
       <div className="footer__items">
@@ -17,8 +18,30 @@ const Footer = () => {
         </div>
         <div className="footer__section footer__section--2">
           <div className="footer__title">DEPARTMENTAL_NODES</div>
-          <div className="footer__department">
-            <Link href={"/computer"} className="footer__department">
+          {/* <div className="footer__department"> */}
+          {menuItems.map((menu) => {
+            const isActive = pathname === menu.slug;
+
+            return (
+              <li
+                key={menu.slug}
+                className={`footer__department ${
+                  isActive ? "footer__department--active" : ""
+                }`}
+              >
+                <Link
+                  href={menu.slug}
+                  className={`footer__department ${
+                    isActive ? "footer__department--active" : ""
+                  }`}
+                >
+                  {menu.text}
+                </Link>
+              </li>
+            );
+          })}
+        </div>
+        {/* <Link href={"/computer"} className="footer__department">
               COMPUTER
             </Link>
           </div>
@@ -32,7 +55,7 @@ const Footer = () => {
               SYSTEM ENGINEERING & CALIBRATION
             </Link>
           </div>
-        </div>
+        </div> */}
         <div className="footer__section footer__section--3">
           <div className="footer__title">PROTOCOL_LINKS</div>
           <div className="footer__protocol">TERMS OF SERVICES</div>

@@ -316,11 +316,21 @@ body {
 .footer__department {
   cursor: pointer;
   font-size: 1.3rem;
+  list-style: none;
+  color: #a7abb1;
 }
-.footer__department:active, .footer__department:link, .footer__department:visited {
+.footer__department:active, .footer__department:link, .footer__department:visited,
+.footer__department a,
+.footer__department a:link,
+.footer__department a:visited {
   text-decoration: none;
   font-size: 1.4rem;
-  color: #a7abb1;
+}
+.footer__department--active {
+  color: #00f2ff;
+}
+.footer__department--active a {
+  color: #00f2ff;
 }
 .footer__department:not(:last-child) {
   padding: 0.5rem 0;
@@ -944,6 +954,7 @@ body {
 }
 .stack__frontend {
   position: absolute;
+  cursor: default;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1006,6 +1017,7 @@ body {
 }
 .stack__ai {
   position: absolute;
+  cursor: default;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1064,6 +1076,7 @@ body {
   align-items: center;
   gap: 5rem;
   margin-right: 5rem;
+  cursor: default;
 }
 .stack__backend--header {
   font-size: 5rem;

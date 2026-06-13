@@ -2,18 +2,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "@/utils/gsap";
 import { usePathname } from "next/navigation";
-
-type MenuItem = {
-  text: string;
-  slug: string;
-};
-
-const menuItems: MenuItem[] = [
-  { text: "COMPUTER", slug: "/computer" },
-  { text: "POWER", slug: "/power" },
-  { text: "CALIBRATION", slug: "/calibration" },
-  { text: "ABOUT US", slug: "/about-us" },
-];
+import menuItems from "@/utils/menuItems";
 
 const useTopNav = () => {
   const containerRef = useRef<HTMLUListElement | null>(null);

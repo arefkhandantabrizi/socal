@@ -115,12 +115,24 @@
   &__department {
     cursor: pointer;
     font-size: 1.3rem;
+    list-style: none;
+    color: $technicalUI-color;
+
     &:active,
     &:link,
-    &:visited {
+    &:visited,
+    a,
+    a:link,
+    a:visited {
       text-decoration: none;
       font-size: 1.4rem;
-      color: $technicalUI-color;
+    }
+
+    &--active {
+      color: $accent-color;
+      a {
+        color: $accent-color;
+      }
     }
   }
 

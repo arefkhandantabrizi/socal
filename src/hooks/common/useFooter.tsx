@@ -1,10 +1,13 @@
 import { useRef } from "react";
 import gsap from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
+import { usePathname } from "next/navigation";
 
 const useFooter = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const indicatorRef = useRef<HTMLSpanElement | null>(null);
+
+  const pathname = usePathname();
 
   useGSAP(
     () => {
@@ -25,7 +28,7 @@ const useFooter = () => {
     { scope: containerRef },
   );
 
-  return { containerRef, indicatorRef };
+  return { containerRef, indicatorRef, pathname };
 };
 
 export default useFooter;
