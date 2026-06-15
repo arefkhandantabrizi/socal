@@ -275,7 +275,7 @@
   &__imagewrapper {
     margin-right: 5rem;
     width: 100%;
-    height: auto;
+    max-height: 40rem;
     aspect-ratio: 7/4;
     position: relative;
     object-fit: fill;

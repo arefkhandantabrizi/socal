@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+.pillar__card {
+  background-color: transparent;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+
+  &--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $ethosText-color;
+  }
+  &--header {
+    padding: 2rem 0;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+  &--body {
+    font-size: 1.6rem;
+    color: $technicalUI-color;
+    margin-bottom: 3rem;
+    width: 75%;
+  }
+}

@@ -8,6 +8,7 @@
 @use "components/topNav";
 @use "components/footer";
 @use "components/stackCard";
+@use "components/pillarCard";
 
 @use "layouts/hero";
 @use "layouts/divisions";
@@ -20,5 +21,8 @@
 @use "layouts/design";
 @use "layouts/solar";
 @use "layouts/ecosystem";
+@use "layouts/aboutUsIntro";
+@use "layouts/origin";
+@use "layouts/pillar";
 
 @use "pages/power";
