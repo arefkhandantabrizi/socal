@@ -2176,6 +2176,97 @@ body {
   align-content: space-between;
 }
 
+.roadMap {
+  background-color: #0a0f13;
+  height: 100vh;
+  width: 100dvw;
+  padding: 0rem 5rem;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.roadMap--label {
+  font-size: 1.4rem;
+  color: #99f7ff;
+  margin-bottom: 2rem;
+  cursor: default;
+}
+.roadMap--header {
+  font-size: 6.5rem;
+  color: #eeeeee;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+.roadMap__timeline {
+  display: flex;
+  padding: 5rem 0;
+  align-items: center;
+  justify-content: center;
+}
+.roadMap__timeline--wrapper {
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: -4rem;
+}
+.roadMap__timeline--phase {
+  text-transform: uppercase;
+  color: #436b70;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.roadMap__timeline--text {
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--font-primary), sans-serif;
+  width: 10rem;
+  text-align: center;
+}
+.roadMap__timeline--indicator {
+  width: 2rem;
+  height: 2rem;
+  background-color: #173138;
+  border-radius: 50%;
+  border: 1px solid #436b70;
+}
+.roadMap__timeline--indicator--active {
+  background-color: #00f2ff;
+}
+.roadMap__timeline--phase--wrapper {
+  display: flex;
+  align-items: center;
+}
+.roadMap__timeline--phase--wrapper:nth-child(1):not(:first-child)::before {
+  content: "";
+  width: 30rem;
+  height: 0.2rem;
+  background-color: #173138;
+}
+.roadMap__timeline--phase--wrapper:first-child::before {
+  content: "";
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #173138;
+}
+.roadMap__timeline--phase--wrapper:not(:last-child)::after {
+  content: "";
+  width: 30rem;
+  height: 0.2rem;
+  background-color: #173138;
+}
+.roadMap__timeline--phase--wrapper:last-child::after {
+  content: "";
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #173138;
+}
+
 .power {
   position: relative;
   overflow: hidden;
