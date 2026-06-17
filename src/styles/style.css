@@ -2094,7 +2094,7 @@ body {
 .origin__text--label {
   font-size: 1.4rem;
   color: #99f7ff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   cursor: default;
 }
 .origin__text--header {
@@ -2160,7 +2160,7 @@ body {
 .pillars--label {
   font-size: 1.4rem;
   color: #99f7ff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   cursor: default;
 }
 .pillars--header {
@@ -2189,7 +2189,7 @@ body {
 .roadMap--label {
   font-size: 1.4rem;
   color: #99f7ff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   cursor: default;
 }
 .roadMap--header {
@@ -2242,12 +2242,6 @@ body {
   display: flex;
   align-items: center;
 }
-.roadMap__timeline--phase--wrapper:nth-child(1):not(:first-child)::before {
-  content: "";
-  width: 30rem;
-  height: 0.2rem;
-  background-color: #173138;
-}
 .roadMap__timeline--phase--wrapper:first-child::before {
   content: "";
   width: 10rem;
@@ -2265,6 +2259,61 @@ body {
   width: 10rem;
   height: 0.2rem;
   background-color: #173138;
+}
+
+.validation {
+  background-color: #0e1419;
+  height: 100vh;
+  width: 100dvw;
+  padding: 0rem 5rem;
+  position: relative;
+  align-items: center;
+  display: flex;
+  column-gap: 5rem;
+}
+.validation__badge {
+  background-color: rgba(28, 32, 36, 0.5);
+  border: 1px solid #1c2024;
+  padding: 2rem;
+}
+.validation__badge--wrapper {
+  flex: 0 0 47%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  margin-right: 5rem;
+}
+.validation__badge--header {
+  font-size: 3.5rem;
+  color: #eeeeee;
+}
+.validation__badge--body {
+  font-size: 1.5rem;
+  color: #436b70;
+  text-transform: uppercase;
+}
+.validation__text--wrapper {
+  flex: 0 0 47%;
+}
+.validation__text--label {
+  font-size: 1.4rem;
+  color: #99f7ff;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+.validation__text--header {
+  font-size: 6rem;
+  color: #00f2ff;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+.validation__text--body {
+  font-size: 2.2rem;
+  color: #a7abb1;
+  margin-bottom: 2rem;
+  cursor: default;
 }
 
 .power {

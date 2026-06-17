@@ -23,21 +23,23 @@ const Footer = () => {
             const isActive = pathname === menu.slug;
 
             return (
-              <li
-                key={menu.slug}
-                className={`footer__department ${
-                  isActive ? "footer__department--active" : ""
-                }`}
-              >
-                <Link
-                  href={menu.slug}
+              menu.department && (
+                <li
+                  key={menu.slug}
                   className={`footer__department ${
                     isActive ? "footer__department--active" : ""
                   }`}
                 >
-                  {menu.text}
-                </Link>
-              </li>
+                  <Link
+                    href={menu.slug}
+                    className={`footer__department ${
+                      isActive ? "footer__department--active" : ""
+                    }`}
+                  >
+                    {menu.text}
+                  </Link>
+                </li>
+              )
             );
           })}
         </div>

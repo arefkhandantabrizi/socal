@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+
+.validation {
+  background-color: $ecosystem-color;
+  height: 100vh;
+  width: 100dvw;
+  padding: 0rem 5rem;
+  position: relative;
+  align-items: center;
+  display: flex;
+  column-gap: 5rem;
+
+  &__badge {
+    background-color: rgba($secondary-color, 0.5);
+    border: 1px solid $secondary-color;
+    padding: 2rem;
+
+    &--wrapper {
+      flex: 0 0 47%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 2rem;
+      margin-right: 5rem;
+    }
+
+    &--header {
+      font-size: 3.5rem;
+      color: $white-color;
+    }
+    &--body {
+      font-size: 1.5rem;
+      color: $timeLine-color;
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    &--wrapper {
+      flex: 0 0 47%;
+    }
+
+    &--label {
+      font-size: 1.4rem;
+      color: $ethosText-color;
+      margin-bottom: 1rem;
+      cursor: default;
+    }
+
+    &--header {
+      font-size: 6rem;
+      color: $accent-color;
+      line-height: 1;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+    &--body {
+      font-size: 2.2rem;
+      color: $technicalUI-color;
+      margin-bottom: 2rem;
+      cursor: default;
+    }
+  }
+}
