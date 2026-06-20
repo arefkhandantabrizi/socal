@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+
+.synchronize {
+  width: 100dvw;
+  height: 100vh;
+  background-color: $black-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: $border-color;
+    margin-bottom: 2rem;
+    cursor: default;
+  }
+  &__header {
+    line-height: 1;
+    font-size: 7.5rem;
+    font-weight: 700;
+    cursor: default;
+    text-transform: uppercase;
+    &--1 {
+      color: $white-color;
+    }
+    &--2 {
+      color: $accent-color;
+      font-style: italic;
+      padding-bottom: 2rem;
+    }
+  }
+  &__body {
+    font-size: 1.7rem;
+    color: $technicalUI-color;
+    margin-bottom: 2rem;
+    width: 50%;
+    cursor: default;
+    text-align: center;
+  }
+  &__btn {
+    padding: 1.5rem 3rem;
+    background-color: $accent-color;
+    color: $secondary-color;
+    text-align: center;
+    border: 1px solid $accent-color;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

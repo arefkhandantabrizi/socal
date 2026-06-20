@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.aboutUs__ethos {
+  height: 100vh;
+  width: 100dvw;
+  background-color: $primary-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  padding: 0 5rem;
+
+  &--one,
+  &--two {
+    &--label {
+      color: $ethosText-color;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      cursor: default;
+      font-weight: 200;
+    }
+    &--header {
+      font-size: 5rem;
+      color: $white-color;
+      line-height: 1;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+    &--body {
+      font-size: 1.7rem;
+      color: $technicalUI-color;
+      margin-bottom: 2rem;
+      word-spacing: 0.5rem;
+      width: 80%;
+      cursor: default;
+    }
+    &--image {
+      width: 60rem;
+      height: 25rem;
+
+      &--wrapper {
+        width: 60rem;
+        height: 25rem;
+      }
+    }
+  }
+
+  &--one {
+    align-self: center;
+  }
+  &--two {
+    align-self: self-end;
+    margin-bottom: 5rem;
+  }
+}

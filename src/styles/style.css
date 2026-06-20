@@ -1085,7 +1085,6 @@ body {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(28, 32, 36, 0.4);
   gap: 2.5rem;
   align-items: center;
 }
@@ -2314,6 +2313,103 @@ body {
   color: #a7abb1;
   margin-bottom: 2rem;
   cursor: default;
+}
+
+.aboutUs__ethos {
+  height: 100vh;
+  width: 100dvw;
+  background-color: #0a0f13;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  padding: 0 5rem;
+}
+.aboutUs__ethos--one--label, .aboutUs__ethos--two--label {
+  color: #99f7ff;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  cursor: default;
+  font-weight: 200;
+}
+.aboutUs__ethos--one--header, .aboutUs__ethos--two--header {
+  font-size: 5rem;
+  color: #eeeeee;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+.aboutUs__ethos--one--body, .aboutUs__ethos--two--body {
+  font-size: 1.7rem;
+  color: #a7abb1;
+  margin-bottom: 2rem;
+  word-spacing: 0.5rem;
+  width: 80%;
+  cursor: default;
+}
+.aboutUs__ethos--one--image, .aboutUs__ethos--two--image {
+  width: 60rem;
+  height: 25rem;
+}
+.aboutUs__ethos--one--image--wrapper, .aboutUs__ethos--two--image--wrapper {
+  width: 60rem;
+  height: 25rem;
+}
+.aboutUs__ethos--one {
+  align-self: center;
+}
+.aboutUs__ethos--two {
+  align-self: self-end;
+  margin-bottom: 5rem;
+}
+
+.synchronize {
+  width: 100dvw;
+  height: 100vh;
+  background-color: #040404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.synchronize__icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #173138;
+  margin-bottom: 2rem;
+  cursor: default;
+}
+.synchronize__header {
+  line-height: 1;
+  font-size: 7.5rem;
+  font-weight: 700;
+  cursor: default;
+  text-transform: uppercase;
+}
+.synchronize__header--1 {
+  color: #eeeeee;
+}
+.synchronize__header--2 {
+  color: #00f2ff;
+  font-style: italic;
+  padding-bottom: 2rem;
+}
+.synchronize__body {
+  font-size: 1.7rem;
+  color: #a7abb1;
+  margin-bottom: 2rem;
+  width: 50%;
+  cursor: default;
+  text-align: center;
+}
+.synchronize__btn {
+  padding: 1.5rem 3rem;
+  background-color: #00f2ff;
+  color: #1c2024;
+  text-align: center;
+  border: 1px solid #00f2ff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .power {

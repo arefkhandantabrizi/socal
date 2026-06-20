@@ -1,13 +1,10 @@
 "use client";
-// import StackCard from "./stackCard";
-// import Image from "next/image";
+
 import useStack from "@/hooks/computer/useStack";
 import { Express, MongoDB, Next, Node, React } from "../common/icons";
 import Image from "next/image";
-// import useStackCard from "@/hooks/computer/useStackCard";
 
 const Stack = () => {
-  // const { stacks } = useStackCard();
   const {
     containerRef,
     aiIconRef,
@@ -117,11 +114,12 @@ const Stack = () => {
         <div className="stack__ai--icon--wrapper" ref={aiIconRef}>
           <div className="stack__imagewrapper">
             <Image
-              fill
               preload
               src={"/stack.webp"}
               alt="stack image"
               className="stack__image"
+              width={670}
+              height={383}
             />
           </div>
         </div>
