@@ -33,7 +33,7 @@ const Ethos = () => {
             alt="ethos two image"
             className="aboutUs__ethos--two--image"
             width={600}
-            height={250}
+            height={260}
           />
         </div>
       </div>

@@ -2,7 +2,7 @@
 import useFooter from "@/hooks/common/useFooter";
 import { Email, Github, Linkedin } from "./icons";
 import Link from "next/link";
-import menuItems from "@/utils/menuItems";
+import menuItems from "@/services/menuItems";
 
 const Footer = () => {
   const { containerRef, indicatorRef, pathname } = useFooter();

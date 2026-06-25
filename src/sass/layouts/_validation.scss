@@ -9,6 +9,7 @@
   align-items: center;
   display: flex;
   column-gap: 5rem;
+  flex-shrink: 0;
 
   &__badge {
     background-color: rgba($secondary-color, 0.5);
@@ -26,11 +27,13 @@
     &--header {
       font-size: 3.5rem;
       color: $white-color;
+      cursor: default;
     }
     &--body {
       font-size: 1.5rem;
       color: $timeLine-color;
       text-transform: uppercase;
+      cursor: default;
     }
   }
 

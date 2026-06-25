@@ -1,0 +1,11 @@
+.aboutTimeline {
+  height: 100vh;
+  overflow: hidden;
+
+  &__track {
+    display: flex;
+    width: 400vw;
+    height: 100vh;
+    overflow: visible;
+  }
+}

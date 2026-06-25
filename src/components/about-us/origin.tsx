@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const Origin = () => {
@@ -13,14 +14,19 @@ const Origin = () => {
         </p>
       </div>
       <div className="origin__image--wrapper">
-        <Image
-          fill
-          preload
-          src={"/origin.webp"}
-          alt="orgin image"
-          className="origin__image"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+        <div className="origin__image--container">
+          <Image
+            fill
+            preload
+            src={"/origin.webp"}
+            alt="orgin image"
+            className="origin__image"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            // ref={containerRef}
+            // onMouseEnter={onMouseEnter}
+            // onMouseLeave={onMouseLeave}
+          />
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,49 @@
   column-gap: 3rem;
   padding: 0 5rem;
 
-  &--one,
+  &--one {
+    &--label {
+      color: $ethosText-color;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      cursor: default;
+      font-weight: 200;
+    }
+    &--header {
+      font-size: 5rem;
+      color: $white-color;
+      line-height: 1;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+    &--body {
+      font-size: 1.7rem;
+      color: $technicalUI-color;
+      margin-bottom: 2rem;
+      word-spacing: 0.5rem;
+      width: 80%;
+      cursor: default;
+    }
+    &--image {
+      width: 60rem;
+      height: 25rem;
+      transition: transform 0.5s ease;
+      will-change: transform;
+
+      &--wrapper {
+        width: 60rem;
+        height: 25rem;
+        overflow: hidden;
+
+        &:hover {
+          .aboutUs__ethos--one--image {
+            transform: scale(1.15);
+          }
+        }
+      }
+    }
+  }
   &--two {
     &--label {
       color: $ethosText-color;
@@ -37,10 +79,19 @@
     &--image {
       width: 60rem;
       height: 25rem;
+      transition: transform 0.5s ease;
+      will-change: transform;
 
       &--wrapper {
         width: 60rem;
         height: 25rem;
+        overflow: hidden;
+
+        &:hover {
+          .aboutUs__ethos--two--image {
+            transform: scale(1.15);
+          }
+        }
       }
     }
   }

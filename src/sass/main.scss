@@ -9,6 +9,9 @@
 @use "components/footer";
 @use "components/stackCard";
 @use "components/pillarCard";
+@use "components/input";
+@use "components/textArea";
+@use "components/select";
 
 @use "layouts/hero";
 @use "layouts/divisions";
@@ -28,5 +31,7 @@
 @use "layouts/validation";
 @use "layouts/aboutUsEthos";
 @use "layouts/synchronize";
+@use "layouts/transmission";
+@use "layouts/aboutUsTimeLine";
 
 @use "pages/power";

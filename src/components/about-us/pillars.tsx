@@ -6,8 +6,9 @@ import usePillarCardAnimations from "@/hooks/about-us/usePillarCardAnimations";
 
 const Pillars = () => {
   const { cards } = usePillarCard();
+  const { outerContainerRef } = usePillarCardAnimations();
   return (
-    <section className="pillars">
+    <section className="pillars" ref={outerContainerRef}>
       <h2 className="pillars--label">MODULE 02 // CORE PILLARS</h2>
       <h2 className="pillars--header">Multi-Disciplinary Synthesis</h2>
       <div className="pillars--cards">

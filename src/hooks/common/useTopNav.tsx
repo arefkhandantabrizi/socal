@@ -2,14 +2,12 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "@/utils/gsap";
 import { usePathname } from "next/navigation";
-import menuItems from "@/utils/menuItems";
+import menuItems from "@/services/menuItems";
 
 const useTopNav = () => {
   const containerRef = useRef<HTMLUListElement | null>(null);
   const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
-
   const pathname = usePathname();
-
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useGSAP(
