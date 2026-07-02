@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <div>&copy; 2026 SOCAL POWER GRID. ALL RIGHT RESERVED.</div>
+        <div>&copy; 2026 SOCAL POWER GRID. ALL RIGHTS RESERVED.</div>
         <div className="footer__copyright--live" ref={containerRef}>
           <span ref={indicatorRef} className="footer__copyright--indicator" />
           SYSTEM IS LIVE

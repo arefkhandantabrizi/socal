@@ -3,16 +3,18 @@
 import useInput from "@/hooks/about-us/useInput";
 import data from "@/services/departments";
 import CustomSelect from "../common/customSelect";
+import useAboutUsAnimation from "@/hooks/about-us/useAboutUsAnimation";
 
 const Transmission = () => {
   const { select, disable, jobDesc, name, handleChange } = useInput();
+  const { divContainer, formContainer, indicatorRef } = useAboutUsAnimation();
 
   return (
-    <section className="transmission">
+    <section className="transmission" ref={divContainer}>
       <h4 className="transmission__label">Transmission Portal</h4>
       <h4 className="transmission__header">Connect Systems</h4>
       <div className="transmission__divider" />
-      <div className="transmission__form">
+      <div className="transmission__form" ref={formContainer}>
         <div className="transmission__form--row">
           <div className="transmission__form--wrapper">
             <label htmlFor="name" className="transmission__form--label">
@@ -61,7 +63,10 @@ const Transmission = () => {
         </div>
         <div className="transmission__form--row">
           <div className="transmission__form--wrapper transmission__form--wrapper--indicator">
-            <div className="transmission__form--indicator" />
+            <span
+              className="transmission__form--indicator"
+              ref={indicatorRef}
+            />
             <label className="transmission__form--label transmission__form--label--indicator">
               ENCRYPTED_UPLINK_READY
             </label>

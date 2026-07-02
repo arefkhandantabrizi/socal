@@ -25,7 +25,7 @@ const useDivisions = () => {
     },
     {
       icon: <Calibration className="divisions__floating-icon--svg" />,
-      title: "System Engineering & Calibraton",
+      title: "System Engineering & Calibration",
       bodyText:
         "High-fidelity verification protocols and stress-testing for sub-micron component integrity across all hardware strata.",
       hasLinks: true,

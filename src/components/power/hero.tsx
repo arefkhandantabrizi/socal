@@ -23,7 +23,7 @@ const Hero = () => {
         <h1 className="power__hero--text--header-3">core</h1>
         <div className="power__hero--text--body--wrapper">
           <h2 className="power__hero--text--body">
-            Architecting resillient power infrastructures through high-fidelity
+            Architecting resilient power infrastructures through high-fidelity
             modeling and precision execution. From grid scale distribution to
             sustainable energy integration.
           </h2>

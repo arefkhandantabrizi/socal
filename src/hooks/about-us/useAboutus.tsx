@@ -15,38 +15,22 @@ const useAboutus = () => {
   useGSAP(
     () => {
       const track = trackRef.current;
-
       const section = sectionRef.current;
-
       if (!track || !section) return;
-
       const getDistance = () => track.scrollWidth - window.innerWidth;
-
       const tween = gsap.to(track, {
         x: () => -getDistance(),
-
         ease: "none",
-
         scrollTrigger: {
           trigger: section,
-
           start: "top top",
-
           end: () => `+=${getDistance()}`,
-
           scrub: 1,
-
           pin: true,
-
           anticipatePin: 1,
-
           invalidateOnRefresh: true,
-
-          // onRefresh: () => ScrollTrigger.refresh(),
         },
       });
-
-      // 🔥 FORCE FULL REGISTRATION BEFORE CHILDREN RUN
 
       ScrollTrigger.refresh();
 
