@@ -93,7 +93,6 @@
         font-size: 2.5rem;
         font-weight: 700;
         color: $white-color;
-        // margin-top: 8rem;
         cursor: default;
         line-height: 1;
 
@@ -110,6 +109,7 @@
         color: $technicalUI-color;
         padding: 2rem 0;
         cursor: default;
+        min-height: 12rem;
       }
       &--label {
         text-transform: uppercase;

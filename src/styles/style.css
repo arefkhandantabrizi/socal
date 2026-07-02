@@ -2046,6 +2046,7 @@ body {
   color: #a7abb1;
   padding: 2rem 0;
   cursor: default;
+  min-height: 12rem;
 }
 .ecosystem__carousel--item--label {
   text-transform: uppercase;
