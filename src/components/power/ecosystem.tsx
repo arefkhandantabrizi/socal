@@ -30,13 +30,18 @@ const Ecosystem = () => {
           {ecosystemCards.map((card, idx) => {
             return (
               <div key={idx} className="ecosystem__carousel--item">
-                <div className="ecosystem__carousel--item--icon--wrapper">
-                  {card.icon}
+                <div className="ecosystem__carousel--item--header--wrapper">
+                  <h4 className="ecosystem__carousel--item--header">
+                    {card.header}
+                  </h4>
+                  <div className="ecosystem__carousel--item--icon--wrapper">
+                    {card.icon}
+                  </div>
                 </div>
-                <h4 className="ecosystem__carousel--item--header">
-                  {card.header}
-                </h4>
+                <div className="ecosystem__carousel--item--separator" />
                 <p className="ecosystem__carousel--item--body">{card.body}</p>
+                <div className="ecosystem__carousel--item--separator" />
+
                 <div className="ecosystem__carousel--item--label--wrapper">
                   {card.labels.map((label, index) => {
                     return (
