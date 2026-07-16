@@ -18,7 +18,8 @@ const useDivisionAnimation = () => {
       if (!section || !track) return;
 
       const totalScroll = !isMobile
-        ? track.scrollWidth - window.innerWidth
+        ? track.scrollWidth -
+          (window.innerWidth >= 2000 ? 2000 : window.innerWidth)
         : track.scrollWidth + 90 - window.innerWidth;
 
       gsap.to(track, {

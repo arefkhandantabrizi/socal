@@ -12,6 +12,9 @@
 @use "components/input";
 @use "components/textArea";
 @use "components/select";
+@use "components/servicesCard";
+@use "components/protocolsCard";
+@use "components/mobileNav";
 
 @use "layouts/hero";
 @use "layouts/divisions";
@@ -33,5 +36,10 @@
 @use "layouts/synchronize";
 @use "layouts/transmission";
 @use "layouts/aboutUsTimeLine";
+@use "layouts/calibrationIntro";
+@use "layouts/services";
+@use "layouts/specs";
+@use "layouts/protocols";
+@use "layouts/calibrationTransmission";
 
 @use "pages/power";

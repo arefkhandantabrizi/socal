@@ -8,10 +8,14 @@
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
-  width: 100dvw;
+  width: 100%;
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    height: 50dvh;
   }
 
   &__text {

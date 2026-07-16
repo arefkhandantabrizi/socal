@@ -22,9 +22,6 @@ const Origin = () => {
             alt="orgin image"
             className="origin__image"
             sizes="(max-width: 768px) 100vw, 50vw"
-            // ref={containerRef}
-            // onMouseEnter={onMouseEnter}
-            // onMouseLeave={onMouseLeave}
           />
         </div>
       </div>

@@ -2,6 +2,7 @@ import gsap from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
+import useIsMobile from "../common/useIsMobile";
 
 const useAboutus = () => {
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -17,7 +18,12 @@ const useAboutus = () => {
       const track = trackRef.current;
       const section = sectionRef.current;
       if (!track || !section) return;
-      const getDistance = () => track.scrollWidth - window.innerWidth;
+      const getDistance = () => {
+        return !useIsMobile
+          ? track.scrollWidth -
+              (window.innerWidth >= 2000 ? 2000 : window.innerWidth)
+          : track.scrollWidth - window.innerWidth;
+      };
       const tween = gsap.to(track, {
         x: () => -getDistance(),
         ease: "none",

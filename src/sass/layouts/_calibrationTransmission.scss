@@ -1,0 +1,119 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+.calibration__transmission {
+  padding: 15rem 5rem;
+  background-color: $primary-color;
+  min-height: 100dvh;
+
+  @media only screen and (min-width: $bp-extralarge) {
+    min-height: 70dvh;
+  }
+
+  &--form {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    gap: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0;
+    }
+
+    &--label {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: $technicalUI-color;
+      font-weight: 100;
+      text-transform: uppercase;
+      cursor: default;
+    }
+
+    &--btn {
+      padding: 1rem 4rem;
+      background-color: $accent-color;
+      color: $secondary-color;
+      border: 1px solid $accent-color;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 100%;
+
+      &:disabled {
+        background-color: color.adjust($accent-color, $lightness: -20%);
+        color: color.adjust($secondary-color, $lightness: -20%);
+        border: 1px solid color.adjust($accent-color, $lightness: -20%);
+      }
+    }
+
+    &--outer {
+      background-color: $transmitCalibration-color;
+      display: flex;
+      padding: 5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        gap: 5rem;
+        padding: 10rem 5rem;
+      }
+    }
+
+    &--wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--text {
+    flex: 0 0 50%;
+    cursor: default;
+  }
+
+  &--header {
+    color: $white-color;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.2;
+
+    &--accent {
+      color: $accent-color;
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &--body {
+    color: $technicalUI-color;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    width: 90%;
+  }
+
+  &--label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    &--wrapper {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--header {
+      color: $accent-color;
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+    &--body {
+      color: $white-color;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

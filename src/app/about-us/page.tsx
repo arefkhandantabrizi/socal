@@ -13,10 +13,6 @@ const AboutUs = () => {
     <>
       <Intro />
       <AboutTimeline />
-      {/* <Origin />
-      <Pillars />
-      <RoadMap />
-      <Validation /> */}
       <Ethos />
       <Synchronize />
       <Transmission />

@@ -24,6 +24,7 @@ $transmissionForm-color: #121619;
 $input-color: #31363b;
 $transmit-color: #202d30;
 $transmitText-color: #5c9398;
+$transmitCalibration-color: #141a20;
 
 // FONT VARIABLES
 
@@ -32,6 +33,7 @@ $font-primary: var(--font-primary), sans-serif;
 $border-radius: 4rem;
 
 //Responsive breakpoints
+$bp-extralarge: 125rem; // 2000px
 $bp-largest: 100rem; //1600px
 $bp-larger: 75rem; // 1200px
 $bp-large: 62.5rem; // 1000px

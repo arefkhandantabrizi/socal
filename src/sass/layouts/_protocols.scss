@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+.protocols {
+  background-color: $primary-color;
+  padding: 15rem 5rem;
+  min-height: 100dvh;
+
+  @media only screen and (min-width: $bp-largest) {
+    min-height: 70dvh;
+  }
+
+  &__header {
+    font-size: 5rem;
+    color: $white-color;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    &--accent {
+      font-size: 1.7rem;
+      color: $accent-color;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

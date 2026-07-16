@@ -2,14 +2,25 @@
 
 .aboutUs__ethos {
   height: 100vh;
-  width: 100dvw;
   background-color: $primary-color;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3rem;
   padding: 0 5rem;
 
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    min-height: 70dvh;
+  }
+
   &--one {
+    @media only screen and (max-width: $bp-largest) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
     &--label {
       color: $ethosText-color;
       font-size: 1.4rem;
@@ -53,6 +64,10 @@
     }
   }
   &--two {
+    @media only screen and (max-width: $bp-largest) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
     &--label {
       color: $ethosText-color;
       font-size: 1.4rem;

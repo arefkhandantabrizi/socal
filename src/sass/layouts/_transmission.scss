@@ -3,12 +3,16 @@
 
 .transmission {
   background-color: $primary-color;
-  min-height: 100vh;
-  width: 100dvw;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5rem;
+  justify-content: center;
+
+  @media only screen and (min-width: $bp-largest) {
+    min-height: 70dvh;
+  }
 
   &__label {
     font-size: 1.4rem;
@@ -24,6 +28,10 @@
     text-transform: uppercase;
     font-weight: 900;
     cursor: default;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 5rem;
+    }
   }
   &__divider {
     width: 20rem;
@@ -92,6 +100,11 @@
       width: 100%;
       column-gap: 5rem;
       align-items: center;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        gap: 5rem;
+      }
     }
 
     &--wrapper {

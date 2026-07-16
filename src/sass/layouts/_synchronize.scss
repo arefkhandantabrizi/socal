@@ -1,13 +1,18 @@
 @use "../abstracts/variables" as *;
 
 .synchronize {
-  width: 100dvw;
+  // width: 100dvw;
   height: 100vh;
   background-color: $black-color;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media only screen and (min-width: $bp-largest) {
+    min-height: 70dvh;
+  }
+
   &__icon {
     width: 5rem;
     height: 5rem;

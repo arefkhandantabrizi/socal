@@ -8,6 +8,8 @@
   gap: 5rem;
   justify-items: center;
   align-items: center;
+  height: 100dvh;
+
   background-image:
     radial-gradient(
       circle at 0% 0%,
@@ -22,6 +24,10 @@
 
   @media only screen and (max-width: $bp-large) {
     grid-template-columns: 1fr;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    height: 70dvh;
   }
 
   &__text {

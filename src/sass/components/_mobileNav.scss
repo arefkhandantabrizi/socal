@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+
+.mobilenav {
+  padding: 5rem;
+  background-color: $secondary-color;
+
+  @media only screen and (min-width: $bp-medium) {
+    display: none;
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    column-gap: 5rem;
+    align-items: center;
+  }
+
+  &__item {
+    &--link {
+      color: $accent-color;
+      font-size: 3rem;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: $technicalUI-color;
+  }
+}

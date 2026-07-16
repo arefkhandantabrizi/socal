@@ -11,6 +11,16 @@
   column-gap: 5rem;
   flex-shrink: 0;
 
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    max-width: 200rem;
+  }
+
   &__badge {
     background-color: rgba($secondary-color, 0.5);
     border: 1px solid $secondary-color;
@@ -40,6 +50,9 @@
   &__text {
     &--wrapper {
       flex: 0 0 47%;
+      @media only screen and (max-width: $bp-medium) {
+        flex: unset;
+      }
     }
 
     &--label {

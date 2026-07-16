@@ -1,11 +1,23 @@
+@use "../abstracts/variables" as *;
+
 .aboutTimeline {
-  height: 100vh;
+  height: 100dvh !important;
   overflow: hidden;
 
   &__track {
     display: flex;
-    width: 400vw;
-    height: 100vh;
+    width: 400dvw;
+    height: 100dvh;
     overflow: visible;
+
+    @media only screen and (max-width: $bp-medium) {
+      // align-items: center;
+      width: 400dvw;
+      height: 100dvh !important;
+    }
+
+    @media only screen and (min-width: $bp-extralarge) {
+      max-width: 1000rem;
+    }
   }
 }

@@ -27,7 +27,7 @@ const Intro = () => {
           alt="computer stack"
           width={500}
           height={500}
-          preload
+          priority={true}
         />
       </div>
     </section>
