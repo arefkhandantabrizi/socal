@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export default interface IStackCard {
-  icon: ReactNode;
+  icon?: ReactNode;
   header: string;
   body: string;
   hasLabel: boolean;
