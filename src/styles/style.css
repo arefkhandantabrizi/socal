@@ -2725,7 +2725,7 @@ body {
   column-gap: 3rem;
   padding: 0 5rem;
 }
-@media only screen and (max-width: 100rem) {
+@media only screen and (max-width: 50rem) {
   .aboutUs__ethos {
     grid-template-columns: 1fr;
   }
@@ -2735,7 +2735,7 @@ body {
     min-height: 70dvh;
   }
 }
-@media only screen and (max-width: 100rem) {
+@media only screen and (max-width: 50rem) {
   .aboutUs__ethos--one {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -2778,7 +2778,7 @@ body {
 .aboutUs__ethos--one--image--wrapper:hover .aboutUs__ethos--one--image {
   transform: scale(1.15);
 }
-@media only screen and (max-width: 100rem) {
+@media only screen and (max-width: 50rem) {
   .aboutUs__ethos--two {
     grid-column: 1/2;
     grid-row: 2/3;
