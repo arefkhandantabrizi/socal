@@ -10,7 +10,7 @@ const Transmission = () => {
   const { divContainer, formContainer, indicatorRef } = useAboutUsAnimation();
 
   return (
-    <section className="transmission" ref={divContainer}>
+    <section className="transmission" ref={divContainer} id="transmission">
       <h4 className="transmission__label">Transmission Portal</h4>
       <h4 className="transmission__header">Connect Systems</h4>
       <div className="transmission__divider" />

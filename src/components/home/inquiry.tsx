@@ -1,10 +1,13 @@
 "use client";
 
+import useNavigateTo from "@/hooks/common/useNavigate";
 import useInquiry from "@/hooks/home/useInquiry";
 
 const Inquiry = () => {
   const { btn1Ref, btn2Ref, containerRef, headerRef, labelRef, subheaderRef } =
     useInquiry();
+
+  const { handleNavigate } = useNavigateTo();
 
   return (
     <div className="inquiry" ref={containerRef}>
@@ -21,7 +24,11 @@ const Inquiry = () => {
         <button className="inquiry__meetingbtn" ref={btn1Ref}>
           SCHEDULE A MEETING
         </button>
-        <button className="inquiry__technicalbtn" ref={btn2Ref}>
+        <button
+          className="inquiry__technicalbtn"
+          ref={btn2Ref}
+          onClick={() => handleNavigate("/about-us#transmission")}
+        >
           TECHNICAL INQUIRY
         </button>
       </div>

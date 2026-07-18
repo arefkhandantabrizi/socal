@@ -1,6 +1,9 @@
+"use client";
+
 import { SolarPanel } from "../common/icons";
 import useSolarTilt from "@/hooks/power/useSolarTilt";
 import useSolarAnalysisAnimation from "@/hooks/power/useSolarAnalysisAnimation";
+import useNavigateTo from "@/hooks/common/useNavigate";
 
 const Solar = () => {
   const {
@@ -25,6 +28,8 @@ const Solar = () => {
     analysisCardRef.current = node;
   };
 
+  const { handleNavigate } = useNavigateTo();
+
   return (
     <section className="solar">
       <div className="solar__cards">
@@ -47,7 +52,12 @@ const Solar = () => {
 
           <div className="solar__card--btn--wrapper">
             <button className="solar__card--btn">schedule a meeting</button>
-            <button className="solar__card--btn--outline">about us</button>
+            <button
+              className="solar__card--btn--outline"
+              onClick={() => handleNavigate("/about-us")}
+            >
+              about us
+            </button>
           </div>
         </div>
 

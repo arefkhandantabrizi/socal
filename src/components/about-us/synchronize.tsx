@@ -1,6 +1,9 @@
+"use client";
+import useNavigateTo from "@/hooks/common/useNavigate";
 import { Radar } from "../common/icons";
 
 const Synchronize = () => {
+  const { handleNavigate } = useNavigateTo();
   return (
     <section className="synchronize">
       <Radar className="synchronize__icon" />
@@ -12,7 +15,12 @@ const Synchronize = () => {
         Begin the system initialization protocol. Connect with our architects to
         define the blueprint for your next-generation infrastructure.
       </p>
-      <button className="synchronize__btn">initiate_project_</button>
+      <button
+        className="synchronize__btn"
+        onClick={() => handleNavigate("/about-us#transmission")}
+      >
+        initiate_project_
+      </button>
     </section>
   );
 };

@@ -1,6 +1,9 @@
+"use client";
+import useNavigateTo from "@/hooks/common/useNavigate";
 import Image from "next/image";
 
 const Intro = () => {
+  const { handleNavigate } = useNavigateTo();
   return (
     <section className="aboutUs__intro">
       <div className="aboutUs__intro--image--wrapper">
@@ -26,7 +29,12 @@ const Intro = () => {
             industrial civilization.
           </p>
           <div className="aboutUs__intro--btn--wrapper">
-            <button className="aboutUs__intro--btn">initialize project</button>
+            <button
+              className="aboutUs__intro--btn"
+              onClick={() => handleNavigate("/about-us#transmission")}
+            >
+              initialize project
+            </button>
             <button className="aboutUs__intro--btn--outline">
               schedule a meeting
             </button>
