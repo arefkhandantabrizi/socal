@@ -1,10 +1,40 @@
 "use client";
 import useInput from "@/hooks/calibration/useInput";
 import useTransmissionAnimation from "@/hooks/calibration/useTransmissionAnimation";
+import useCreate from "@/hooks/common/useCreate";
+import useCreateValidation from "@/hooks/common/useCreateValidation";
+import useHandleCreate from "@/hooks/common/useHandleCreate";
+import IAddCalibration from "@/interfaces/calibration/IAddCalibration";
+import ICalibration from "@/interfaces/calibration/ICalibration";
+import { addCalibration } from "@/services/calibration";
+import Button from "../common/Button";
 
 const Transmission = () => {
-  const { disable, email, handleChange, jobDesc } = useInput();
+  const { disable, errors, createData, clear, handleSubmit, register } =
+    useInput();
   const { containerRef } = useTransmissionAnimation();
+
+  const { createFunction, createdData, error, isLoading } = useCreate<
+    ICalibration,
+    IAddCalibration
+  >({ addFn: addCalibration });
+
+  const dataForClibration = createData();
+
+  const { handleCreate } = useHandleCreate<IAddCalibration>({
+    data: dataForClibration,
+    createFn: createFunction,
+  });
+
+  useCreateValidation<ICalibration>({
+    createdData,
+    error,
+    toastMessage: "We've received your message.",
+    clear,
+  });
+
+  const loading = isLoading;
+
   return (
     <section className="calibration__transmission" ref={containerRef}>
       <div className="calibration__transmission--form--outer">
@@ -36,7 +66,10 @@ const Transmission = () => {
             </div>
           </div>
         </div>
-        <div className="calibration__transmission--form">
+        <form
+          className="calibration__transmission--form"
+          onSubmit={handleSubmit(handleCreate)}
+        >
           <div className="calibration__transmission--form--wrapper">
             <label
               htmlFor="email"
@@ -46,12 +79,18 @@ const Transmission = () => {
             </label>
             <input
               id="email"
-              type="text"
+              type="email"
               className="input calibration__transmission--form--input"
               placeholder="operator@nexsus-ops.sh"
-              value={email}
-              onChange={handleChange}
+              {...register("email")}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "email-error" : undefined}
             />
+            {errors.email && (
+              <div className="calibration__transmission--form--error">
+                {errors.email.message}
+              </div>
+            )}
           </div>
           <div className="calibration__transmission--form--wrapper">
             <label
@@ -64,19 +103,25 @@ const Transmission = () => {
               id="jobDesc"
               className="textArea calibration__transmission--form--text"
               placeholder="Outline specific hardware requirements..."
-              value={jobDesc}
-              onChange={handleChange}
+              {...register("jobDesc")}
+              aria-invalid={!!errors.jobDesc}
+              aria-describedby={errors.jobDesc ? "jobDesc-error" : undefined}
             />
+            {errors.jobDesc && (
+              <div className="calibration__transmission--form--error">
+                {errors.jobDesc.message}
+              </div>
+            )}
           </div>
           <div className="calibration__transmission--form--wrapper">
-            <button
-              className="calibration__transmission--form--btn"
+            <Button
+              type="submit"
               disabled={disable}
-            >
-              Establish Link
-            </button>
+              label={!loading ? "Establish Link" : " Sending"}
+              loadingCondition={!loading}
+            />
           </div>
-        </div>
+        </form>
       </div>
     </section>
   );

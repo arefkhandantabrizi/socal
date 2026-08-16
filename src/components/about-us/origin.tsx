@@ -17,7 +17,7 @@ const Origin = () => {
         <div className="origin__image--container">
           <Image
             fill
-            preload
+            priority
             src={"/origin.webp"}
             alt="orgin image"
             className="origin__image"

@@ -9,7 +9,7 @@ const Intro = () => {
       <div className="aboutUs__intro--image--wrapper">
         <Image
           fill
-          preload
+          priority
           src={"/about-us.webp"}
           alt="about us hero image"
           className="aboutUs__intro--image"

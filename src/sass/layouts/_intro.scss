@@ -81,7 +81,9 @@
       width: 75dvw;
     }
     &--container {
-      padding: 5rem;
+      padding: 2rem;
+      inset: 2rem;
+
       background-color: $ethos-color;
       overflow: visible;
       will-change: transform;

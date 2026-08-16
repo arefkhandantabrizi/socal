@@ -4,6 +4,7 @@ import "@/styles/style.css";
 import Footer from "@/components/common/footer";
 import TopNav from "@/components/common/topNav";
 import MobileNav from "@/components/common/mobileNav";
+import { Toaster } from "react-hot-toast";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
           <TopNav />
           {children}
           <Footer />
+          <Toaster />
         </div>
       </body>
     </html>

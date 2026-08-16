@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 const useAboutUsAnimation = () => {
   const divContainer = useRef<HTMLElement | null>(null);
-  const formContainer = useRef<HTMLDivElement | null>(null);
+  const formContainer = useRef<HTMLFormElement | null>(null);
   const indicatorRef = useRef<HTMLSpanElement | null>(null);
 
   useGSAP(

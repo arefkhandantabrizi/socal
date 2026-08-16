@@ -9,6 +9,8 @@ const useAboutus = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const horizontalTweenRef = useRef<GSAPTween | null>(null);
 
+  const isMobile = useIsMobile();
+
   useEffect(() => {
     ScrollTrigger.refresh();
   }, []);
@@ -19,7 +21,7 @@ const useAboutus = () => {
       const section = sectionRef.current;
       if (!track || !section) return;
       const getDistance = () => {
-        return !useIsMobile
+        return !isMobile
           ? track.scrollWidth -
               (window.innerWidth >= 2000 ? 2000 : window.innerWidth)
           : track.scrollWidth - window.innerWidth;
@@ -44,7 +46,7 @@ const useAboutus = () => {
         tween.kill();
       };
     },
-    { scope: sectionRef },
+    { scope: sectionRef, dependencies: [isMobile] },
   );
   return {
     sectionRef,

@@ -21,3 +21,19 @@
 .mr-3 {
   margin-right: 3rem;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.spinner-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $technicalUI-color;
+
+  animation: rotateIcon 0.5s ease-in infinite;
+}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import useTopNav from "@/hooks/common/useTopNav";
-import { Setting, Terminal } from "./icons";
+import useNavigateTo from "@/hooks/common/useNavigate";
 
 const TopNav = () => {
   const {
@@ -14,6 +14,8 @@ const TopNav = () => {
     handleEnter,
     handleLeave,
   } = useTopNav();
+
+  const { handleNavigate } = useNavigateTo();
 
   return (
     <nav className="topnav">
@@ -51,22 +53,27 @@ const TopNav = () => {
         })}
 
         <li className="topnav__item topnav__search">
-          <input
+          {/* <input
             type="text"
             placeholder="search here"
             className="topnav__search--input"
-          />
+          /> */}
         </li>
 
         <li className="topnav__item">
           <div className="topnav__icons">
-            <Terminal className="topnav__icons--icon" />
-            <Setting className="topnav__icons--icon" />
+            {/* <Terminal className="topnav__icons--icon" />
+            <Setting className="topnav__icons--icon" /> */}
           </div>
         </li>
 
         <li className="topnav__item topnav__contact">
-          <button className="topnav__contact--btn">CONTACT US</button>
+          <button
+            className="topnav__contact--btn"
+            onClick={() => handleNavigate("/about-us#transmission")}
+          >
+            CONTACT US
+          </button>
         </li>
       </ul>
     </nav>
