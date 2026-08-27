@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "@/utils/gsap";
 import { usePathname } from "next/navigation";
-import menuItems from "@/services/menuItems";
+import { menuItems } from "@/data/common/menuItems";
 
 const useTopNav = () => {
   const containerRef = useRef<HTMLUListElement | null>(null);

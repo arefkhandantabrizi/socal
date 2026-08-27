@@ -52,21 +52,6 @@ const TopNav = () => {
           );
         })}
 
-        <li className="topnav__item topnav__search">
-          {/* <input
-            type="text"
-            placeholder="search here"
-            className="topnav__search--input"
-          /> */}
-        </li>
-
-        <li className="topnav__item">
-          <div className="topnav__icons">
-            {/* <Terminal className="topnav__icons--icon" />
-            <Setting className="topnav__icons--icon" /> */}
-          </div>
-        </li>
-
         <li className="topnav__item topnav__contact">
           <button
             className="topnav__contact--btn"

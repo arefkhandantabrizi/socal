@@ -4,7 +4,7 @@ import useInput from "@/hooks/about-us/useInput";
 import useCreate from "@/hooks/common/useCreate";
 import useCreateValidation from "@/hooks/common/useCreateValidation";
 import useHandleCreate from "@/hooks/common/useHandleCreate";
-import data from "@/services/departments";
+import data from "@/data/common/departments";
 import ControlledSelect from "../common/controlledSelect";
 import useAboutUsAnimation from "@/hooks/about-us/useAboutUsAnimation";
 import { addAboutUs } from "@/services/aboutUs";

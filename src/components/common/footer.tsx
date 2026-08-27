@@ -2,7 +2,7 @@
 import useFooter from "@/hooks/common/useFooter";
 import { Email, Github, Linkedin } from "./icons";
 import Link from "next/link";
-import menuItems from "@/services/menuItems";
+import { menuItems, legalItems } from "@/data/common/menuItems";
 
 const Footer = () => {
   const { containerRef, indicatorRef, pathname } = useFooter();
@@ -18,10 +18,8 @@ const Footer = () => {
         </div>
         <div className="footer__section footer__section--2">
           <div className="footer__title">DEPARTMENTAL_NODES</div>
-          {/* <div className="footer__department"> */}
           {menuItems.map((menu) => {
             const isActive = pathname === menu.slug;
-
             return (
               menu.department && (
                 <li
@@ -43,37 +41,40 @@ const Footer = () => {
             );
           })}
         </div>
-        {/* <Link href={"/computer"} className="footer__department">
-              COMPUTER
-            </Link>
-          </div>
-          <div className="footer__department">
-            <Link href={"/power"} className="footer__department">
-              POWER
-            </Link>
-          </div>
-          <div className="footer__department">
-            <Link href={"/calibration"} className="footer__department">
-              SYSTEM ENGINEERING & CALIBRATION
-            </Link>
-          </div>
-        </div> */}
         <div className="footer__section footer__section--3">
           <div className="footer__title">PROTOCOL_LINKS</div>
-          <div className="footer__protocol">TERMS OF SERVICES</div>
-          <div className="footer__protocol">PRIVACY PROTOCOL</div>
-          <div className="footer__protocol">GLOBAL SUPPORT</div>
-          <div className="footer__protocol">SYSTEM STATUS</div>
+          {legalItems.map((menu) => {
+            const isActive = pathname === menu.slug;
+            return (
+              <li
+                key={menu.slug}
+                className={`footer__protocol ${
+                  isActive ? "footer__protocol--active" : ""
+                }`}
+              >
+                <Link
+                  href={menu.slug}
+                  className={`footer__protocol ${
+                    isActive ? "footer__protocol--active" : ""
+                  }`}
+                >
+                  {menu.text}
+                </Link>
+              </li>
+            );
+          })}
         </div>
         <div className="footer__section footer__section--4">
           <div className="footer__title">GLOBAL_HEADQUARTERS</div>
-          <div className="footer__address">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
-          </div>
+          <div className="footer__address">To be announced soon.</div>
           <div className="footer__connection">
-            <Linkedin className="footer__connection--icon" />
-            <Github className="footer__connection--icon" />
-            <Email className="footer__connection--icon" />
+            {/* <Linkedin className="footer__connection--icon" /> */}
+            <a href="https://github.com/socalpowergrid" target="_blank">
+              <Github className="footer__connection--icon" />
+            </a>
+            <a href="mailto: contact@socalpowergrid.com">
+              <Email className="footer__connection--icon" />
+            </a>
           </div>
         </div>
       </div>

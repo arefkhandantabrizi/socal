@@ -1,0 +1,16 @@
+import IIcons from "@/interfaces/common/icons";
+
+export const Terminal = ({ className }: IIcons) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      className={className}
+      viewBox="0 0 32 32"
+    >
+      <path d="M0 2v28h32v-28h-32zM30 28h-28v-24h28v24zM28 6h-24v20h24v-20zM14 16h-2v2h-2v2h-2v-2h2v-2h2v-2h-2v-2h-2v-2h2v2h2v2h2v2zM22 20h-6v-2h6v2z"></path>
+    </svg>
+  );
+};
+
+export default Terminal;
