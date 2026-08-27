@@ -114,7 +114,7 @@ const Stack = () => {
         <div className="stack__ai--icon--wrapper" ref={aiIconRef}>
           <div className="stack__imagewrapper">
             <Image
-              preload
+              priority
               src={"/stack.webp"}
               alt="stack image"
               className="stack__image"
