@@ -13,7 +13,7 @@ const Hero = () => {
         width={1400}
         height={900}
         className="power__hero--image"
-        preload
+        priority
       />
       <div className="power__hero--text">
         <h1 className="power__hero--text--header-1">DEPARTMENT_02</h1>

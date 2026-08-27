@@ -3,7 +3,7 @@ const privacyPolicy = {
   lastUpdated: "Aug 2026",
 
   introduction:
-    'These Terms of Service ("Terms") govern your access to and use of the website located at socalpowergrid.com (the "Site"), operated by SOCAL Power Grid ("we," "us," or "our"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, do not use the Site.',
+    'Socal Power Grid ("we," "us," or "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
 
   informationWeCollect: {
     number: "01",
