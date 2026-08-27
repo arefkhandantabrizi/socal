@@ -8,12 +8,12 @@ const Hero = () => {
     <section className="hero" ref={rootRef}>
       <div className="hero__img--container" ref={imageRef}>
         <Image
+          priority
           className="hero__img"
           src="/hero.webp"
           alt="electrical device"
           width={700}
           height={500}
-          preload
         />
         <div className="hero__img--badge" ref={badgeRef}>
           <p className="hero__img--badge--header ">NODE_STATUS</p>
