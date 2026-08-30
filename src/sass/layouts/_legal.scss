@@ -3,9 +3,20 @@
 .legal {
   padding: 5rem 0;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
   &__btnwrapper {
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 2rem 0;
+    }
   }
 
   &__homebtn {
@@ -28,6 +39,9 @@
     padding: 5rem;
     margin: 5rem 15rem;
     border-radius: 1rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 2rem;
+    }
   }
 
   &__intro {
@@ -57,6 +71,11 @@
     background-color: $primary-color;
     margin: 5rem 10rem;
     border-left: 2px solid $accent-color;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin: 2rem;
+      // width: 80%;
+    }
 
     &--header {
       display: flex;

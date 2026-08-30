@@ -3,6 +3,33 @@
 .mobilenav {
   padding: 5rem;
   background-color: $secondary-color;
+  position: relative;
+
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    right: 5rem;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    background-color: $secondary-color;
+  }
+
+  &__toggled {
+    position: fixed;
+    inset: 0;
+    width: 100dvw;
+    min-height: 100dvh;
+    z-index: 10;
+    overflow-y: hidden;
+    background-color: $secondary-color;
+
+    &--icon {
+      width: 5rem;
+      height: 5rem;
+      fill: $technicalUI-color;
+    }
+  }
 
   @media only screen and (min-width: $bp-medium) {
     display: none;
@@ -13,6 +40,14 @@
     display: flex;
     column-gap: 5rem;
     align-items: center;
+    &--toggled {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5rem;
+      align-items: center;
+      padding-top: 5rem;
+    }
   }
 
   &__item {
@@ -27,5 +62,6 @@
     width: 5rem;
     height: 5rem;
     fill: $technicalUI-color;
+    cursor: pointer;
   }
 }

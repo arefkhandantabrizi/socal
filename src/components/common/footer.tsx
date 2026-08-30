@@ -1,6 +1,6 @@
 "use client";
 import useFooter from "@/hooks/common/useFooter";
-import { Email, Github, Linkedin } from "./icons";
+import { Email, Github } from "./icons";
 import Link from "next/link";
 import { menuItems, legalItems } from "@/data/common/menuItems";
 
@@ -68,7 +68,6 @@ const Footer = () => {
           <div className="footer__title">GLOBAL_HEADQUARTERS</div>
           <div className="footer__address">To be announced soon.</div>
           <div className="footer__connection">
-            {/* <Linkedin className="footer__connection--icon" /> */}
             <a href="https://github.com/socalpowergrid" target="_blank">
               <Github className="footer__connection--icon" />
             </a>

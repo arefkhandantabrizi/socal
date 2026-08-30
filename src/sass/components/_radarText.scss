@@ -1,0 +1,60 @@
+$bg-color: #000;
+$text-color: #fff;
+$subtext-color: #9ca3af; // gray-400
+$border-color: #374151; // gray-700
+$scan-color: #00e5ff;
+// $blur-amount: 2.5px;
+$blur-amount: 1px;
+// $blur-layer-opacity: 0.85;
+$blur-layer-opacity: 0.9;
+$digit-font-size: 14rem;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: $text-color;
+}
+
+.digitStack {
+  position: relative;
+  display: grid;
+  user-select: none;
+  font-size: $digit-font-size;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  // both layers occupy the same grid cell so they align perfectly
+  > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.layerBlurred {
+  display: flex;
+  filter: blur($blur-amount);
+  opacity: $blur-layer-opacity;
+}
+
+.layerSharp {
+  display: flex;
+  // clip-path is animated from JS; this is just the resting/hidden state
+  clip-path: inset(110% 0 -10% 0);
+}
+
+.digit {
+  display: inline-block;
+}
+
+.scanLine {
+  pointer-events: none;
+  height: 2px;
+  width: 100%;
+  opacity: 0; // animated from JS
+  background: linear-gradient(to right, transparent, $scan-color, transparent);
+  box-shadow: 0 0 8px 1px $scan-color;
+}

@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+
+.notFound {
+  min-height: 100dvh;
+
+  &__hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    padding-bottom: 2rem;
+
+    &--image {
+      width: 70rem;
+      height: 35rem;
+      display: block;
+      aspect-ratio: 7/4;
+
+      &--wrapper {
+        position: relative;
+        width: 70rem;
+        height: 35rem;
+      }
+    }
+  }
+
+  &__subText {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $ethosText-color;
+    padding: 1rem 2rem;
+    background-color: $secondary-color;
+    margin-bottom: 2rem;
+
+    &--wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--indicator {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: $ethosTerminalRed-color;
+      margin-right: 2rem;
+    }
+
+    &--body {
+      font-size: 1.8rem;
+      color: $technicalUI-color;
+      margin-bottom: 2rem;
+      width: 45%;
+      text-align: center;
+    }
+
+    &--btn {
+      padding: 1.5rem 4rem;
+      cursor: pointer;
+      background-color: $accent-color;
+      color: $secondary-color;
+      outline: none;
+      border: 1px solid $accent-color;
+      border-radius: 0.3rem;
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      text-transform: uppercase;
+      margin: 5rem;
+      font-size: 1.6rem;
+    }
+
+    &--icon {
+      width: 2rem;
+      height: 1.8rem;
+      fill: $secondary-color;
+    }
+  }
+}

@@ -22,6 +22,7 @@ export { default as Auction } from "./auction";
 export { default as Statistics } from "./statistics";
 export { default as Consulting } from "./consulting";
 export { default as Support } from "./support";
+export { default as Cancel } from "./cancel";
 
 export { default as Terminal } from "./terminal";
 export { default as Lightning } from "./lightning";

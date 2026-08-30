@@ -16,6 +16,7 @@
 @use "components/protocolsCard";
 @use "components/mobileNav";
 @use "components/spinner";
+@use "components/radarText";
 
 @use "layouts/hero";
 @use "layouts/divisions";
@@ -43,5 +44,6 @@
 @use "layouts/protocols";
 @use "layouts/calibrationTransmission";
 @use "layouts/legal";
+@use "layouts/notFound";
 
 @use "pages/power";

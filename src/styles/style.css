@@ -633,6 +633,30 @@ body {
 .mobilenav {
   padding: 5rem;
   background-color: #1c2024;
+  position: relative;
+}
+.mobilenav__close {
+  position: absolute;
+  cursor: pointer;
+  right: 5rem;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #1c2024;
+}
+.mobilenav__toggled {
+  position: fixed;
+  inset: 0;
+  width: 100dvw;
+  min-height: 100dvh;
+  z-index: 10;
+  overflow-y: hidden;
+  background-color: #1c2024;
+}
+.mobilenav__toggled--icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #a7abb1;
 }
 @media only screen and (min-width: 50rem) {
   .mobilenav {
@@ -645,6 +669,14 @@ body {
   column-gap: 5rem;
   align-items: center;
 }
+.mobilenav__items--toggled {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  align-items: center;
+  padding-top: 5rem;
+}
 .mobilenav__item--link {
   color: #00f2ff;
   font-size: 3rem;
@@ -654,6 +686,7 @@ body {
   width: 5rem;
   height: 5rem;
   fill: #a7abb1;
+  cursor: pointer;
 }
 
 .spinner {
@@ -663,6 +696,53 @@ body {
 }
 .spinner__text {
   margin-left: 1rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #fff;
+}
+
+.digitStack {
+  position: relative;
+  display: grid;
+  user-select: none;
+  font-size: 14rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.digitStack > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.layerBlurred {
+  display: flex;
+  filter: blur(1px);
+  opacity: 0.9;
+}
+
+.layerSharp {
+  display: flex;
+  clip-path: inset(110% 0 -10% 0);
+}
+
+.digit {
+  display: inline-block;
+}
+
+.scanLine {
+  pointer-events: none;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(to right, transparent, #00e5ff, transparent);
+  box-shadow: 0 0 8px 1px #00e5ff;
 }
 
 .hero {
@@ -3484,9 +3564,22 @@ body {
 .legal {
   padding: 5rem 0;
 }
+@media only screen and (max-width: 50rem) {
+  .legal {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+  }
+}
 .legal__btnwrapper {
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 50rem) {
+  .legal__btnwrapper {
+    margin: 2rem 0;
+  }
 }
 .legal__homebtn {
   padding: 1rem 4rem;
@@ -3507,6 +3600,11 @@ body {
   padding: 5rem;
   margin: 5rem 15rem;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 50rem) {
+  .legal__body {
+    margin: 2rem;
+  }
 }
 .legal__intro {
   display: flex;
@@ -3532,6 +3630,12 @@ body {
   background-color: #0a0f13;
   margin: 5rem 10rem;
   border-left: 2px solid #00f2ff;
+}
+@media only screen and (max-width: 50rem) {
+  .legal__disclaimers {
+    padding: 2rem;
+    margin: 2rem;
+  }
 }
 .legal__disclaimers--header {
   display: flex;
@@ -3633,6 +3737,77 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: #00f2ff;
+}
+
+.notFound {
+  min-height: 100dvh;
+}
+.notFound__hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+  padding-bottom: 2rem;
+}
+.notFound__hero--image {
+  width: 70rem;
+  height: 35rem;
+  display: block;
+  aspect-ratio: 7/4;
+}
+.notFound__hero--image--wrapper {
+  position: relative;
+  width: 70rem;
+  height: 35rem;
+}
+.notFound__subText {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #99f7ff;
+  padding: 1rem 2rem;
+  background-color: #1c2024;
+  margin-bottom: 2rem;
+}
+.notFound__subText--wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.notFound__subText--indicator {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ff716c;
+  margin-right: 2rem;
+}
+.notFound__subText--body {
+  font-size: 1.8rem;
+  color: #a7abb1;
+  margin-bottom: 2rem;
+  width: 45%;
+  text-align: center;
+}
+.notFound__subText--btn {
+  padding: 1.5rem 4rem;
+  cursor: pointer;
+  background-color: #00f2ff;
+  color: #1c2024;
+  outline: none;
+  border: 1px solid #00f2ff;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  text-transform: uppercase;
+  margin: 5rem;
+  font-size: 1.6rem;
+}
+.notFound__subText--icon {
+  width: 2rem;
+  height: 1.8rem;
+  fill: #1c2024;
 }
 
 .power {
