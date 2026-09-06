@@ -51,7 +51,12 @@ const Solar = () => {
           </div>
 
           <div className="solar__card--btn--wrapper">
-            <button className="solar__card--btn">schedule a meeting</button>
+            <button
+              className="solar__card--btn"
+              onClick={() => handleNavigate("/about-us#transmission")}
+            >
+              Get a Quote
+            </button>
             <button
               className="solar__card--btn--outline"
               onClick={() => handleNavigate("/about-us")}

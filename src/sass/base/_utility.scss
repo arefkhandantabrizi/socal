@@ -39,7 +39,15 @@
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: 800 !important;
+}
+
+.slim {
+  font-weight: 200 !important;
+}
+
+.normal {
+  font-weight: 400 !important;
 }
 
 .white {

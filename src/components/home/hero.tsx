@@ -1,9 +1,11 @@
 "use client";
+import useNavigateTo from "@/hooks/common/useNavigate";
 import useHero from "@/hooks/home/useHero";
 import Image from "next/image";
 
 const Hero = () => {
   const { rootRef, badgeRef, imageRef, textRef } = useHero();
+  const { handleNavigate } = useNavigateTo();
   return (
     <section className="hero" ref={rootRef}>
       <div className="hero__img--container" ref={imageRef}>
@@ -29,7 +31,13 @@ const Hero = () => {
           next-generation industrial computing. We build the infrastructure of
           tomorrow.
         </h2>
-        <button className="hero__text--btn">Schedule a Meeting</button>
+        <button
+          // className="hero__text--btn"
+          className="btn btn--primary bold"
+          onClick={() => handleNavigate("/about-us#transmission")}
+        >
+          Get a Quote
+        </button>
       </div>
     </section>
   );

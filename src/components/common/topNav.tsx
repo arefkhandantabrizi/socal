@@ -54,7 +54,8 @@ const TopNav = () => {
 
         <li className="topnav__item topnav__contact">
           <button
-            className="topnav__contact--btn"
+            // className="topnav__contact--btn"
+            className="btn btn--primary bold"
             onClick={() => handleNavigate("/about-us#transmission")}
           >
             CONTACT US

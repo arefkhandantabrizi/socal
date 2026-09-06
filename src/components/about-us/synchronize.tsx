@@ -16,7 +16,7 @@ const Synchronize = () => {
         define the blueprint for your next-generation infrastructure.
       </p>
       <button
-        className="synchronize__btn"
+        className="btn btn--primary bold"
         onClick={() => handleNavigate("/about-us#transmission")}
       >
         initiate_project_

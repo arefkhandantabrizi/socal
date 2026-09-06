@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+.btn {
+  padding: 1rem 4rem;
+  background-color: $accent-color;
+  color: $secondary-color;
+  border: 1px solid $accent-color;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $accent-color;
+    color: $secondary-color;
+    border: 1px solid $accent-color;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $white-color;
+    border: 1px solid $secondary-color;
+  }
+
+  &:disabled {
+    background-color: color.adjust($accent-color, $lightness: -20%);
+    color: color.adjust($secondary-color, $lightness: -20%);
+    border: 1px solid color.adjust($accent-color, $lightness: -20%);
+  }
+}

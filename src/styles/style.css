@@ -155,7 +155,15 @@ body {
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: 800 !important;
+}
+
+.slim {
+  font-weight: 200 !important;
+}
+
+.normal {
+  font-weight: 400 !important;
 }
 
 .white {
@@ -743,6 +751,33 @@ body {
   opacity: 0;
   background: linear-gradient(to right, transparent, #00e5ff, transparent);
   box-shadow: 0 0 8px 1px #00e5ff;
+}
+
+.btn {
+  padding: 1rem 4rem;
+  background-color: #00f2ff;
+  color: #1c2024;
+  border: 1px solid #00f2ff;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.btn--primary {
+  background-color: #00f2ff;
+  color: #1c2024;
+  border: 1px solid #00f2ff;
+}
+.btn--outline {
+  background-color: transparent;
+  color: #eeeeee;
+  border: 1px solid #1c2024;
+}
+.btn:disabled {
+  background-color: rgb(0, 145.2, 153);
+  color: hsl(210, 12.5%, -7.4509803922%);
+  border: 1px solid rgb(0, 145.2, 153);
 }
 
 .hero {
@@ -2104,6 +2139,7 @@ body {
   font: var(--font-primary), sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
+  border-radius: 0.3rem;
 }
 .solar__card--btn--wrapper {
   padding-top: 5rem;
@@ -2122,6 +2158,7 @@ body {
   font: var(--font-primary), sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
+  border-radius: 0.3rem;
 }
 .solar__card--label {
   text-transform: uppercase;
@@ -3098,6 +3135,7 @@ body {
   width: 50%;
   align-self: self-end;
   cursor: pointer;
+  border-radius: 0.3rem;
 }
 .transmission__form--btn:disabled {
   background-color: hsl(191.25, 20%, -4.3137254902%);
@@ -3486,6 +3524,7 @@ body {
   text-transform: uppercase;
   width: 100%;
   cursor: pointer;
+  border-radius: 0.3rem;
 }
 .calibration__transmission--form--btn:disabled {
   background-color: rgb(0, 145.2, 153);
@@ -3741,6 +3780,15 @@ body {
 
 .notFound {
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 50rem) {
+  .notFound {
+    gap: 5rem;
+  }
 }
 .notFound__hero {
   width: 100%;
@@ -3755,10 +3803,24 @@ body {
   display: block;
   aspect-ratio: 7/4;
 }
+@media only screen and (max-width: 50rem) {
+  .notFound__hero--image {
+    width: 50rem;
+    height: 30rem;
+    aspect-ratio: 5/3;
+  }
+}
 .notFound__hero--image--wrapper {
   position: relative;
   width: 70rem;
   height: 35rem;
+}
+@media only screen and (max-width: 50rem) {
+  .notFound__hero--image--wrapper {
+    width: 50rem;
+    height: 30rem;
+    aspect-ratio: 5/3;
+  }
 }
 .notFound__subText {
   font-size: 2rem;
@@ -3788,6 +3850,11 @@ body {
   margin-bottom: 2rem;
   width: 45%;
   text-align: center;
+}
+@media only screen and (max-width: 50rem) {
+  .notFound__subText--body {
+    width: 75%;
+  }
 }
 .notFound__subText--btn {
   padding: 1.5rem 4rem;

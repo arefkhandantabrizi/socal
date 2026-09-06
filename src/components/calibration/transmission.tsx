@@ -117,7 +117,7 @@ const Transmission = () => {
             <Button
               type="submit"
               disabled={disable}
-              label={!loading ? "Establish Link" : " Sending"}
+              label={!loading ? "Send" : " Sending"}
               loadingCondition={!loading}
             />
           </div>

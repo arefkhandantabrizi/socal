@@ -75,6 +75,7 @@
       width: 50%;
       align-self: self-end;
       cursor: pointer;
+      border-radius: 0.3rem;
 
       &:disabled {
         background-color: color.adjust($transmit-color, $lightness: -20%);

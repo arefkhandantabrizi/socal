@@ -3,7 +3,7 @@ const privacyPolicy = {
   lastUpdated: "Aug 2026",
 
   introduction:
-    'Socal Power Grid ("we," "us," or "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
+    'SoCal Power Grid ("we," "us," or "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
 
   informationWeCollect: {
     number: "01",
@@ -118,7 +118,7 @@ const privacyPolicy = {
     number: "11",
     title: "Contact Us",
     head: "If you have questions about this Privacy Policy or how we handle your information, please contact us at:",
-    body: ["SOCAL Power Grid", "contact@socalpowergrid.com"],
+    body: ["SoCal Power Grid", "contact@socalpowergrid.com"],
   },
 };
 

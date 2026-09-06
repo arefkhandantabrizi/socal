@@ -1,10 +1,12 @@
 "use client";
 
+import useNavigateTo from "@/hooks/common/useNavigate";
 import useIntro from "@/hooks/computer/useIntro";
 import Image from "next/image";
 
 const Intro = () => {
   const { refImageContainer } = useIntro();
+  const { handleNavigate } = useNavigateTo();
   return (
     <section className="intro">
       <div className="intro__text">
@@ -18,7 +20,12 @@ const Intro = () => {
           through Neural Architectures, predictive modeling, and autonomous
           protocols.
         </h2>
-        <button className="intro__text--btn">Schedule a Meeting</button>
+        <button
+          className="btn btn--primary bold"
+          onClick={() => handleNavigate("/about-us#transmission")}
+        >
+          Get a Quote
+        </button>
       </div>
       <div className="intro__img--container" ref={refImageContainer}>
         <Image

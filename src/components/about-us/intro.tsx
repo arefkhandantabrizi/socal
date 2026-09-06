@@ -30,13 +30,10 @@ const Intro = () => {
           </p>
           <div className="aboutUs__intro--btn--wrapper">
             <button
-              className="aboutUs__intro--btn"
+              className="btn btn--primary bold"
               onClick={() => handleNavigate("/about-us#transmission")}
             >
               initialize project
-            </button>
-            <button className="aboutUs__intro--btn--outline">
-              schedule a meeting
             </button>
           </div>
         </div>

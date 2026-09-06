@@ -2,6 +2,14 @@
 
 .notFound {
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    gap: 5rem;
+  }
 
   &__hero {
     width: 100%;
@@ -16,10 +24,22 @@
       display: block;
       aspect-ratio: 7/4;
 
+      @media only screen and (max-width: $bp-medium) {
+        width: 50rem;
+        height: 30rem;
+        aspect-ratio: 5/3;
+      }
+
       &--wrapper {
         position: relative;
         width: 70rem;
         height: 35rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          width: 50rem;
+          height: 30rem;
+          aspect-ratio: 5/3;
+        }
       }
     }
   }
@@ -54,6 +74,10 @@
       margin-bottom: 2rem;
       width: 45%;
       text-align: center;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+      }
     }
 
     &--btn {

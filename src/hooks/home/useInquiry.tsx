@@ -7,8 +7,7 @@ const useInquiry = () => {
   const labelRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const subheaderRef = useRef<HTMLHeadingElement | null>(null);
-  const btn1Ref = useRef<HTMLButtonElement | null>(null);
-  const btn2Ref = useRef<HTMLButtonElement | null>(null);
+  const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useGSAP(
     () => {
@@ -16,10 +15,9 @@ const useInquiry = () => {
       const label = labelRef.current;
       const header = headerRef.current;
       const subheader = subheaderRef.current;
-      const btn1 = btn1Ref.current;
-      const btn2 = btn2Ref.current;
+      const btn2 = btnRef.current;
 
-      if (!container || !label || !header || !subheader || !btn1 || !btn2) {
+      if (!container || !label || !header || !subheader || !btn2) {
         return;
       }
 
@@ -66,7 +64,7 @@ const useInquiry = () => {
         )
 
         .from(
-          [btn1, btn2],
+          btn2,
           {
             opacity: 0,
             y: 50,
@@ -94,8 +92,7 @@ const useInquiry = () => {
 
   return {
     containerRef,
-    btn1Ref,
-    btn2Ref,
+    btnRef,
     headerRef,
     subheaderRef,
     labelRef,

@@ -3,7 +3,7 @@ const termsOfServices = {
   lastUpdated: "Aug 2026",
 
   introduction:
-    'These Terms of Service ("Terms") govern your access to and use of the website located at socalpowergrid.com (the "Site"), operated by SOCAL Power Grid ("we," "us," or "our"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, do not use the Site.',
+    'These Terms of Service ("Terms") govern your access to and use of the website located at socalpowergrid.com (the "Site"), operated by SoCal Power Grid ("we," "us," or "our"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, do not use the Site.',
 
   eligibility: {
     title: "Eligibility",
@@ -32,7 +32,7 @@ const termsOfServices = {
 
   intellectualProperty: {
     title: "Intellectual Property",
-    body: "All content on this Site, including text, graphics, logos, designs, and software, is the property of SOCAL Power Grid or its licensors and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent.",
+    body: "All content on this Site, including text, graphics, logos, designs, and software, is the property of SoCal Power Grid or its licensors and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent.",
     number: "04",
   },
 
@@ -57,7 +57,7 @@ const termsOfServices = {
 
   limitationOfLiability: {
     title: "Limitation of Liability",
-    body: 'TO THE FULLEST EXTENT PERMITTED BY LAW, SOCAL Power Grid SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SITE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THESE TERMS OR YOUR USE OF THE SITE SHALL NOT EXCEED "$100 USD".',
+    body: 'TO THE FULLEST EXTENT PERMITTED BY LAW, SOCAL POWER GRID SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SITE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THESE TERMS OR YOUR USE OF THE SITE SHALL NOT EXCEED "$100 USD".',
     end: "Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.",
 
     number: "07",
@@ -65,7 +65,7 @@ const termsOfServices = {
 
   indemnification: {
     title: "Indemnification",
-    body: "You agree to indemnify and hold harmless SOCAL Power Grid, its officers, employees, and agents from any claims, damages, liabilities, and expenses (including reasonable attorneys' fees) arising from your use of the Site or violation of these Terms.",
+    body: "You agree to indemnify and hold harmless SoCal Power Grid, its officers, employees, and agents from any claims, damages, liabilities, and expenses (including reasonable attorneys' fees) arising from your use of the Site or violation of these Terms.",
     number: "08",
   },
 
