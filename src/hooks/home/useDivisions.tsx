@@ -9,7 +9,7 @@ const useDivisions = () => {
       title: "Computer",
       bodyExtraClassName: "divisions__card--body-1",
       bodyText:
-        "Full-stack industrial applications and high-fidelity web ecosystems engineered for data density.",
+        "Custom React/Next.js platforms, Node backend services, and autonomous AI integrations engineered for resilient throughput.",
       hasLinks: true,
       links: ["WEB_APPLICATIONS", "INDUSTRIAL_APPS"],
       isActive: true,
@@ -18,7 +18,7 @@ const useDivisions = () => {
       icon: <Lightning className="divisions__floating-icon--svg" />,
       title: "Power",
       bodyText:
-        "Grid-scale power distribution and embedded logic systems for extreme environments.",
+        "Grid-scale renewable infrastructure, high-voltage system architecture, and specialized engineering studies delivered with rigorous precision from concept through commissioning.",
       hasLinks: true,
       isActive: false,
       links: ["COMING SOON..."],

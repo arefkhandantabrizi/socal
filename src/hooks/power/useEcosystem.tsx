@@ -73,7 +73,7 @@ const useEcosystem = () => {
         "Short Circuit Study",
         "Protection & Coordination",
         "Load Flow Analysis",
-        "ower Quality Analysis",
+        "Power Quality Analysis",
         "Fault Duty Evaluation",
       ],
     },

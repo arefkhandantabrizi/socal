@@ -15,10 +15,10 @@ const Intro = () => {
           COMPUTATIONAL <br /> SYSTEMS_HUB
         </h1>
         <h2 className="intro__text--body">
-          High-fidelity industrial AI engineering. Bridging the gap between
-          tactile mechanical hardware and hyper-scaled digital infrastructure
-          through Neural Architectures, predictive modeling, and autonomous
-          protocols.
+          From sleek commercial platforms and SaaS products to high-scale web
+          applications and mission-critical systems. Whatever your vision, we
+          engineer production-ready digital solutions engineered for immediate
+          impact and unmatched performance.
         </h2>
         <button
           className="btn btn--primary bold"

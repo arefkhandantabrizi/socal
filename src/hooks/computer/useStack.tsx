@@ -63,6 +63,7 @@ const useStack = () => {
           scrub: 1.2,
           pin: true,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
 

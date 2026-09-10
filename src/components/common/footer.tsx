@@ -3,11 +3,12 @@ import useFooter from "@/hooks/common/useFooter";
 import { Email, Github } from "./icons";
 import Link from "next/link";
 import { menuItems, legalItems } from "@/data/common/menuItems";
+import IFooter from "@/interfaces/common/IFooter";
 
-const Footer = () => {
+const Footer = ({ footerRef }: IFooter) => {
   const { containerRef, indicatorRef, pathname } = useFooter();
   return (
-    <section className="footer">
+    <section className="footer" ref={footerRef}>
       <div className="footer__items">
         <div className="footer__section footer__section--1">
           <div className="footer__name">SOCAL POWER GRID</div>
@@ -68,10 +69,14 @@ const Footer = () => {
           <div className="footer__title">GLOBAL_HEADQUARTERS</div>
           <div className="footer__address">To be announced soon.</div>
           <div className="footer__connection">
-            <a href="https://github.com/socalpowergrid" target="_blank">
+            <a
+              href="https://github.com/socalpowergrid"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Github className="footer__connection--icon" />
             </a>
-            <a href="mailto: contact@socalpowergrid.com">
+            <a href="mailto:contact@socalpowergrid.com">
               <Email className="footer__connection--icon" />
             </a>
           </div>

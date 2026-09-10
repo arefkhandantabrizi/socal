@@ -23,22 +23,32 @@ const Stack = () => {
     <section className="stack" ref={containerRef}>
       <div className="stack__frontend">
         <div className="stack__frontend--text--wrapper" ref={webRef}>
-          <h2 className="stack__frontend--header">Industrial Web Systems</h2>
+          <h2 className="stack__frontend--header">
+            Modern Web & Cloud Applications{" "}
+          </h2>
           <p className="stack__frontend--body">
-            Engineering robust digital interfaces that handle massive industrial
-            data streams. We leverage{" "}
-            <span className="stack__frontend--body--highlight">React</span> and{" "}
-            <span className="stack__frontend--body--highlight">Next.js</span> to
-            create high-performance frontends.
+            We build fast, responsive web applications and digital tools
+            tailored to your exact needs. From modern commercial platforms and
+            internal business tools to sleek client portals, our software is
+            built with{" "}
+            <span className="stack__frontend--body--highlight">React</span>,{" "}
+            <span className="stack__frontend--body--highlight">Next.js</span>,
+            and modern web standards for immediate reliability, smooth
+            performance, and effortless scalability.
           </p>
           <div className="stack__frontend--labels">
             <p className="stack__frontend--label">
-              Hyper-optimized rendering pipelines
+              Web Apps & Customer Portals
             </p>
             <p className="stack__frontend--label">
-              Real-time WebSocket integration
+              Clean Architecture & Fast Turnaround
             </p>
-            <p className="stack__frontend--label">Cinematic animations</p>
+            <p className="stack__frontend--label">
+              Intuitive UX & Responsive Design
+            </p>
+            <p className="stack__frontend--label">
+              Custom Fluid Animations & Interactions
+            </p>
           </div>
         </div>
         <div className="stack__frontend--icon--wrapper" ref={webIconWrapperRef}>
@@ -75,14 +85,17 @@ const Stack = () => {
           </div>
         </div>
         <div className="stack__backend--text--wrapper" ref={backendRef}>
-          <h2 className="stack__backend--header">Mission-Critical Backends</h2>
+          <h2 className="stack__backend--header">
+            High-Scale Backend & Cloud Architecture
+          </h2>
           <p className="stack__backend--body">
             Scalable{" "}
             <span className="stack__backend--body--highlight">Node.js</span> and{" "}
             <span className="stack__backend--body--highlight">Express</span>{" "}
-            microservices designed for 99.999% uptime. We build the backbone for
-            mission-critical industrial automation, where latency is measured in
-            microseconds.
+            architectures built for extreme demand and rapid scale. Whether
+            handling millions of concurrent consumers, secure payment flows, or
+            real-time data streaming, our backends deliver immediate stability
+            with zero compromises.
           </p>
           <div className="stack__backend--badge--wrapper">
             <div className="stack__backend--badge">
@@ -98,18 +111,16 @@ const Stack = () => {
       </div>
       <div className="stack__ai">
         <div className="stack__ai--text--wrapper" ref={aiRef}>
-          <h2 className="stack__ai--header">The Neural Synthesis</h2>
+          <h2 className="stack__ai--header">AI & Smart Automation</h2>
           <p className="stack__ai--body">
-            Transitioning from standard commercial AI to specialized{" "}
-            <span className="stack__ai--body--highlight">
-              {" "}
-              Industrial Logic{" "}
-            </span>
-            . Our neural models predict machine fatigue, optimize power
-            distribution, and enable autonomous robotics across global
-            manufacturing hubs.
+            From smart commercial workflows to custom predictive models, we
+            seamlessly integrate adaptive AI capabilities directly into your web
+            applications and digital products. We engineer intelligent systems
+            that automate complex operations, forecast trends, and drive
+            real-time decision-making across diverse business and technical
+            environments.
           </p>
-          <p className="stack__ai--quote">{`"We are no longer just building software; we are engineering the cognitive layer of physical industry."`}</p>
+          <p className="stack__ai--quote">{`"From commercial web applications to intelligent automation, if you can conceive it, we build it—fast, robust, and ready for immediate deployment."`}</p>
         </div>
         <div className="stack__ai--icon--wrapper" ref={aiIconRef}>
           <div className="stack__imagewrapper">

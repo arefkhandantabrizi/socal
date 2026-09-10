@@ -27,12 +27,11 @@ const Hero = () => {
         <h1 className="hero__text--header-1">Engineered</h1>
         <h1 className="hero__text--header-2">Precision.</h1>
         <h2 className="hero__text--body">
-          Architecting Intelligence through high-fidelity hardware synthesis and
-          next-generation industrial computing. We build the infrastructure of
-          tomorrow.
+          Architecting high-performance web applications, applied AI, precision
+          calibration, and power engineering systems. Built with rigorous
+          accuracy, uncompromising reliability, and scalable execution.
         </h2>
         <button
-          // className="hero__text--btn"
           className="btn btn--primary bold"
           onClick={() => handleNavigate("/about-us#transmission")}
         >

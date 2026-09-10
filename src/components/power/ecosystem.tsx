@@ -8,7 +8,7 @@ const Ecosystem = () => {
     <section className="ecosystem">
       <div className="ecosystem__label">integrated_divisions</div>
       <div className="ecosystem__header--wrapper">
-        <h3 className="ecosystem__header">power engineering ecosystem</h3>
+        <h3 className="ecosystem__header">power engineering services</h3>
         <div className="ecosystem__header--icon--wrappers">
           <div
             className="ecosystem__header--icon--wrapper"
@@ -27,9 +27,9 @@ const Ecosystem = () => {
 
       <div ref={carouselRef} className="ecosystem__carousel">
         <div className="ecosystem__carousel--items">
-          {ecosystemCards.map((card, idx) => {
+          {ecosystemCards.map((card) => {
             return (
-              <div key={idx} className="ecosystem__carousel--item">
+              <article key={card.header} className="ecosystem__carousel--item">
                 <div className="ecosystem__carousel--item--header--wrapper">
                   <h4 className="ecosystem__carousel--item--header">
                     {card.header}
@@ -42,19 +42,19 @@ const Ecosystem = () => {
                 <p className="ecosystem__carousel--item--body">{card.body}</p>
                 <div className="ecosystem__carousel--item--separator" />
 
-                <div className="ecosystem__carousel--item--label--wrapper">
+                <ul className="ecosystem__carousel--item--label--wrapper">
                   {card.labels.map((label, index) => {
                     return (
-                      <div
+                      <li
                         key={index}
                         className="ecosystem__carousel--item--label"
                       >
                         {label}
-                      </div>
+                      </li>
                     );
                   })}
-                </div>
-              </div>
+                </ul>
+              </article>
             );
           })}
         </div>
