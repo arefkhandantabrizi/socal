@@ -103,6 +103,7 @@ body {
   margin: 0 auto;
   background-color: #0a0f13;
   color: #a7abb1;
+  overflow: hidden;
 }
 
 .normal-text {
@@ -657,7 +658,7 @@ body {
   inset: 0;
   width: 100dvw;
   min-height: 100dvh;
-  z-index: 10;
+  z-index: 1000;
   overflow-y: hidden;
   background-color: #1c2024;
 }
@@ -1298,6 +1299,8 @@ body {
 @media only screen and (max-width: 62.5rem) {
   .intro {
     grid-template-columns: 1fr;
+    padding: 0 5rem;
+    gap: 2rem;
   }
 }
 @media only screen and (min-width: 100rem) {
@@ -1313,6 +1316,7 @@ body {
 @media only screen and (max-width: 62.5rem) {
   .intro__text {
     grid-row: 2/3;
+    align-self: self-start;
   }
 }
 .intro__text--header-1 {
@@ -1354,6 +1358,7 @@ body {
   .intro__img {
     grid-column: 1/1;
     width: 75dvw;
+    height: 40dvh;
   }
 }
 .intro__img--container {
@@ -1369,7 +1374,7 @@ body {
 }
 @media only screen and (max-width: 62.5rem) {
   .intro__img--container {
-    width: 85dvw;
+    width: 80dvw;
   }
 }
 
