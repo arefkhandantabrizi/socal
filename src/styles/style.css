@@ -2567,6 +2567,11 @@ body {
   text-transform: uppercase;
   cursor: default;
 }
+@media only screen and (max-width: 50rem) {
+  .aboutUs__intro--heading {
+    font-size: 9rem;
+  }
+}
 .aboutUs__intro--heading--accent {
   color: #99f7ff;
   font-style: italic;
@@ -2579,6 +2584,11 @@ body {
   width: 40%;
   margin: 0 auto;
   cursor: default;
+}
+@media only screen and (max-width: 50rem) {
+  .aboutUs__intro--body {
+    width: 75%;
+  }
 }
 .aboutUs__intro--btn {
   padding: 1.5rem 3rem;
@@ -3155,6 +3165,11 @@ body {
   gap: 3rem;
   border: 1px solid #1c2024;
   box-shadow: -0.1rem -0.1rem 1.5rem 0.1rem rgba(0, 242, 255, 0.2);
+}
+@media only screen and (max-width: 50rem) {
+  .transmission__form {
+    width: 100%;
+  }
 }
 .transmission__form--error {
   background-color: #ff716c;

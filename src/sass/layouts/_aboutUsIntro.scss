@@ -78,6 +78,10 @@
       text-transform: uppercase;
       cursor: default;
 
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 9rem;
+      }
+
       &--accent {
         color: $ethosText-color;
         font-style: italic;
@@ -92,6 +96,9 @@
       width: 40%;
       margin: 0 auto;
       cursor: default;
+      @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+      }
     }
 
     &--btn {
