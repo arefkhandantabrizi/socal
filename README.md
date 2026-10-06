@@ -4,7 +4,7 @@ SoCal Power Grid is a modern web application for managing and presenting power-g
 
 The application is built with Next.js and React and uses GSAP to provide rich, scroll-driven interactions and visual transitions while maintaining a structured, component-driven architecture.
 
-**Production:** https://socal-three.vercel.app
+**Production:** https://socalpowergrid.com
 
 ---
 
@@ -319,7 +319,7 @@ The application is deployed through Vercel.
 
 The production deployment is available at:
 
-https://socal-three.vercel.app
+https://socalpowergrid.com
 
 ---
 
