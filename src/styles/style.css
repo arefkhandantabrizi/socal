@@ -282,6 +282,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.footer__email {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #eeeeee;
+}
 .footer__copyright {
   display: flex;
   justify-content: space-between;

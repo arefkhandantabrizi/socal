@@ -80,6 +80,9 @@ const Footer = ({ footerRef }: IFooter) => {
               <Email className="footer__connection--icon" />
             </a>
           </div>
+          <div className="footer__email">
+            E-mail address: contact@socalpowergrid.com
+          </div>
         </div>
       </div>
 
