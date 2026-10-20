@@ -54,12 +54,14 @@ const Solar = () => {
             <button
               className="solar__card--btn"
               onClick={() => handleNavigate("/about-us#transmission")}
+              disabled
             >
               Get a Quote
             </button>
             <button
               className="solar__card--btn--outline"
               onClick={() => handleNavigate("/about-us")}
+              disabled
             >
               about us
             </button>

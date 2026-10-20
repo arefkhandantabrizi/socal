@@ -15,7 +15,7 @@ const usePillarCard = () => {
     },
     {
       icon: <Equalizer className="pillar__card--icon" />,
-      header: "system engineering & calibration",
+      header: "system design & calibration",
       body: "Absolute precision mapping, sensor-array synchronization, and unified calibration protocols",
     },
   ];

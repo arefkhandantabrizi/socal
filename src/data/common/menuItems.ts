@@ -3,7 +3,7 @@ import IMenuItem from "@/interfaces/common/menuItem";
 export const menuItems: IMenuItem[] = [
   { text: "COMPUTER", slug: "/computer", department: true },
   { text: "POWER", slug: "/power", department: true },
-  { text: "CALIBRATION", slug: "/calibration", department: true },
+  { text: "SYSTEM DESIGN", slug: "/calibration", department: true },
   { text: "ABOUT US", slug: "/about-us", department: false },
 ];
 

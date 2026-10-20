@@ -17,6 +17,8 @@ export { default as LeftChevron } from "./leftChevron";
 export { default as RightChevron } from "./rightChevron";
 export { default as UpChevron } from "./upChevron";
 export { default as LeftArrow } from "./leftArrow";
+export { default as Lock } from "./lock";
+export { default as Info } from "./info";
 
 export { default as Auction } from "./auction";
 export { default as Statistics } from "./statistics";

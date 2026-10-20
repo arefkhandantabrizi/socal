@@ -10,7 +10,7 @@ const Intro = () => {
       <div className="calibration__intro--text" ref={textRef}>
         <h1 className="calibration__intro--label">DEPARTMENT_03</h1>
         <h1 className="calibration__intro--header calibration__intro--header-1">
-          system engineering &
+          system design &
         </h1>
         <h1 className="calibration__intro--header calibration__intro--header-2">
           calibration_core

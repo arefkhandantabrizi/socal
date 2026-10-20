@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "sass:color";
 
 .solar {
   background-color: $black-color;
@@ -43,6 +44,12 @@
       font-weight: 400;
       border-radius: 0.3rem;
 
+      &:disabled {
+        background-color: color.adjust($accent-color, $lightness: -20%);
+        color: color.adjust($border-color, $lightness: -20%);
+        border: 1px solid color.adjust($accent-color, $lightness: -20%);
+      }
+
       &--wrapper {
         padding-top: 5rem;
         display: flex;
@@ -61,6 +68,12 @@
         font-size: 1.4rem;
         font-weight: 400;
         border-radius: 0.3rem;
+
+        &:disabled {
+          background-color: color.adjust(transparent, $lightness: -20%);
+          color: color.adjust($accent-color, $lightness: -20%);
+          border: 1px solid color.adjust($technicalUI-color, $lightness: -20%);
+        }
       }
     }
 

@@ -2,6 +2,7 @@
 
 import useEfficiencyCounter from "@/hooks/power/useEfficiencyCounter";
 import Image from "next/image";
+import OfflineBanner from "./offlineBanner";
 
 const Hero = () => {
   const { containerRef, efficiencyRef } = useEfficiencyCounter();
@@ -28,8 +29,12 @@ const Hero = () => {
             sustainable energy integration.
           </h2>
           <div className="power__hero--badge">
-            <div className="power__hero--badge--header">status</div>
-            <div className="power__hero--badge--body">synced</div>
+            <div className="power__hero--badge--header power__hero--badge--body--offline">
+              status
+            </div>
+            <div className="power__hero--badge--body power__hero--badge--body--offline">
+              offline
+            </div>
           </div>
           <div className="power__hero--badge" ref={containerRef}>
             <div className="power__hero--badge--header">efficiency</div>
@@ -40,6 +45,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <OfflineBanner />
     </section>
   );
 };

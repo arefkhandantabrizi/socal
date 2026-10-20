@@ -3,7 +3,6 @@
 .power {
   position: relative;
   overflow: hidden;
-  // min-height: 100vh;
 
   &__scan-line {
     position: absolute;
@@ -36,6 +35,160 @@
       background: inherit;
       filter: blur(10px);
       opacity: 0.7;
+    }
+  }
+
+  &__banner {
+    background-color: $powerBanner-color;
+    color: $powerBannerText-color;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    &--text {
+      padding: 0 2rem;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      justify-self: center;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    &--icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $powerBannerText-color;
+    }
+
+    &--indicator {
+      margin-left: 3rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-color: $powerBannerText-color;
+      border-radius: 50%;
+      display: block;
+      transform-origin: center;
+      will-change: opacity, transform;
+    }
+  }
+
+  &__offline {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: 0rem 5rem 3rem 5rem;
+    padding: 0.5rem 2rem;
+    background-color: $secondary-color;
+    border: 0.2rem solid $powerBannerText-color;
+    border-top: 0.5rem solid $powerBannerText-color;
+    box-shadow: 0rem 0rem 3.2rem 0.6rem rgba($powerBannerText-color, 0.4);
+    height: fit-content;
+    width: 40%;
+
+    &--badge {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      background-color: $powerBanner-color;
+      padding: 1rem 2rem;
+      width: max-content;
+      text-transform: uppercase;
+      color: $powerBannerText-color;
+      align-items: center;
+
+      &--indicator {
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: $powerBannerText-color;
+        border-radius: 50%;
+        display: block;
+        transform-origin: center;
+        will-change: opacity, transform;
+      }
+      &--subtext {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      &--text {
+        font-size: 1.9rem;
+        font-weight: 700;
+      }
+    }
+
+    &--header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem 0 1rem 0rem;
+
+      &--icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $powerBannerText-color;
+      }
+      &--text {
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        color: $white-color;
+        font-weight: 900;
+      }
+    }
+
+    &--body {
+      font-size: 1.4rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    &--info {
+      display: flex;
+      gap: 1rem;
+      background-color: $powerInfo-color;
+      color: $powerBannerText-color;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding: 0.2rem 2rem 0.2rem 0rem;
+
+      &--icon {
+        align-self: self-start;
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: $powerBannerText-color;
+        margin-top: 0.4rem;
+      }
+      &--text {
+        font-size: 1.4rem;
+        text-align: left;
+        font-weight: 700;
+      }
+    }
+
+    &--btn {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      background-color: $powerOffline-color;
+      color: $primary-color;
+      width: 100%;
+      padding: 1rem 2rem;
+      font-family: $font-primary;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid $powerOffline-color;
+      border-radius: 0.2rem;
+
+      &--wrapper {
+        cursor: default;
+        margin-bottom: 2rem;
+      }
+      &--icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $primary-color;
+      }
     }
   }
 }
