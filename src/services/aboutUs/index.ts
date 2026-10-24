@@ -11,9 +11,7 @@ export const addAboutUs = (
   data: IAddAboutUs,
 ): Promise<IApiResponse<IResult<IAboutUs>>> => {
   return apiRequest<IResult<IAboutUs>>(async () => {
-    const response = await mainAPI.post(`${route}`, data, {
-      withCredentials: true,
-    });
+    const response = await mainAPI.post(`${route}`, data);
     return response.data;
   });
 };
